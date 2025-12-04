@@ -1118,40 +1118,37 @@ header
 }
 .event-slider .event-slider__item-img {
   width: 150px;
-  padding-top: 150px;
-  /* 正方形化 */
+  padding-top: 150px; /* 正方形化 */
   position: relative;
-  overflow: hidden;
   border-radius: 16px;
-  /* デフォルト余白カラー */
-  background: #e6f7fa;
-  /* ← 好きな色に変更OK ($mainより薄め) */
+  overflow: hidden;
   margin: 0 auto;
-  /* 横長画像 → 正方形いっぱいで左右見切れOK */
-  /* 縦長画像 → 左右に余白を作る（見切らせない） */
+  background: #e6f7fa; /* ← 縦長時にこの色が出る */
+  /* 横長画像 → 正方形いっぱい（見切れOK） */
+  /* 縦長画像 → 横幅を小さくし余白を作る */
 }
 .event-slider .event-slider__item-img img {
   position: absolute;
-  inset: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: contain;
+     object-fit: contain; /* 基本は contain */
   max-width: 100%;
   max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  transition: 0.3s ease;
 }
 .event-slider .event-slider__item-img.is-horizontal img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
-  /* ← 横長はこれだけでOK */
+     object-fit: cover; /* 横長は cover */
 }
 .event-slider .event-slider__item-img.is-vertical img {
   width: auto;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
-  /* ← 左右余白が自然に作られる */
+     object-fit: contain; /* contain で左右余白出る */
 }
 .event-slider__arrow {
   position: absolute;
