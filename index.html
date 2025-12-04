@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>テンプレート02</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20230220">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <div class="black-bg"></div>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__ttl-wrap header__item"><a href="index.html" class="header__ttl"><img
+            src="assets/img/top/logo.png" alt="テンプレート"></a>
+      </h1>
+      <a href="" class="header__menu-tel"><i class="fa-solid fa-phone"></i>012-345-6789</a>
+      <nav class="header__menu-wrap header__item">
+        <div class="header__menu-inner">
+          <a href="news.html" class="header__menu active">お知らせ</a>
+          <a href="company.html" class="header__menu">会社概要</a>
+          <a href="about.html" class="header__menu">事業案内</a>
+          <a href="services.html" class="header__menu">サービス</a>
+        </div>
+      </nav>
+      <a href="contact.html" class="header__right-menu-contact">お問い合わせ</a>
+      <div class="header__btn-wrap header__item open-btn-js" id="js-hamburger-menu">
+        <img src="assets/img/top/hun-btn.png" alt="">
+      </div>
+    </div>
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu">
+          <a href="news.html" class="header-sp__menu-item">お知らせ</a>
+          <a href="company.html" class="header-sp__menu-item">会社概要</a>
+          <a href="about.html" class="header-sp__menu-item">事業案内</a>
+          <a href="services.html" class="header-sp__menu-item">サービス</a>
+          <a href="contact.html" class="header-sp__menu-item">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="main page-top">
+
+    <section class="main-visual">
+      <div class="main-visual__img main-visual-js">
+        <img src="assets/img/top/main-visual.png" alt="">
+        <img src="assets/img/top/main-visual02.jpg" alt="">
+        <img src="assets/img/top/main-visual03.jpg" alt="">
+      </div>
+      <div class="main-visual__lead-wrap">
+        <div class="top-ttl-style">
+          <p class="top-ttl-style__top fade-in-onload">CORPORATE CONCEPT</p>
+          <p class="top-ttl-style__middle fade-in-onload">企業コンセプト</p>
+        </div>
+        <p class="main-visual__lead fade-in-onload02">家族の笑顔と明日のために<br>自然と調和し心安らぐ暮らしを</p>
+      </div>
+    </section>
+
+    <section class="top-info section-bg">
+
+
+      <div class="top-ttl-style">
+        <p class="top-ttl-style__top fade-in-onload">NEWS</p>
+        <h2 class="top-ttl-style__middle fade-in-onload">お知らせ</h2>
+      </div>
+
+      <div class="top-info__inner">
+
+        <article class="top-info__article"><a href="single.html" class="top-info__link">
+            <span class="top-info__cat">カテゴリー</span>
+            <date class="top-info__date">2025.1.1</date>
+            <p class="top-info__ttl">この文章はダミーです。この文章はダミーです。</p>
+
+          </a>
+        </article>
+        <article class="top-info__article"><a href="single.html" class="top-info__link">
+            <span class="top-info__cat">カテゴリー</span>
+            <date class="top-info__date">2025.1.1</date>
+            <p class="top-info__ttl">この文章はダミーです。この文章はダミーです。</p>
+
+          </a>
+        </article>
+        <article class="top-info__article"><a href="single.html" class="top-info__link">
+            <span class="top-info__cat">カテゴリー</span>
+            <date class="top-info__date">2025.1.1</date>
+            <p class="top-info__ttl">この文章はダミーです。この文章はダミーです。</p>
+          </a>
+        </article>
+        <a href="news.html" class="top-info__btn">お知らせ一覧へ</a>
+      </div>
+
+
+    </section>
+
+    <section class="top-menu fade-in-js">
+      <div class="top-menu__inner">
+
+        <a href="" class="top-menu__item">
+          <div class="top-ttl-style">
+            <p class="top-ttl-style__top fade-in-onload">COMPANY</p>
+            <h2 class="top-ttl-style__middle fade-in-onload">会社概要</h2>
+          </div>
+          <div class="top-menu__img">
+            <img src="assets/img/top/main-visual.png" alt="">
+          </div>
+        </a>
+        <a href="" class="top-menu__item">
+          <div class="top-ttl-style">
+            <p class="top-ttl-style__top fade-in-onload">WHAT WE DO</p>
+            <h2 class="top-ttl-style__middle fade-in-onload">事業案内</h2>
+          </div>
+          <div class="top-menu__img">
+            <img src="assets/img/top/main-visual02.jpg" alt="">
+          </div>
+        </a>
+        <a href="" class="top-menu__item">
+          <div class="top-ttl-style">
+            <p class="top-ttl-style__top fade-in-onload">SERVICES</p>
+            <h2 class="top-ttl-style__middle fade-in-onload">サービス</h2>
+          </div>
+          <div class="top-menu__img">
+            <img src="assets/img/top/main-visual03.jpg" alt="">
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="top-contact section-bg">
+      <div class="top-ttl-style">
+        <p class="top-ttl-style__top fade-in-onload">CONTACT</p>
+        <h2 class="top-ttl-style__middle fade-in-onload">お問い合わせ</h2>
+      </div>
+
+      <div class="top-contact__inner">
+        <div class="top-contact__item">
+
+          <p class="top-contact__text">
+            <img src="assets/img/top/top-contact-mail.png" class="top-contact__icon">
+            メールフォームでのお問い合わせはこちらから</p>
+          <a href="" class="top-contact__btn">お問い合わせ</a>
+        </div>
+        <div class="top-contact__item">
+
+          <p class="top-contact__text">
+            <img src="assets/img/top/top-contact-tel.png" class="top-contact__icon top-contact__icon--tel">
+            お電話でのお問い合わせはこちらから</p>
+          <a href="" class="top-contact__tel">012-345-6789</a>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+  <!--main end-->
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="index.html" class="footer__ttl"><img src="assets/img/top/logo.png" alt="テンプレート"></a>
+      <div class="footer__top">
+        <p class="footer__text">
+          〒012-3456<br>
+          ○○県○○市○○○○○○1丁目1番1号<br>
+          ○○○○○○○○○○ビル
+        </p>
+        <p class="footer__text">
+          営業時間 / 9:00～18:00<br>
+          定休日 / 水曜日
+        </p>
+        <a href="" class="footer__tel"><i class="fa-solid fa-phone"></i>012-888-4444</a>
+      </div>
+      <a href="contact.html" class="footer__contact">お問い合わせ</a>
+      <div class="footer__nav">
+        <a href="news.html" class="footer__nav-item">お知らせ</a>
+        <a href="company.html" class="footer__nav-item">会社概要</a>
+        <a href="about.html" class="footer__nav-item">事業案内</a>
+        <a href="services.html" class="footer__nav-item">サービス</a>
+        <a href="userguide.html" class="footer__nav-item">このサイトについて</a>
+        <a href="privacy.html" class="footer__nav-item">個人情報保護方針</a>
+      </div>
+      <div class="footer__sns-wrap">
+        <a href="" class="footer__sns"><img src="assets/img/top/x.png" alt=""></a>
+        <a href="" class="footer__sns"><img src="assets/img/top/line.png" alt=""></a>
+        <a href="" class="footer__sns"><img src="assets/img/top/fb.png" alt=""></a>
+        <a href="" class="footer__sns"><img src="assets/img/top/youtube.png" alt=""></a>
+        <a href="" class="footer__sns"><img src="assets/img/top/insta.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      &copy;テンプレート
+    </div>
+    <a href="#" class="footer__go-to-btn top-to-js"><img src="assets/img/top/go-top-btn.png" alt=""></a>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
+</html>

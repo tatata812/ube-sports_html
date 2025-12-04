@@ -1,0 +1,518 @@
+$main: #22B573;
+$sub: #b57322;
+
+@mixin sp {
+  @media (max-width:(600px)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width:(820px)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width:(1120px)) {
+    @content;
+  }
+}
+
+
+// 下層共通
+
+.subpage {
+
+  &__ttl-wrap {
+    border-bottom: 1px solid #eee;
+    padding: 0 12px;
+  }
+
+  &__ttl-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 60px 12px;
+
+    @include tab {
+      padding: 24px 12px;
+    }
+  }
+
+  &__ttl {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+
+
+    @include sp {
+      font-size: 26px;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      color: #141414;
+      font-size: 24px;
+
+      @include sp {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__date {
+    text-align: center;
+    display: block;
+  }
+
+  &__main {
+    padding: 40px 12px 80px;
+
+    @include tab {
+      padding: 24px 12px 40px;
+    }
+  }
+
+  &__content {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+}
+
+/* =================================
+ニュース
+ ================================= */
+
+.page-news {
+
+  &__article-wrap {
+    max-width: 880px;
+    margin: 0 auto 60px;
+  }
+
+  &__pager {
+    text-align: center;
+  }
+}
+
+/* =================================
+記事詳細
+ ================================= */
+
+.single {
+
+  &__content-wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  &__ content {
+    margin: 0 0 80px;
+  }
+}
+
+/* =================================
+会社概要
+ ================================= */
+
+.page-company {
+
+  &__inner {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  &__ttl {
+    color: $sub;
+    font-size: 28px;
+    line-height: 1.4;
+    font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+    text-align: center;
+
+    @include sp {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      color: #141414;
+      font-size: 17px;
+
+      @include sp {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__table {
+
+    width: 100%;
+    margin: 24px auto 80px;
+    border-collapse: collapse;
+
+    @include tab {
+      margin: 24px auto 40px;
+    }
+
+    &--bottom {
+      margin: 24px auto 0;
+
+      @include tab {
+        margin: 24px auto 0;
+      }
+    }
+
+    tr {
+      border-bottom: #c5c5c5 1px solid;
+
+      &:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+
+      &:first-of-type {
+        border-top: #c5c5c5 1px solid;
+
+      }
+    }
+
+
+    th,
+    td {
+      padding: 20px;
+      vertical-align: top;
+      vertical-align: middle;
+
+      @include tab {
+        padding: 14px 10px;
+      }
+    }
+
+    th {
+      width: 25%;
+      text-align: left;
+      padding-left: 40px;
+      font-weight: normal;
+
+      @include tab {
+        padding-left: 16px;
+      }
+    }
+
+
+    .business-list,
+    .license-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .business-list li,
+    .license-list li {
+      margin-bottom: 12px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .label {
+      color: $main;
+      margin-right: 5px;
+    }
+
+  }
+
+  &__map-wrap {
+    max-width: 480px;
+    margin: 40px auto 80px;
+
+    @include tab {
+      margin: 40px auto 40px;
+    }
+  }
+
+  &__map {
+    height: 0;
+    position: relative;
+    padding-top: 75.25%;
+    overflow: hidden;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* =================================
+お問い合わせ
+ ================================= */
+
+.page-contact {
+
+  &__form-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    label span {
+      display: inline-block;
+      background: $sub;
+      color: #fff;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-right: 6px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+
+    a {
+      color: $sub;
+      text-decoration: underline;
+    }
+
+    /* チェックボックス用の label はインライン表示に戻す */
+    input[type="checkbox"]+label {
+      display: inline;
+      font-weight: normal;
+      margin-left: 4px;
+    }
+
+    button {
+      display: block;
+      border: $main 3px solid;
+      background-color: #fff;
+      padding: 12px;
+      border-radius: 24px;
+      width: 200px;
+      text-align: center;
+      margin: 60px auto 0;
+    }
+
+    .checkbox-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 24px 0;
+      justify-content: center;
+
+      label {
+        margin: 0;
+      }
+    }
+
+    .checkbox-text {
+      margin: 24px 0 0;
+      text-align: center;
+      line-height: 2;
+
+    }
+  }
+}
+
+/* =================================
+会社概要
+ ================================= */
+
+.page-about {
+
+  &__inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 0 0 40px;
+    border-bottom: #c5c5c5 1px solid;
+    margin: 0 0 40px;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+
+      @include tab {
+        flex-direction: column;
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+      padding: 0 0 0;
+
+    }
+
+    @include tab {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+  }
+
+  &__text {}
+
+  &__item-ttl {
+    margin: 0 0 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-color: $main;
+      height: 4px;
+      width: 60px;
+      position: absolute;
+      bottom: -14px;
+    }
+  }
+
+  &__item-text {}
+
+  &__img {
+    width: 340px;
+    aspect-ratio: 3 / 2;
+    /* 横:縦 = 3:2 に固定 */
+    overflow: hidden;
+    /* 枠外を切り落とす */
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* 枠いっぱいに収めて切り抜く */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+}
+
+/* =================================
+サービス
+ ================================= */
+
+.page-services {
+
+  &__section {
+    margin: 24px 0 60px;
+  }
+
+  &__ttl {
+    background-color: #ececec;
+    padding: 18px 12px;
+    margin: 0 0 60px;
+
+    @include tab {
+      margin: 0 0 32px;
+    }
+  }
+
+  &__ttl-iner {
+    max-width: 760px;
+    margin: 0 auto;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      background-color: $main;
+      height: 4px;
+      width: 60px;
+      position: absolute;
+      bottom: -17px;
+    }
+  }
+
+  &__item {
+    max-width: 760px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 0 auto 40px;
+    padding: 0 12px;
+
+    &:last-of-type {
+      margin: 0 auto;
+    }
+
+    @include tab {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__img {
+    width: 340px;
+    aspect-ratio: 3 / 2;
+    /* 横:縦 = 3:2 に固定 */
+    overflow: hidden;
+    /* 枠外を切り落とす */
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* 枠いっぱいに収めて切り抜く */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &__item-ttl {
+    margin: 0 0 24px;
+
+    @include tab {
+      margin: 0 0 12px;
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+}
