@@ -1,18 +1,67 @@
 $(function () {
 
-  // SPメニュー
-  $("#js-hamburger-menu, .navigation__link").click(function () {
-    $(".header-sp,.black-bg,.header").toggleClass("active"); //ボタン自身に activeクラスを付与し
-  });
-  $(".header-sp__btn-img").click(function () {
-    $(".header-sp,.black-bg,.header").toggleClass("active");
-    $('.hamburger-menu').toggleClass('hamburger-menu--open');
-  });
+// 検索開く
+$('#header-search-js').on('click', function () {
+  $('.header-search, .black-bg').addClass('active');
+});
 
-  $('#js-hamburger-menu, .navigation__link').on('click', function () {
-    $('.navigation').slideToggle(500);
-    $('.hamburger-menu').toggleClass('hamburger-menu--open')
-  });
+// ハンバーガー開く
+$('#header-hum-js').on('click', function () {
+  $('.header-sp, .black-bg').addClass('active');
+});
+
+// 背景クリックで閉じる
+$('.black-bg').on('click', function () {
+  $('.header-search, .header-sp, .black-bg').removeClass('active');
+});
+
+// SPメニュー閉じる
+$('.header-sp__btn-img').on('click', function () {
+  $('.header-sp, .black-bg').removeClass('active');
+});
+
+// ★検索閉じる（修正：クラス名を search-form__close に変更）
+$('.search-form__close').on('click', function () {
+  $('.header-search, .black-bg').removeClass('active');
+});
+
+
+
+// 注目のイベントスライダー
+$('.js-event-slider').slick({
+  arrows: false, // 矢印は HTMLで作る
+  dots: false,
+  infinite: true,
+  speed: 400,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+// カスタム矢印
+$('.event-slider__arrow--prev').on('click', function () {
+  $('.js-event-slider').slick('slickPrev');
+});
+
+$('.event-slider__arrow--next').on('click', function () {
+  $('.js-event-slider').slick('slickNext');
+});
+
+// サムネイルの調整
+$('.event-slider__item-img img').each(function () {
+  const w = this.naturalWidth;
+  const h = this.naturalHeight;
+
+  if (h > w) {
+    // 縦長
+    $(this).parent().addClass('is-vertical');
+  } else {
+    // 横長
+    $(this).parent().addClass('is-horizontal');
+  }
+});
+
+
+
 
 
   // TOPへボタン

@@ -1,4 +1,4 @@
-$main: #22B573;
+$main: #5EBCC9;
 $sub: #b57322;
 
 @mixin sp {
@@ -170,29 +170,30 @@ dt {
 
 
 .black-bg {
-  visibility: hidden;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  cursor: pointer;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  transition: all 0.6s;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 200;
 
   &.active {
-    visibility: visible;
-    z-index: 10;
-    opacity: 0.6;
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
+
 .main {
-  margin: 76px 0 0;
+  margin: 86px 0 0;
 
   @include pc {
-    margin: 50px 0 0 0;
+    margin: 64px 0 0 0;
+  }
+
+    @include tab {
+    margin: 56px 0 0 0;
   }
 }
 
