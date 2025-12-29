@@ -422,15 +422,15 @@ $main: #5EBCC9; // メインカラーのみ使用
       left: 40%;
     }
 
-    @include pc{
-          width: 460px;
+    @include pc {
+      width: 460px;
       left: 32%;
     }
 
 
     @include tab {
       width: 85%;
-      left: 50%;    
+      left: 50%;
       top: 50%;
 
 
@@ -495,40 +495,45 @@ $main: #5EBCC9; // メインカラーのみ使用
   }
 
   /* 正方形枠 */
-.event-slider__item-img {
-  width: 150px;
-  padding-top: 150px; /* 正方形化 */
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 0 auto;
-  background: #e6f7fa; /* ← 縦長時にこの色が出る */
+  .event-slider__item-img {
+    width: 150px;
+    padding-top: 150px;
+    /* 正方形化 */
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #e6f7fa;
+    /* ← 縦長時にこの色が出る */
 
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain; /* 基本は contain */
-    max-width: 100%;
-    max-height: 100%;
-    transition: 0.3s ease;
-  }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+      /* 基本は contain */
+      max-width: 100%;
+      max-height: 100%;
+      transition: 0.3s ease;
+    }
 
-  /* 横長画像 → 正方形いっぱい（見切れOK） */
-  &.is-horizontal img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 横長は cover */
-  }
+    /* 横長画像 → 正方形いっぱい（見切れOK） */
+    &.is-horizontal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* 横長は cover */
+    }
 
-  /* 縦長画像 → 横幅を小さくし余白を作る */
-  &.is-vertical img {
-    width: auto;
-    height: 100%;
-    object-fit: contain; /* contain で左右余白出る */
+    /* 縦長画像 → 横幅を小さくし余白を作る */
+    &.is-vertical img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      /* contain で左右余白出る */
+    }
   }
-}
 
   /* 左右矢印 */
   &__arrow {
@@ -593,273 +598,19 @@ $main: #5EBCC9; // メインカラーのみ使用
 お知らせ
  ================================= */
 
-.top-info {
-  padding: 40px 12px 80px;
-
-  @include tab {
-    padding: 40px 12px;
-  }
-
-  &__inner {
-    max-width: 1120px;
-    margin: 32px auto 0;
-    padding: 0 12px;
-    max-width: 800px;
-    background-color: #fff;
-    padding: 40px 60px;
-
-
-    @include tab {
-      padding: 32px 16px;
-
-    }
-  }
-
-  &__btn {
-    display: block;
-    border: $main 3px solid;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 24px;
-    width: 200px;
-    text-align: center;
-    margin: 40px auto 0;
-  }
-
-
-  &__article {
-    border-bottom: #b6b6b6 1px solid;
-    padding: 18px 44px 18px 4px;
-    position: relative;
-
-    &::after {
-      content: url(../img/top/item-arrow.png);
-      position: absolute;
-      right: -12px;
-      top: 54%;
-      transform: translateY(-50%)scale(0.7);
-    }
-
-    &:first-of-type {
-      border-top: #b6b6b6 1px solid;
-    }
-
-    @include tab {
-      padding: 12px 44px 12px 4px;
-    }
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    @include tab {
-      flex-wrap: wrap;
-      gap: 8px;
-
-    }
-  }
-
-  &__cat {
-    width: 80px;
-    font-size: 12px;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    background-color: $sub;
-  }
-
-  &__date {
-    font-size: 12px;
-    white-space: nowrap;
-
-  }
-
-  &__ttl {
-    flex: 1;
-    line-height: 1.2;
-
-    @include tab {
-      flex: none;
-      width: 100%;
-    }
-  }
-
-  &__arrow {
-    margin-left: auto;
-    width: 24px;
-
-  }
-}
+.top-info {}
 
 /* =================================
 メニュー
  ================================= */
 
-.top-menu {
-  padding: 80px 12px 120px;
-
-  @include tab {
-    padding: 40px 12px 80px;
-  }
-
-
-  &__inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 12px;
-    display: flex;
-    gap: 40px;
-
-    @include tab {
-      flex-direction: column;
-      align-items: center;
-      gap: 80px;
-
-    }
-  }
-
-  &__item {
-    width: calc((100% - 80px) / 3);
-    position: relative;
-
-    &::after {
-      content: url(../img/top/item-arrow.png);
-      position: absolute;
-      bottom: -64px;
-      left: 50%;
-      transform: translateX(-50%)scale(0.8);
-
-      @include tab {
-        bottom: -54px;
-      }
-    }
-
-    @include tab {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-
-  &__img {
-    aspect-ratio: 7 / 5;
-    /* ← 横7：縦5の比率に固定 */
-    overflow: hidden;
-    /* はみ出した部分を非表示 */
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* 中央でトリミング */
-      object-position: center;
-      /* 中央基準 */
-      display: block;
-    }
-
-
-  }
-}
+.top-menu {}
 
 /* =================================
 お問い合わせ
  ================================= */
 
-.top-contact {
-  padding: 60px 12px 80px;
-
-  @include tab {
-    padding: 40px 12px;
-  }
-
-
-  &__inner {
-    background-color: #fff;
-    max-width: 800px;
-    margin: 40px auto 0;
-    padding: 0 80px;
-
-    @include tab {
-      padding: 0 4px;
-    }
-
-  }
-
-  &__ttl {
-    margin-right: auto;
-
-    @include tab {
-      margin: 0 auto;
-    }
-  }
-
-  &__item {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    padding: 24px 8px;
-
-    &:first-of-type {
-      border-bottom: #b6b6b6 1px solid;
-    }
-
-    @include tab {
-      flex-direction: column;
-
-    }
-  }
-
-  &__icon {
-    width: 30px;
-    display: inline-block;
-    margin: 0 12px 0 0;
-
-    &--tel {
-      width: 24px;
-    }
-
-    @include tab {
-      width: 24px;
-      display: inline-block;
-      margin: 0 8px 0 0;
-    }
-  }
-
-  &__text {
-    white-space: nowrap;
-
-  }
-
-  &__tel {
-    text-align: center;
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: auto;
-
-    @include tab {
-      margin-right: auto;
-      text-align: center;
-    }
-  }
-
-  &__btn {
-    background-color: #22B573;
-    color: #fff;
-    padding: 10px;
-    border-radius: 24px;
-    width: 160px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-
-    @include tab {
-      margin-right: auto;
-
-    }
-  }
-}
+.top-contact {}
 
 
 /* =================================
@@ -868,100 +619,198 @@ footer
 
 .footer {
   position: relative;
-  border-top: #e9e9e9 2px solid;
+  background-color: #ebf9ed;
+  max-width: 1350px;
+  margin: 0 auto 24px;
+  border-radius: 24px;
+
+  @media screen and (max-width: 1350px) {
+    border-radius: 0;
+      margin: 0 auto 0;
+
+  }
+
 
   &__inner {
-    padding: 40px 12px;
-    max-width: 720px;
+    padding: 24px 16px;
+    max-width: 1280px;
     margin: 0 auto;
 
+    @include tab {}
+  }
+
+  &__logo {
+    max-width: 240px;
+    display: block;
+
     @include tab {
-      max-width: 320px;
+      margin: 0 auto 16px;
     }
   }
 
   &__top {
     display: flex;
+    border-bottom: #02ad69 1px solid;
+    margin: 0 0 24px;
+
+    @include pc {
+      flex-direction: column-reverse;
+    }
+
+    @include tab {
+      border-bottom: none;
+      gap: 8px;
+    }
+  }
+
+  &__top-left {
+    display: flex;
+    align-items: flex-end;
+
+    @include tab {
+      flex-direction: column;
+
+    }
+  }
+
+  &__top-left-item {
+    border-top: #02ad69 1px solid;
+    border-left: #02ad69 1px solid;
+    padding: 4px 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #141414;
+    white-space: nowrap;
+    line-height: 1;
+
+    &:last-of-type {
+      border-right: #02ad69 1px solid;
+
+      @include tab {
+        border-bottom: #02ad69 1px solid;
+      }
+    }
+
+    @include pc {
+      border-right: #02ad69 1px solid;
+      width: 100%;
+    }
+
+
+
+  }
+
+  &__top-right {
+    text-align: center;
+    flex: 1;
+
+
+  }
+
+  &__top-right-item {
+    font-size: 20px;
+
+    @include tab {
+      font-size: 16px;
+    }
+  }
+
+  // メニュー
+
+  &__menu {
+    display: flex;
     justify-content: space-between;
-    margin: 0 0 24px;
+    gap: 32px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1350px) {
+      flex-wrap: wrap;
+    }
+
+    @include sp {
+      justify-content: flex-start;
+      gap: 24px 70px;
+
+    }
+
+  }
+
+  &__menu-col {
+
+    &--left {
+      margin: 0 0 40px -70px;
+
+      @media screen and (max-width: 1350px) {
+        margin: 0 0 40px 0;
+      }
+    }
 
     @include tab {
-      flex-direction: column;
+      margin: 0 0 0;
+    }
+
+    &--bottom {
+      margin: 0 0 40px;
+
+      @include tab {
+        margin: 0 0 28px;
+      }
     }
   }
 
-  &__ttl {
-    max-width: 200px;
-    display: block;
-    margin: 0 0 24px;
+  &__menu-ttl {
+    font-size: 12px;
+    margin-bottom: 12px;
+    color: #000;
   }
 
-  &__text {
-    margin: 0 0 16px;
-    line-height: 1.2;
-  }
+  &__menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: #eee solid 1px;
+    padding: 0 0 0 8px;
 
-  &__tel {
-    font-weight: bold;
-    font-size: 18px;
-  }
+    &-item {
 
-  &__contact {
-    background-color: $main;
-    color: #fff;
-    padding: 10px;
-    border-radius: 24px;
-    width: 160px;
-    text-align: center;
-    display: block;
-    margin: 0 auto 24px;
-  }
+      a {
+        color: #2aa84a;
+        text-decoration: none;
+        line-height: 1;
+        font-size: 11px;
+        white-space: nowrap;
 
-  &__nav {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin: 0 0 24px;
-
-    @include tab {
-      flex-direction: column;
-      gap: 4px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 
-  &__contact {
-    background-color: $main;
-    color: #fff;
-    padding: 10px;
-    border-radius: 24px;
-    width: 160px;
-    text-align: center;
-    display: block;
-    margin: 0 auto 24px;
-  }
 
-  &__sns-wrap {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    justify-content: center;
-  }
 
-  &__sns {
-    width: 24px;
 
-    img {
-      vertical-align: middle;
-    }
-  }
 
   &__bottom {
-    font-size: 12px;
-    text-align: center;
-    padding: 12px;
-    background-color: $main;
-    color: #fff;
+    text-align: right;
+    font-size: 11px;
+    padding: 0 40px;
+
+    @include sp{
+    padding: 24px 0 0;
+     text-align: center;
+    }
   }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
   &__go-to-btn {
     width: 40px;
