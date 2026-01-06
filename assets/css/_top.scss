@@ -1,0 +1,555 @@
+@use "config"as *;
+
+/* =================================
+パーツ
+ ================================= */
+.top-section-ttl {
+  text-align: center;
+  font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  color: $main;
+  line-height: 1.2;
+
+  @include tab {
+    font-size: 28px;
+  }
+
+  span {
+    display: block;
+    font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 28px;
+    color: #d9d9d9;
+    font-family: "Noto Sans", sans-serif;
+
+    @include tab {
+      font-size: 20px;
+    }
+  }
+
+}
+
+/* =================================
+メインビジュアル
+ ================================= */
+
+.main-visual {
+  padding: 12px 24px;
+  max-width: 1400px;
+  margin: 0 auto 12px;
+  position: relative;
+
+
+  @include tab {
+    padding: 8px;
+      margin: 0 auto 32px;
+
+  }
+
+  &__img {
+
+    position: relative;
+  }
+
+
+
+  &__lead-wrap {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+
+    @media screen and (max-width: 1250px) {
+      width: 760px;
+      left: 40%;
+    }
+
+    @include pc {
+      width: 460px;
+      left: 32%;
+    }
+
+
+    @include tab {
+      width: 85%;
+      left: 50%;
+      top: 50%;
+
+
+    }
+  }
+
+
+
+  &__lead {
+    font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+    text-align: center;
+    font-size: 34px;
+    margin: 12px 0 0;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include tab {
+      font-size: 20px;
+    }
+  }
+
+}
+
+
+/* =====================================
+   注目イベントスライダー
+===================================== */
+.event-slider {
+  text-align: center;
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+
+
+  @include pc {
+    bottom: -20px;
+  }
+
+  @include tab {
+    position: static;
+    margin: 16px 0 0;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: $main;
+    margin-bottom: 6px;
+  }
+
+  /* 白い大きな丸背景 */
+  &__circle {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 50%;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+  }
+
+  /* 正方形枠 */
+  .event-slider__item-img {
+    width: 150px;
+    padding-top: 150px;
+    /* 正方形化 */
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #e6f7fa;
+    /* ← 縦長時にこの色が出る */
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+      /* 基本は contain */
+      max-width: 100%;
+      max-height: 100%;
+      transition: 0.3s ease;
+    }
+
+    /* 横長画像 → 正方形いっぱい（見切れOK） */
+    &.is-horizontal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* 横長は cover */
+    }
+
+    /* 縦長画像 → 横幅を小さくし余白を作る */
+    &.is-vertical img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      /* contain で左右余白出る */
+    }
+  }
+
+  /* 左右矢印 */
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 8px;
+    }
+  }
+
+  &__arrow--prev {
+    left: 10px;
+  }
+
+  &__arrow--next {
+    right: 10px;
+  }
+
+  /* タイトル */
+  &__text {
+    font-size: 11px;
+    color: #333;
+    margin: 4px auto 32px;
+    width: 150px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  /* ボタン */
+  &__btn {
+    display: inline-flex;
+    width: 200px;
+    margin-top: -8px;
+    position: relative;
+    z-index: 2;
+
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      transition: 0.25s ease;
+    }
+  }
+}
+
+
+
+/* =================================
+お知らせ
+ ================================= */
+
+.top-info {
+  padding: 0 16px;
+
+  &__ttl {
+    margin: 0 0 40px;
+
+    @include tab{
+    margin: 0 0 24px;
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+}
+
+// 重要なお知らせ
+
+.important-info {
+  background: #ecf9ef;
+  border-radius: 24px;
+  padding: 16px;
+  max-width: 1140px;
+  margin: 0 auto 100px;
+
+  @include tab {
+    border-radius: 18px;
+    margin: 0 auto 60px;
+
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include tab {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__label {
+    flex-shrink: 0;
+    width: 220px;
+    text-align: center;
+    color: #e53935;
+    font-size: 18px;
+    line-height: 1.4;
+
+    @include tab {
+      width: auto;
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    flex: 1;
+  }
+
+  &__item {
+    &+& {
+      border-top: 1px solid #bfe5c9;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 32px 8px 12px;
+    color: #333;
+    text-decoration: none;
+
+    @include tab {
+      padding: 14px 0;
+      gap: 12px;
+    }
+
+    &:hover .important-info__icon {
+      transform: translateX(2px);
+    }
+  }
+
+  &__text {
+    line-height: 1.7;
+
+    @include tab {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease; // ← hover外に出す
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include tab {
+      display: none;
+    }
+  }
+}
+
+
+// お知らせ本体
+.news-archive {
+  max-width: 1100px;
+  margin: 0 auto 100px;
+
+  @include tab {
+    margin: 0 auto 60px;
+
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 16px;
+
+    @include tab {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+
+  &__tabs-ttl {
+    color: $main;
+    font-size: 17px;
+
+    @include tab {
+      display: none;
+    }
+  }
+
+  &__tablist {
+    display: flex;
+    gap: 14px;
+
+    @include tab {
+      justify-content: space-between;
+      gap: 8px;
+      width: 100%;
+    }
+  }
+
+  &__tab {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #888;
+    border-radius: 999px;
+    width: 120px;
+    padding: 6px;
+    cursor: pointer;
+    position: relative;
+    font-size: 17px;
+
+    @include sp {
+      width: 70px;
+      font-size: 12px;
+    }
+
+    &.is-active {
+      background: $main;
+      border-color: $main;
+      color: #fff;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 9px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $main;
+      }
+    }
+
+    &:hover {
+      background: #ecf9ef;
+    }
+  }
+
+  &__list-wrap {
+    border-top: 2px solid $main;
+    border-bottom: 2px solid $main;
+  }
+
+  &__item {
+    border-top: 1px solid #e5e5e5;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #333;
+
+    @include tab {
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px;
+
+
+    }
+
+    &:hover {
+      .news-archive__arrow {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &__date {
+    color: #666;
+    font-variant-numeric: tabular-nums;
+    width: 80px;
+
+    @include tab {
+      grid-area: date;
+    }
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 80px;
+    border-radius: 999px;
+    color: #fff;
+
+    @include tab {
+      grid-area: badge;
+    }
+
+    &.is-taikai {
+      background: #2aa0df;
+    }
+
+    &.is-event {
+      background: #ff5aa3;
+    }
+
+    &.is-oshirase {
+      background: #89b43b;
+    }
+  }
+
+  &__title {
+    line-height: 1.7;
+    flex: 1;
+
+    @include tab {
+      flex: auto;
+      width: 100%;
+    }
+  }
+
+  &__arrow {
+    justify-self: end;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+    margin-left: auto;
+
+    @include tab {
+      display: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+
+/* =================================
+メニュー
+ ================================= */
+
+.top-menu {}
+
+/* =================================
+お問い合わせ
+ ================================= */
+
+.top-contact {}

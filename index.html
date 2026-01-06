@@ -25,6 +25,11 @@
   <meta name="twitter:title"
     content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
   <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;800&family=Noto+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
@@ -147,8 +152,162 @@
 
         <!-- タイトル -->
 
-        <a href="#" class="event-slider__btn"><img src="assets/img/top/event-slider-btn.png" alt=""></a>
+        <a href="#" class="event-slider__btn"><img src="assets/img/top/event-slider-btn.png" alt="イベント一覧"></a>
       </div>
+    </section>
+
+
+
+    <!-- お知らせ -->
+    <section class="top-info">
+      <h2 class="top-section-ttl top-info__ttl">お知らせ<span>News</span></h2>
+
+
+      <!-- 重要なお知らせ -->
+      <div class="important-info" aria-labelledby="importantInfoTtl">
+        <div class="important-info__inner">
+          <h2 class="important-info__label" id="importantInfoTtl">重要なお知らせ</h2>
+
+          <ul class="important-info__list">
+            <li class="important-info__item">
+              <a href="#" class="important-info__link">
+                <span class="important-info__text">
+                  令和６年４月１日より公益財団法人人宇部市体育協会から【公益財団法人宇部市スポーツ協会】へ名称を変更いたしました。
+                </span>
+
+                <span class="important-info__icon">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+
+            <li class="important-info__item">
+              <a href="#" class="important-info__link">
+                <span class="important-info__text">
+                  西部体育館アリーナ工事に伴う休館について（期間：令和７年１１月２５日（火）〜令和８年１月９日（金））
+                </span>
+
+                <span class="important-info__icon">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+
+            <li class="important-info__item">
+              <a href="#" class="important-info__link">
+                <span class="important-info__text">
+                  都市型スポーツ広場専用利用日について
+                </span>
+
+                <span class="important-info__icon">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- お知らせ本体 -->
+      <div class="news-archive">
+
+        <!-- カテゴリータブ -->
+        <div class="news-archive__tabs">
+          <p class="news-archive__tabs-ttl">カテゴリー</p>
+
+          <div class="news-archive__tablist">
+            <button class="news-archive__tab is-active" type="button" data-filter="all">
+              すべて
+            </button>
+            <button class="news-archive__tab" type="button" data-filter="oshirase">
+              おしらせ
+            </button>
+            <button class="news-archive__tab" type="button" data-filter="event">
+              イベント
+            </button>
+            <button class="news-archive__tab" type="button" data-filter="taikai">
+              たいかい
+            </button>
+          </div>
+        </div>
+
+        <!-- 一覧 -->
+        <div class="news-archive__list-wrap">
+          <ul class="news-archive__list">
+
+            <li class="news-archive__item" data-cat="taikai">
+              <a href="#" class="news-archive__link">
+                <time class="news-archive__date">2025.12.13</time>
+                <span class="news-archive__badge is-taikai">大　会</span>
+                <span class="news-archive__title">
+                  第58回縄田杯ウベロードレース大会の結果をアップいたしました
+                </span>
+                <span class="news-archive__arrow">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+
+            <li class="news-archive__item" data-cat="event">
+              <a href="#" class="news-archive__link">
+                <time class="news-archive__date">2025.10.13</time>
+                <span class="news-archive__badge is-event">イベント</span>
+                <span class="news-archive__title">
+                  あすチャレ！Academy ～コミュニケーション編～参加者募集中（10/20まで）
+                </span>
+                <span class="news-archive__arrow">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+
+            <li class="news-archive__item" data-cat="event">
+              <a href="#" class="news-archive__link">
+                <time class="news-archive__date">2025.10.13</time>
+                <span class="news-archive__badge is-event">イベント</span>
+                <span class="news-archive__title">
+                  スポーツうべたん 2025秋　開催のお知らせ
+                </span>
+                <span class="news-archive__arrow">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+
+            <li class="news-archive__item" data-cat="event">
+              <a href="#" class="news-archive__link">
+                <time class="news-archive__date">2025.10.13</time>
+                <span class="news-archive__badge is-event">イベント</span>
+                <span class="news-archive__title">
+                  山口パッツファイブホーム開幕戦 観戦招待企画
+                </span>
+                <span class="news-archive__arrow">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+
+            <li class="news-archive__item" data-cat="oshirase">
+              <a href="#" class="news-archive__link">
+                <time class="news-archive__date">2025.04.23</time>
+                <span class="news-archive__badge is-oshirase">お知らせ</span>
+                <span class="news-archive__title">
+                  宇部市スポーツコミッションだより（令和6年度活動報告冊子）
+                </span>
+                <span class="news-archive__arrow">
+                  <img src="/assets/img/top/important-info-arrow.png">
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
     </section>
 
 

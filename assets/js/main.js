@@ -61,6 +61,39 @@ $('.event-slider__item-img img').each(function () {
 });
 
 
+// ニュース一覧：カテゴリタブ切り替え
+var $newsTabs = $('.news-archive__tab');
+var $newsItems = $('.news-archive__item');
+
+function filterNews(type) {
+  $newsItems.each(function () {
+    var $item = $(this);
+    var cat = $item.data('cat');
+
+    if (type === 'all' || cat === type) {
+      $item.show();
+    } else {
+      $item.hide();
+    }
+  });
+}
+
+$newsTabs.on('click', function () {
+  var filter = $(this).data('filter');
+
+  // active切り替え
+  $newsTabs.removeClass('is-active');
+  $(this).addClass('is-active');
+
+  // 表示切り替え
+  filterNews(filter);
+});
+
+// 初期表示
+filterNews('all');
+
+
+
 
 
 

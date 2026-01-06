@@ -1,24 +1,82 @@
-@use "config";
+/* =========================
+   読み込み（最初に全部）
+========================= */
+@use "config" as *;
+@use "top";
 @use "subpage";
 
-$main: #5EBCC9;
-$sub: #b57322;
 
-@mixin sp {
-  @media (max-width:(600px)) {
-    @content;
+/* =========================
+   base（全ページ共通）
+========================= */
+* {
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.8;
+  color: #141414;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Meiryo", "Yu Gothic", "YuGothic",
+    sans-serif;
+}
+
+p {
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+  color: #141414;
+}
+
+a {
+  color: #141414;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
   }
 }
 
-@mixin tab {
-  @media (max-width:(820px)) {
-    @content;
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+}
+
+table {
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+}
+
+dd,
+dt {
+  list-style: none;
+  font-size: clamp(0.813rem, 0.79rem + 0.11vw, 0.875rem);
+}
+
+
+/* =========================
+   表示制御
+========================= */
+.pc-block {
+  display: block;
+
+  @include tab {
+    display: none;
   }
 }
 
-@mixin pc {
-  @media (max-width:(1120px)) {
-    @content;
+.sp-block {
+  display: none;
+
+  @include tab {
+    display: block;
   }
 }
 
@@ -48,14 +106,11 @@ header
 
     @include pc {
       align-items: center;
-
     }
 
     @include tab {
       padding: 8px;
     }
-
-
 
     @include sp {
       justify-content: space-between;
@@ -142,9 +197,6 @@ header
     }
   }
 
-
-
-
   &__right-menu-contact {
     background-color: $main;
     color: #fff;
@@ -177,7 +229,6 @@ header
   }
 }
 
-$main: #5EBCC9; // メインカラーのみ使用
 
 /* =========================
   黒背景
@@ -196,6 +247,7 @@ $main: #5EBCC9; // メインカラーのみ使用
     pointer-events: auto;
   }
 }
+
 
 /* =========================
   検索スライドメニュー
@@ -313,11 +365,8 @@ $main: #5EBCC9; // メインカラーのみ使用
     font-size: 16px;
     color: #fff;
     cursor: pointer;
-
     background: $main;
-    /* ← グラデなし、単色でかわいく */
     box-shadow: 0 6px 14px rgba($main, 0.35);
-
     transition: 0.25s ease;
 
     &:hover {
@@ -330,9 +379,6 @@ $main: #5EBCC9; // メインカラーのみ使用
     }
   }
 }
-
-
-
 
 
 
@@ -388,230 +434,6 @@ $main: #5EBCC9; // メインカラーのみ使用
 }
 
 
-/* =================================
-メインビジュアル
- ================================= */
-
-.main-visual {
-  padding: 12px 24px;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-
-
-  @include tab {
-    padding: 8px;
-  }
-
-  &__img {
-
-    position: relative;
-  }
-
-
-
-  &__lead-wrap {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-
-    @media screen and (max-width: 1250px) {
-      width: 760px;
-      left: 40%;
-    }
-
-    @include pc {
-      width: 460px;
-      left: 32%;
-    }
-
-
-    @include tab {
-      width: 85%;
-      left: 50%;
-      top: 50%;
-
-
-    }
-  }
-
-
-
-  &__lead {
-    font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
-    text-align: center;
-    font-size: 34px;
-    margin: 12px 0 0;
-    line-height: 1.4;
-    font-weight: bold;
-
-    @include tab {
-      font-size: 20px;
-    }
-  }
-
-}
-
-
-/* =====================================
-   注目イベントスライダー
-===================================== */
-.event-slider {
-  text-align: center;
-  position: absolute;
-  right: 60px;
-  bottom: 20px;
-
-
-  @include pc {
-    bottom: -20px;
-  }
-
-  @include tab {
-    position: static;
-    margin: 16px 0 0;
-  }
-
-  &__title {
-    font-size: 16px;
-    font-weight: 700;
-    color: $main;
-    margin-bottom: 6px;
-  }
-
-  /* 白い大きな丸背景 */
-  &__circle {
-    position: relative;
-    width: 270px;
-    height: 270px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 50%;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    padding: 12px;
-  }
-
-  /* 正方形枠 */
-  .event-slider__item-img {
-    width: 150px;
-    padding-top: 150px;
-    /* 正方形化 */
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 0 auto;
-    background: #e6f7fa;
-    /* ← 縦長時にこの色が出る */
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      object-fit: contain;
-      /* 基本は contain */
-      max-width: 100%;
-      max-height: 100%;
-      transition: 0.3s ease;
-    }
-
-    /* 横長画像 → 正方形いっぱい（見切れOK） */
-    &.is-horizontal img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* 横長は cover */
-    }
-
-    /* 縦長画像 → 横幅を小さくし余白を作る */
-    &.is-vertical img {
-      width: auto;
-      height: 100%;
-      object-fit: contain;
-      /* contain で左右余白出る */
-    }
-  }
-
-  /* 左右矢印 */
-  &__arrow {
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: rgba(255, 255, 255, 0.9);
-    cursor: pointer;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 8px;
-    }
-  }
-
-  &__arrow--prev {
-    left: 10px;
-  }
-
-  &__arrow--next {
-    right: 10px;
-  }
-
-  /* タイトル */
-  &__text {
-    font-size: 11px;
-    color: #333;
-    margin: 4px auto 32px;
-    width: 150px;
-    line-height: 1.6;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-  }
-
-  /* ボタン */
-  &__btn {
-    display: inline-flex;
-    width: 200px;
-    margin-top: -8px;
-    position: relative;
-    z-index: 2;
-
-
-    &:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-      transition: 0.25s ease;
-    }
-  }
-}
-
-
-
-/* =================================
-お知らせ
- ================================= */
-
-.top-info {}
-
-/* =================================
-メニュー
- ================================= */
-
-.top-menu {}
-
-/* =================================
-お問い合わせ
- ================================= */
-
-.top-contact {}
-
 
 /* =================================
 footer
@@ -650,7 +472,7 @@ footer
 
   &__top {
     display: flex;
-    border-bottom: #02ad69 1px solid;
+    border-bottom: $main 1px solid;
     margin: 0 0 24px;
 
     @include pc {
@@ -674,8 +496,8 @@ footer
   }
 
   &__top-left-item {
-    border-top: #02ad69 1px solid;
-    border-left: #02ad69 1px solid;
+    border-top: $main 1px solid;
+    border-left: $main 1px solid;
     padding: 4px 12px;
     text-align: center;
     font-size: 11px;
@@ -684,15 +506,15 @@ footer
     line-height: 1;
 
     &:last-of-type {
-      border-right: #02ad69 1px solid;
+      border-right: $main 1px solid;
 
       @include tab {
-        border-bottom: #02ad69 1px solid;
+        border-bottom: $main 1px solid;
       }
     }
 
     @include pc {
-      border-right: #02ad69 1px solid;
+      border-right: $main 1px solid;
       width: 100%;
     }
 
@@ -820,6 +642,178 @@ footer
 
     &--osusume {
       bottom: 100px;
+    }
+  }
+}
+
+
+/* =========================
+   パンくず
+========================= */
+.breadcrumbs-wrap {
+  &__content {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 12px 12px 0;
+    font-size: 11px;
+  }
+}
+
+
+/* =========================
+   layout
+========================= */
+.section-bg {
+  background-color: #f2f2f2;
+}
+
+.main {
+  margin: 86px 0 0;
+
+  @include pc {
+    margin: 64px 0 0;
+  }
+
+  @include tab {
+    margin: 56px 0 0;
+  }
+}
+
+
+/* =========================
+   animation
+========================= */
+.fade-in-js {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.7s ease;
+
+  &.action {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-onload {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInOnLoad 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInOnLoad {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-onload02 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInOnLoad02 1.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInOnLoad02 {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   editor style
+========================= */
+.page-style {
+  &__block {
+    margin: 0 0 40px;
+  }
+
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .alignright {
+    float: right;
+  }
+
+  .alignleft {
+    float: left;
+  }
+
+  img {
+    width: auto;
+  }
+
+  p {
+    margin: 0 0 12px;
+    line-height: 24px;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 36px;
+
+    @include tab {
+      font-size: 20px;
+    }
+
+    &:after {
+      content: '';
+      width: 110px;
+      height: 3px;
+      display: inline-block;
+      background-color: $sub;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    margin: 24px 0 12px;
+    color: $sub;
+    font-weight: bold;
+
+    @include sp {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 24px 0 8px;
+
+    @include sp {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ol {
+    margin: 0 0 12px 24px;
+    line-height: 24px;
+
+    li {
+      list-style: decimal;
+    }
+  }
+
+  ul {
+    margin: 0 0 12px 24px;
+    line-height: 24px;
+
+    li {
+      list-style: disc;
     }
   }
 }
