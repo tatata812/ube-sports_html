@@ -134,7 +134,7 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   padding: 12px;
 }
-.event-slider .event-slider__item-img {
+.event-slider__item-img {
   width: 150px;
   padding-top: 150px;
   /* 正方形化 */
@@ -142,12 +142,12 @@
   border-radius: 16px;
   overflow: hidden;
   margin: 0 auto;
-  background: #e6f7fa;
+  background: #eee;
   /* ← 縦長時にこの色が出る */
   /* 横長画像 → 正方形いっぱい（見切れOK） */
   /* 縦長画像 → 横幅を小さくし余白を作る */
 }
-.event-slider .event-slider__item-img img {
+.event-slider__item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,14 +159,14 @@
   max-height: 100%;
   transition: 0.3s ease;
 }
-.event-slider .event-slider__item-img.is-horizontal img {
+.event-slider__item-img.is-horizontal img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   /* 横長は cover */
 }
-.event-slider .event-slider__item-img.is-vertical img {
+.event-slider__item-img.is-vertical img {
   width: auto;
   height: 100%;
   -o-object-fit: contain;
@@ -488,11 +488,137 @@
 }
 
 /* =================================
-メニュー
+施設利用について
  ================================= */
+.top-howto {
+  margin: 0 auto 40px;
+}
 /* =================================
-お問い合わせ
+イベント
  ================================= */
+.top-event {
+  background-color: #ecf9ef;
+  max-width: 1350px;
+  margin: 0 auto 40px;
+  border-radius: 24px;
+  padding: 40px 16px;
+}
+@media screen and (max-width: 1350px) {
+  .top-event {
+    border-radius: 0;
+    margin: 0 auto 0;
+  }
+}
+.top-event__content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+}
+@media (max-width: 820px) {
+  .top-event__content {
+    padding: 16px;
+  }
+}
+.top-event__ttl {
+  margin: 0 0 64px;
+}
+.event-content {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  /* 正方形枠 */
+  /* タイトル */
+}
+@media (max-width: 820px) {
+  .event-content {
+    gap: 16px;
+  }
+}
+.event-content__item {
+  width: calc((100% - 64px) / 3);
+  margin: 0 0 40px;
+}
+@media (max-width: 820px) {
+  .event-content__item {
+    width: calc((100% - 16px) / 2);
+    margin: 0 0 24px;
+  }
+}
+.event-content__item:hover .event-content__item-img img {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.event-content__item-img {
+  width: 100%;
+  padding-top: 100%;
+  /* 正方形化 */
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto 24px;
+  background: #eee;
+  /* 横長画像 → 正方形いっぱい（見切れOK） */
+  /* 縦長画像 → 横幅を小さくし余白を作る */
+}
+@media (max-width: 820px) {
+  .event-content__item-img {
+    margin: 0 auto 8px;
+  }
+}
+.event-content__item-img::before {
+  content: url(../img/top/arrow-icon.png);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scale(1);
+  z-index: 1;
+}
+.event-content__item-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* 基本は contain */
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.3s ease;
+}
+.event-content__item-img.is-horizontal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* 横長は cover */
+}
+.event-content__item-img.is-vertical img {
+  width: auto;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* contain で左右余白出る */
+}
+.event-content__text {
+  font-size: 12px;
+  color: #333;
+  margin: 0 auto;
+  padding: 0 12px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* =================================
+SNS
+ ================================= */
+.top-sns {
+  margin: 0 auto 40px;
+}
 /* =========================
    読み込み（最初に全部）
 ========================= */
@@ -882,7 +1008,7 @@ footer
  ================================= */
 .footer {
   position: relative;
-  background-color: #ebf9ed;
+  background-color: #ecf9ef;
   max-width: 1350px;
   margin: 0 auto 24px;
   border-radius: 24px;

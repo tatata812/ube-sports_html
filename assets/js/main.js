@@ -47,7 +47,7 @@ $('.event-slider__arrow--next').on('click', function () {
 });
 
 // サムネイルの調整
-$('.event-slider__item-img img').each(function () {
+$('.event-slider__item-img img, .event-content__item-img img').each(function () {
   const w = this.naturalWidth;
   const h = this.naturalHeight;
 
