@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #39b54a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #39b54a;
+      }
+    </style>
+  </defs>
+  <g id="_お知らせ" data-name="お知らせ">
+    <g>
+      <g>
+        <path class="cls-2" d="M18,35.5C8.35,35.5.5,27.65.5,18S8.35.5,18,.5s17.5,7.85,17.5,17.5-7.85,17.5-17.5,17.5Z"/>
+        <path class="cls-3" d="M18,1c9.37,0,17,7.63,17,17s-7.63,17-17,17S1,27.37,1,18,8.63,1,18,1M18,0C8.06,0,0,8.06,0,18s8.06,18,18,18,18-8.06,18-18S27.94,0,18,0h0Z"/>
+      </g>
+      <g>
+        <polyline class="cls-1" points="18 11.25 24.75 18 18 24.75"/>
+        <line class="cls-1" x1="24.75" y1="18" x2="11.25" y2="18"/>
+      </g>
+    </g>
+  </g>
+</svg>

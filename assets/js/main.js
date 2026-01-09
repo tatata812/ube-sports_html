@@ -93,6 +93,48 @@ $newsTabs.on('click', function () {
 filterNews('all');
 
 
+/* =================================
+フェイスブック
+ ================================= */
+(function(){
+  const wrap = document.querySelector('.js-fb-wrap');
+  const page = document.querySelector('.js-fb-page');
+  if(!wrap || !page) return;
+
+  let last = 0;
+
+  function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+
+  function render(){
+    const w = clamp(Math.round(wrap.clientWidth), 180, 500);
+    if (w === last) return;
+    last = w;
+
+    // 幅を更新
+    page.setAttribute('data-width', w);
+
+    // いったん中身をクリアしてから再パース
+    page.innerHTML = '';
+
+    if (window.FB && FB.XFBML) {
+      FB.XFBML.parse(wrap);
+    }
+  }
+
+  // 初回（SDK読込後を想定）
+  window.addEventListener('load', render);
+
+  // リサイズ対応（間引き）
+  let timer = null;
+  window.addEventListener('resize', function(){
+    clearTimeout(timer);
+    timer = setTimeout(render, 200);
+  });
+})();
+
+
+
+
 
 
 

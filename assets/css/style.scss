@@ -1,7 +1,7 @@
 /* =========================
    読み込み（最初に全部）
 ========================= */
-@use "config" as *;
+@use "config"as *;
 @use "top";
 @use "subpage";
 
@@ -91,6 +91,7 @@ header
   width: 100%;
   transition: transform 0.3s;
   background-color: #fff;
+  border-bottom: #eee 1px solid;
 
   &.is-hide {
     transform: translateY(-100%);
@@ -99,13 +100,15 @@ header
   &__inner {
     display: flex;
     gap: 24px;
-    padding: 8px 16px;
+    padding: 8px 16px 0;
     max-width: 1400px;
     margin: 0 auto;
 
 
     @include pc {
       align-items: center;
+          padding: 8px 16px;
+
     }
 
     @include tab {
@@ -154,9 +157,9 @@ header
     &::before {
       content: url(../img/top/header-menu-icon.png);
       position: absolute;
-      top: -10px;
+      top: -20px;
       left: 50%;
-      transform: translateX(-50%)scale(0.4);
+      transform: translateX(-50%)scale(0.35);
     }
 
   }
@@ -448,7 +451,7 @@ footer
 
   @media screen and (max-width: 1350px) {
     border-radius: 0;
-      margin: 0 auto 0;
+    margin: 0 auto 0;
 
   }
 
@@ -618,9 +621,9 @@ footer
     font-size: 11px;
     padding: 0 40px;
 
-    @include sp{
-    padding: 24px 0 0;
-     text-align: center;
+    @include sp {
+      padding: 24px 0 0;
+      text-align: center;
     }
   }
 
@@ -815,5 +818,24 @@ footer
     li {
       list-style: disc;
     }
+  }
+}
+
+/* =========================
+   パーツ
+========================= */
+
+.btn-img {
+  display: block;
+  max-width: 280px;
+
+
+}
+
+a[class*="btn"] {
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    transition: 0.25s ease;
   }
 }
