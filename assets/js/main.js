@@ -46,19 +46,52 @@ $('.event-slider__arrow--next').on('click', function () {
   $('.js-event-slider').slick('slickNext');
 });
 
-// サムネイルの調整
-$('.event-slider__item-img img, .event-content__item-img img').each(function () {
-  const w = this.naturalWidth;
-  const h = this.naturalHeight;
+/* =================================
+サムネイル縦横判定
+ ================================= */
+function applyOrientation($img) {
+  const el = $img[0];
 
-  if (h > w) {
-    // 縦長
-    $(this).parent().addClass('is-vertical');
-  } else {
-    // 横長
-    $(this).parent().addClass('is-horizontal');
-  }
-});
+  // 未読込は何もしない（ここで誤判定しない）
+  if (!el.naturalWidth || !el.naturalHeight) return;
+
+  const $wrap = $img.parent(); // ここが付与先（必要なら .closest() に変える）
+
+  const isVertical = el.naturalHeight > el.naturalWidth;
+
+  $wrap
+    .toggleClass('is-vertical', isVertical)
+    .toggleClass('is-horizontal', !isVertical);
+
+  // デバッグ（必要なら消してOK）
+  // console.log(el.currentSrc || el.src, el.naturalWidth, el.naturalHeight, isVertical ? 'V' : 'H');
+}
+
+function bindOrientation(selector) {
+  $(selector).each(function () {
+    const $img = $(this);
+
+    // すでに読めてるなら即判定
+    if (this.complete && this.naturalWidth) {
+      applyOrientation($img);
+      return;
+    }
+
+    // 読み込み後に判定（1回だけ）
+    $img.one('load', function () {
+      applyOrientation($img);
+    });
+
+    // エラー時（任意）
+    $img.one('error', function () {
+      // console.warn('image load error:', this.currentSrc || this.src);
+    });
+  });
+}
+
+bindOrientation('.event-slider__item-img img, .event-content__item-img img');
+
+
 
 
 // ニュース一覧：カテゴリタブ切り替え
