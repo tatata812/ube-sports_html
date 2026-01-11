@@ -133,40 +133,76 @@ filterNews('all');
 })();
 
 
+/* =================================
+ヘッダーアコーディオン
+ ================================= */
+  const $wrap  = $('.header__menu-wrap');
+  const $inner = $wrap.find('.header__menu-inner');
+  const speed  = 180;
 
+  function closeAll() {
+    // 開いてるsubmenuを閉じる
+    $inner.find('.header__submenu.is-open')
+      .stop(true, true)
+      .slideUp(speed)
+      .removeClass('is-open');
 
+    // 親メニューの見た目クラスも外す（任意）
+    $inner.find('.header__menu.is-open').removeClass('is-open');
+  }
 
+  function openSub($menu) {
+    const $sub = $menu.next('.header__submenu');
+    if (!$sub.length) {
+      // submenuが無いメニューを触ったら、開いてるのは閉じる（好み）
+      closeAll();
+      return;
+    }
 
+    // すでにこのsubmenuが開いてるなら何もしない（チラつき防止）
+    if ($sub.hasClass('is-open')) return;
 
+    closeAll();
 
-  // TOPへボタン
-  $(function () {
-    var $topButton = $(".top-to-js");
-    var $footer = $("footer"); // フッター要素を取得
+    // hoverしたaの真下に出す（inner基準でleftを算出）
+    const left = $menu.offset().left - $inner.offset().left;
+    $sub.css({ left });
 
-    // トップへスクロール
-    $topButton.click(function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $("html, body").animate({
-        scrollTop: 0
-      }, 500);
-    });
+    $menu.addClass('is-open');
 
-    // スクロール時の処理
-    $(window).scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var footerTop = $footer.offset().top;
+    $sub
+      .stop(true, true)
+      .addClass('is-open')
+      .slideDown(speed);
+  }
 
-      // フッターに達したかどうか
-      if (scrollTop + windowHeight >= footerTop) {
-        $topButton.fadeOut();
-      } else {
-        $topButton.fadeIn();
-      }
-    });
+  // PC hover：aに乗ったら開く
+  $inner.on('mouseenter', '.header__menu', function () {
+    openSub($(this));
   });
+
+  // submenu側にマウスが入っても開いたままにするため、
+  // menu-wrapから出たら閉じる
+  $wrap.on('mouseleave', function () {
+    closeAll();
+  });
+
+  // キーボード操作：フォーカスでも開く
+  $inner.on('focusin', '.header__menu', function () {
+    openSub($(this));
+  });
+
+  // wrap外にフォーカスが出たら閉じる
+  $wrap.on('focusout', function (e) {
+    if (!$.contains(this, e.relatedTarget)) {
+      closeAll();
+    }
+  });
+
+
+
+
+
 
 
   // メインビジュアル　スライダー

@@ -107,7 +107,7 @@ header
 
     @include pc {
       align-items: center;
-          padding: 8px 16px;
+      padding: 8px 16px;
 
     }
 
@@ -136,6 +136,9 @@ header
   &__menu-wrap {
     margin-left: auto;
 
+    // サブメニューの閉じ処理をここで拾うので、基準要素にしておく
+    position: relative;
+
     @include pc {
       display: none;
     }
@@ -144,6 +147,12 @@ header
   &__menu-inner {
     display: flex;
     gap: 24px;
+    align-items: flex-start;
+
+    // ★追加：submenu(absolute)の基準
+    position: relative;
+    // ★追加：親のoverflowで切れないように
+    overflow: visible;
 
     @include pc {
       gap: 12px;
@@ -153,15 +162,60 @@ header
   &__menu {
     position: relative;
     padding: 40px 0 0;
+    text-decoration: none;
+    white-space: nowrap;
 
     &::before {
       content: url(../img/top/header-menu-icon.png);
       position: absolute;
       top: -20px;
       left: 50%;
-      transform: translateX(-50%)scale(0.35);
+      transform: translateX(-50%) scale(0.35);
     }
+  }
 
+    //  追加：下層メニュー（アコーディオン）
+
+
+  &__submenu {
+    display: none; // jQueryの slideDown/Up 用
+    position: absolute;
+    top: 56px;
+    left: 0; // JSで hoverしたメニュー位置に合わせて上書き
+    min-width: 220px;
+    margin-top: 10px;
+    padding: 10px;
+    list-style: none;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+    border: $main 2px solid;
+
+    // アニメ中の見切れ対策
+    overflow: hidden;
+  }
+
+  &__submenu-link {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    &:hover {
+      background: $bg;
+    }
+  }
+
+  // 任意：JSが開いたsubmenuに付ける
+  &__submenu.is-open {
+    display: block;
+  }
+
+  // 任意：開いてる親メニューの見た目を変えたい場合（好みで）
+  &__menu.is-open {
+    // 例：文字色変えるとか
+    // color: #e53935;
   }
 
   &__search {
@@ -230,12 +284,12 @@ header
       width: 24px;
     }
   }
+
+  
 }
 
+// 黒背景
 
-/* =========================
-  黒背景
-========================= */
 .black-bg {
   position: fixed;
   inset: 0;
@@ -252,9 +306,7 @@ header
 }
 
 
-/* =========================
-  検索スライドメニュー
-========================= */
+// 検索スライドメニュー
 .header-search {
   position: fixed;
   top: 0;
@@ -279,9 +331,7 @@ header
     pointer-events: auto;
   }
 
-  /* =========================
-     検索フォーム（中央配置）
-  ========================== */
+  //  検索フォーム（中央配置）
   .search-form {
     position: relative;
     z-index: 300;
@@ -310,9 +360,7 @@ header
     transform: translateY(0);
   }
 
-  /* =========================
-     × ボタン（検索窓内部右上）
-  ========================== */
+  //  × ボタン（検索窓内部右上）
   .search-form__close {
     position: absolute;
     top: -14px;
@@ -337,9 +385,7 @@ header
     }
   }
 
-  /* =========================
-     入力欄（ブルー系）
-  ========================== */
+  //  入力欄（ブルー系）
   .search-form input[type="text"] {
     width: 100%;
     padding: 14px 16px;
@@ -358,9 +404,7 @@ header
     }
   }
 
-  /* =========================
-     検索ボタン（単色グラデなし）
-  ========================== */
+  //  検索ボタン（単色グラデなし）
   .search-form button[type="submit"] {
     padding: 12px 16px;
     border: none;
@@ -436,6 +480,65 @@ header
   }
 }
 
+/* ハンバーガー内のメニュー“中身”だけ */
+.gnav-panel {
+  padding: 18px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 18px;
+
+    @include tab{
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 12px;
+    }
+
+    @include sp{
+    grid-template-columns: 1fr;
+    }
+  }
+
+  &__col {
+    background: $bg;
+    border-radius: 14px;
+    padding: 14px;
+  }
+
+
+  &__ttl {
+    margin: 0 0 10px;
+    font-weight: 800;
+    letter-spacing: .04em;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    & + & {
+      margin-top: 6px;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 10px 10px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.06);
+
+      &:hover {
+        background:$bg;
+      }
+    }
+  }
+}
+
+
 
 
 /* =================================
@@ -461,7 +564,9 @@ footer
     max-width: 1280px;
     margin: 0 auto;
 
-    @include tab {}
+    @include tab {
+      padding: 48px 16px 24px;
+    }
   }
 
   &__logo {
@@ -520,8 +625,6 @@ footer
       border-right: $main 1px solid;
       width: 100%;
     }
-
-
 
   }
 
@@ -612,10 +715,6 @@ footer
     }
   }
 
-
-
-
-
   &__bottom {
     text-align: right;
     font-size: 11px;
@@ -627,7 +726,27 @@ footer
     }
   }
 
-  &__ {}
+  &__go-top {
+    position: absolute;
+    top: -100px;
+    right: -150px;
+    transform: scale(0.4);
+
+    @include tab {
+      position: absolute;
+      top: -58px;
+      left: 50%;
+      transform: translateX(-50%)scale(0.6);
+    }
+
+    @include sp {
+      top: -42px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 
   &__ {}
 

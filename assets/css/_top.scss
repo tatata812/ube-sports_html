@@ -374,8 +374,8 @@
 
   &__icon {
     flex-shrink: 0;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.2s ease; // ← hover外に出す
 
     img {
@@ -557,8 +557,8 @@
 
   &__arrow {
     justify-self: end;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     transition: transform 0.2s ease;
     margin-left: auto;
 
@@ -908,9 +908,9 @@
     &::before {
       content: url(../img/top/arrow-icon.png);
       position: absolute;
-      bottom: 0;
-      right: 0;
-      transform: scale(1);
+    bottom: -20px;
+    right: -12px;
+      transform: scale(0.45);
       z-index: 1;
     }
 
@@ -966,7 +966,7 @@ SNS
   padding: 12px 16px 180px;
 
   @include tab {
-    padding: 40px 16px 60px;
+    padding: 40px 16px 120px;
   }
 
   &__ttl {
