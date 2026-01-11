@@ -1441,7 +1441,7 @@ header
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .gnav-panel__item a:hover {
-  background: #ecf9ef;
+  background: #eee;
 }
 
 /* =================================
@@ -1599,6 +1599,28 @@ footer
 }
 .footer__menu-list-item a:hover {
   text-decoration: underline;
+}
+.footer__menu-sns {
+  position: relative;
+}
+.footer__menu-sns:before {
+  position: absolute;
+  top: -14px;
+  right: -40px;
+  transform: scale(0.3);
+}
+.footer__menu-sns--insta::before {
+  content: url(../img/top/footer-insta.png);
+}
+.footer__menu-sns--youtube::before {
+  content: url(../img/top/footer-youtube.png);
+  top: -5px;
+}
+.footer__menu-sns--fb::before {
+  content: url(../img/top/footer-fb.png);
+}
+.footer__menu-sns--line::before {
+  content: url(../img/top/footer-line.png);
 }
 .footer__bottom {
   text-align: right;
