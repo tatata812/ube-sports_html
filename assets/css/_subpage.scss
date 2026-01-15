@@ -189,10 +189,11 @@
   flex-wrap: wrap;
   gap: 12px;
   margin: 0 0 60px;
+  max-width: 640px;
 
-  @include tab{
-   gap: 8px;
-     margin: 0 0 32px;
+  @include tab {
+    gap: 8px;
+    margin: 0 0 32px;
 
   }
 
@@ -210,7 +211,7 @@
     white-space: nowrap;
     transition: background 0.2s ease, color 0.2s ease;
 
-    @include tab{
+    @include tab {
       font-size: 13px;
       padding: 10px 12px;
     }
@@ -228,4 +229,37 @@
   }
 }
 
+// サブメニュー
 
+.subttl {
+  margin: 40px 0 20px;
+  padding-left: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #222;
+  border-left: 6px solid #60b358; // メインアクセント（緑）
+}
+
+/* h3 相当 */
+.subttl-sub {
+  margin: 24px 0 12px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #333;
+  border-left: 3px solid #b7e3c3; // 薄めの緑
+}
+
+/* =================================
+スポーツ少年団
+ ================================= */
+
+.page-youth-sports {
+
+  &__leaflet-img {
+    display: flex;
+    max-width: 400px;
+  }
+}

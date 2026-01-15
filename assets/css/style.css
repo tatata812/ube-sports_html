@@ -1140,6 +1140,7 @@ SNS
   flex-wrap: wrap;
   gap: 12px;
   margin: 0 0 60px;
+  max-width: 640px;
 }
 @media (max-width: 820px) {
   .page-anchor {
@@ -1175,6 +1176,35 @@ SNS
 .page-anchor__btn:hover {
   background: #60b358;
   color: #fff;
+}
+
+.subttl {
+  margin: 40px 0 20px;
+  padding-left: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #222;
+  border-left: 6px solid #60b358;
+}
+
+/* h3 相当 */
+.subttl-sub {
+  margin: 24px 0 12px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #333;
+  border-left: 3px solid #b7e3c3;
+}
+
+/* =================================
+スポーツ少年団
+ ================================= */
+.page-youth-sports__leaflet-img {
+  display: flex;
+  max-width: 400px;
 }
 
 /* =========================

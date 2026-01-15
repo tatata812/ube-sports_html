@@ -258,6 +258,52 @@ filterNews('all');
     }, intervalTime);
   });
 
+  /* =================================
+  ページ内リンク　ヘッダーの高さ考慮
+ ================================= */
+   var $header = $('.header');
+
+  function getHeaderH() {
+    if (!$header.length) return 0;
+    return $header.outerHeight() || 0;
+  }
+
+  function scrollToHash(hash, speed) {
+    if (!hash || hash === '#') return;
+
+    var $target = $(hash);
+    if (!$target.length) return;
+
+    var targetTop = $target.offset().top - getHeaderH();
+
+    $('html, body').stop().animate(
+      { scrollTop: targetTop },
+      typeof speed === 'number' ? speed : 400
+    );
+  }
+
+  $(document).on('click', 'a[href^="#"]', function (e) {
+    var href = $(this).attr('href');
+    if (!href || href === '#') return;
+    if (!$(href).length) return;
+
+    e.preventDefault();
+
+    if (history.pushState) {
+      history.pushState(null, null, href);
+    } else {
+      location.hash = href;
+    }
+
+    scrollToHash(href, 400);
+  });
+
+  $(window).on('load', function () {
+    if (location.hash) {
+      scrollToHash(location.hash, 0);
+    }
+  });
+
 
   //フェードイン
   $(window).scroll(function () {
@@ -272,19 +318,5 @@ filterNews('all');
     });
   });
 
-
-  $(function () {
-    var headerHeight = 40; // ヘッダーの高さ
-    $('a[href^="#"]').click(function () {
-      var speed = 500;
-      var href = $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top - headerHeight;
-      $("html, body").animate({
-        scrollTop: position
-      }, speed, "swing");
-      return false;
-    });
-  });
 
 })
