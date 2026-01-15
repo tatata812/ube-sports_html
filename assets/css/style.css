@@ -1206,6 +1206,12 @@ SNS
   display: flex;
   max-width: 400px;
 }
+@media (max-width: 600px) {
+  .page-youth-sports__leaflet-img {
+    flex-direction: column;
+    max-width: 200px;
+  }
+}
 
 /* =========================
    base（全ページ共通）
@@ -1585,6 +1591,11 @@ header
 .header-sp__inner {
   padding: 80px 20px 20px;
 }
+@media (max-width: 600px) {
+  .header-sp__inner {
+    padding: 80px 20px 40px;
+  }
+}
 .header-sp__btn-img {
   position: absolute;
   top: 20px;
@@ -1609,6 +1620,11 @@ header
 /* ハンバーガー内のメニュー“中身”だけ */
 .gnav-panel {
   padding: 18px;
+}
+@media (max-width: 600px) {
+  .gnav-panel {
+    padding: 0;
+  }
 }
 .gnav-panel__grid {
   display: grid;
@@ -1765,7 +1781,7 @@ footer
 }
 @media (max-width: 600px) {
   .footer__menu {
-    justify-content: flex-start;
+    flex-direction: column;
     gap: 24px 70px;
   }
 }
@@ -1814,6 +1830,12 @@ footer
 }
 .footer__menu-sns {
   position: relative;
+  margin: 0 12px 0 0px;
+}
+@media (max-width: 600px) {
+  .footer__menu-sns {
+    max-width: 82px;
+  }
 }
 .footer__menu-sns:before {
   position: absolute;

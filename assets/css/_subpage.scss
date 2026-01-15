@@ -261,5 +261,11 @@
   &__leaflet-img {
     display: flex;
     max-width: 400px;
+
+    @include sp{
+    flex-direction: column;
+        max-width: 200px;
+
+    }
   }
 }

@@ -453,6 +453,10 @@ header
 
   &__inner {
     padding: 80px 20px 20px;
+
+    @include sp{
+    padding: 80px 20px 40px;
+    }
   }
 
   &__btn-img {
@@ -483,6 +487,10 @@ header
 /* ハンバーガー内のメニュー“中身”だけ */
 .gnav-panel {
   padding: 18px;
+
+  @include sp{
+  padding: 0;
+  }
 
   &__grid {
     display: grid;
@@ -653,7 +661,7 @@ footer
     }
 
     @include sp {
-      justify-content: flex-start;
+      flex-direction: column;
       gap: 24px 70px;
 
     }
@@ -714,6 +722,11 @@ footer
 
   &__menu-sns {
     position: relative;
+    margin: 0 12px 0 0px;
+
+    @include sp{
+    max-width: 82px;
+    }
 
     &:before {
       position: absolute;
