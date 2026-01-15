@@ -93,8 +93,9 @@ bindOrientation('.event-slider__item-img img, .event-content__item-img img');
 
 
 
-
+/* =================================
 // ニュース一覧：カテゴリタブ切り替え
+ ================================= */
 var $newsTabs = $('.news-archive__tab');
 var $newsItems = $('.news-archive__item');
 
@@ -236,9 +237,9 @@ filterNews('all');
 
 
 
-
-
-  // メインビジュアル　スライダー
+/* =================================
+メインビジュアル　スライダー
+ ================================= */
   $(document).ready(function () {
     const $slides = $('.main-visual-js img');
     let current = 0;
