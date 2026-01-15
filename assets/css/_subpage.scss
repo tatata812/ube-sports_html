@@ -6,11 +6,12 @@
 
 .subpage {
 
-  a[rel="noopener"]::after {
-    content: "↗";
-    display: inline-block;
-    margin-left: 0.3em;
-    font-size: 0.85em;
+  &__margin {
+    margin: 0 0 80px;
+
+    @include tab{
+    margin: 0 0 40px;
+    }
   }
 
   &__ttl {
@@ -50,8 +51,8 @@
       transform: scale(1)translateX(-50%);
       z-index: -1;
 
-      @include tab{
-      display: none;
+      @include tab {
+        display: none;
       }
     }
   }
@@ -66,6 +67,21 @@
     }
   }
 
+  &__text {
+    margin: 0 0 12px;
+  }
+
+  &__text-big {
+    font-size: 20px;
+    margin: 0 0 12px;
+  }
+
+  &__text-right {
+text-align: right;
+  }
+
+
+  // テーブル
   &__table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -80,6 +96,13 @@
     a {
       text-decoration: underline;
       color: $main;
+    }
+
+    a[rel="noopener"]::after {
+      content: "↗";
+      display: inline-block;
+      margin-left: 0.3em;
+      font-size: 0.85em;
     }
 
     th {
@@ -108,7 +131,27 @@
     }
   }
 
-  &__ {}
+  // 説明リスト
+  &__description-wrap {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    dt {
+      flex-shrink: 0;
+      font-weight: bold;
+
+      &::after {
+        content: "：";
+      }
+    }
+
+    dd {
+      margin: 0;
+    }
+
+
+  }
 
   &__ {}
 

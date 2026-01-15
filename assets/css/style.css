@@ -998,11 +998,13 @@ SNS
 /* =================================
 下層ページ共通
  ================================= */
-.subpage a[rel=noopener]::after {
-  content: "↗";
-  display: inline-block;
-  margin-left: 0.3em;
-  font-size: 0.85em;
+.subpage__margin {
+  margin: 0 0 80px;
+}
+@media (max-width: 820px) {
+  .subpage__margin {
+    margin: 0 0 40px;
+  }
 }
 .subpage__ttl {
   background-color: #ecf9ef;
@@ -1057,6 +1059,16 @@ SNS
     margin: 0 auto 80px;
   }
 }
+.subpage__text {
+  margin: 0 0 12px;
+}
+.subpage__text-big {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+.subpage__text-right {
+  text-align: right;
+}
 .subpage__table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -1070,6 +1082,12 @@ SNS
 .subpage__table a {
   text-decoration: underline;
   color: #3AB649;
+}
+.subpage__table a[rel=noopener]::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.85em;
 }
 .subpage__table th {
   background: #f2f2f2;
@@ -1095,6 +1113,21 @@ SNS
   .subpage__table td {
     padding: 10px 8px;
   }
+}
+.subpage__description-wrap {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.subpage__description-wrap dt {
+  flex-shrink: 0;
+  font-weight: bold;
+}
+.subpage__description-wrap dt::after {
+  content: "：";
+}
+.subpage__description-wrap dd {
+  margin: 0;
 }
 /* 行ホバー（PC向け） */
 @media (hover: hover) {
