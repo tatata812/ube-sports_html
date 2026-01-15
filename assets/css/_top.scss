@@ -145,6 +145,10 @@
     margin: 16px 0 0;
   }
 
+  @include sp {
+    margin: -46px 0 0;
+  }
+
   &__title {
     font-size: 16px;
     font-weight: 700;
@@ -908,8 +912,8 @@
     &::before {
       content: url(../img/top/arrow-icon.png);
       position: absolute;
-    bottom: -20px;
-    right: -12px;
+      bottom: -20px;
+      right: -12px;
       transform: scale(0.45);
       z-index: 1;
     }
@@ -972,8 +976,8 @@ SNS
   &__ttl {
     margin: 0 0 60px;
 
-    @include tab{
-    margin: 0 0 40px;
+    @include tab {
+      margin: 0 0 40px;
     }
   }
 
@@ -989,8 +993,8 @@ SNS
     max-width: 1020px;
     margin: 0 auto 180px;
 
-    @include tab{
-    margin: 0 auto 40px;
+    @include tab {
+      margin: 0 auto 40px;
     }
   }
 
@@ -1003,11 +1007,11 @@ SNS
     gap: 24px;
     position: relative;
     z-index: 0;
-    
-    @include tab{
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
+
+    @include tab {
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
     }
 
     &::before {
@@ -1024,8 +1028,8 @@ SNS
       z-index: -1;
       /* ← 中身より後ろ */
 
-      @include sp{
-      display: none;
+      @include sp {
+        display: none;
       }
     }
   }
@@ -1033,8 +1037,8 @@ SNS
   &__item {
     width: calc((100% - 24px) / 2);
 
-    @include tab{
-    width: 100%;
+    @include tab {
+      width: 100%;
     }
   }
 
