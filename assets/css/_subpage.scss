@@ -252,6 +252,90 @@
   border-left: 3px solid #b7e3c3; // 薄めの緑
 }
 
+// 見出しリスト
+
+.definition-block {
+  dl {
+    margin: 0;
+  }
+
+  dt {
+    margin-top: 40px;
+    padding-left: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #222;
+  
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+  }
+
+  dd {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    line-height: 1.8;
+    color: #333;
+
+    ol {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    a {
+      color: #60b358;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/* =================================
+スポーツ協会について
+ ================================= */
+
+.page-about {
+
+  &__flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    @include tab{
+    flex-direction: column;
+    justify-content: center;
+    }
+  }
+
+  &__picture {
+    max-width: 220px;
+    text-align: center;
+
+    img {
+      max-width: 150px;
+    }
+
+    p {
+      margin: 8px 0 0;
+    }
+  }
+
+  &__text-wrap {
+    flex: 1;
+  }
+}
+
 /* =================================
 スポーツ少年団
  ================================= */
@@ -262,9 +346,9 @@
     display: flex;
     max-width: 400px;
 
-    @include sp{
-    flex-direction: column;
-        max-width: 200px;
+    @include sp {
+      flex-direction: column;
+      max-width: 200px;
 
     }
   }

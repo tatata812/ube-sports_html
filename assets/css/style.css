@@ -1204,6 +1204,69 @@ SNS
   border-left: 3px solid #b7e3c3;
 }
 
+.definition-block dl {
+  margin: 0;
+}
+.definition-block dt {
+  margin-top: 40px;
+  padding-left: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #222;
+}
+.definition-block dt:first-of-type {
+  margin-top: 0;
+}
+.definition-block dd {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+.definition-block dd ol {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+.definition-block dd li {
+  margin: 6px 0;
+}
+.definition-block dd a {
+  color: #60b358;
+  text-decoration: underline;
+}
+.definition-block dd a:hover {
+  text-decoration: none;
+}
+
+/* =================================
+スポーツ協会について
+ ================================= */
+.page-about__flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 820px) {
+  .page-about__flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.page-about__picture {
+  max-width: 220px;
+  text-align: center;
+}
+.page-about__picture img {
+  max-width: 150px;
+}
+.page-about__picture p {
+  margin: 8px 0 0;
+}
+.page-about__text-wrap {
+  flex: 1;
+}
+
 /* =================================
 スポーツ少年団
  ================================= */
