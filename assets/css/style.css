@@ -1006,7 +1006,7 @@ SNS
 }
 .subpage__ttl {
   background-color: #ecf9ef;
-  padding: 20px 16px 40px;
+  padding: 20px 16px 30px;
   text-align: center;
   font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
   font-weight: 800;
@@ -1014,6 +1014,7 @@ SNS
   color: #3AB649;
   line-height: 1.2;
   margin: 0 0 80px;
+  position: relative;
 }
 @media (max-width: 820px) {
   .subpage__ttl {
@@ -1031,6 +1032,19 @@ SNS
 @media (max-width: 820px) {
   .subpage__ttl span {
     font-size: 14px;
+  }
+}
+.subpage__ttl::after {
+  content: url(../img/subpage/ttl-semicircle-bottom.png);
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: scale(1) translateX(-50%);
+  z-index: -1;
+}
+@media (max-width: 820px) {
+  .subpage__ttl::after {
+    display: none;
   }
 }
 .subpage__section {
