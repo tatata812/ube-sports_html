@@ -808,8 +808,9 @@ footer
    パンくず
 ========================= */
 .breadcrumbs-wrap {
+  background-color: $bg;
   &__content {
-    max-width: 1180px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 12px 12px 0;
     font-size: 11px;
@@ -825,7 +826,7 @@ footer
 }
 
 .main {
-  margin: 86px 0 0;
+  margin: 80px 0 0;
 
   @include pc {
     margin: 64px 0 0;

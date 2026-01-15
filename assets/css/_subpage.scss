@@ -1,2 +1,127 @@
-@use "config" as *;
+@use "config"as *;
 
+/* =================================
+下層ページ共通
+ ================================= */
+
+.subpage {
+
+  a[rel="noopener"]::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.85em;
+}
+
+  &__ttl {
+    background-color: $bg;
+    padding: 20px 16px 40px;
+    text-align: center;
+    font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    color: $main;
+    line-height: 1.2;
+    margin: 0 0 80px;
+
+    @include tab {
+      font-size: 20px;
+          margin: 0 0 40px;
+
+    }
+
+    span {
+      display: block;
+      font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 28px;
+      color: #d9d9d9;
+      font-family: "Noto Sans", sans-serif;
+
+      @include tab {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__section {
+    max-width: 1120px;
+    margin: 0 auto 120px;
+    padding: 0 16px;
+
+    @include tab{
+    margin: 0 auto 80px;
+    }
+  }
+
+  &__table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+    border-collapse: collapse;
+
+    a {
+      text-decoration: underline;
+      color: $main;
+    }
+
+    th {
+      background: #f2f2f2;
+      font-weight: bold;
+      text-align: center;
+      padding: 12px 10px;
+      border: 1px solid #ccc;
+      white-space: nowrap;
+      vertical-align: middle;
+
+      @include tab{
+      padding: 10px 8px;
+      }
+    }
+
+    td {
+      padding: 12px 10px;
+      border: 1px solid #ccc;
+      vertical-align: middle;
+      white-space: nowrap;
+           @include tab{
+      padding: 10px 8px;
+      }
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+}
+
+/* 行ホバー（PC向け） */
+@media (hover: hover) {
+  .subpage__table tbody tr:hover {
+    background: #ececec;
+  }
+}
