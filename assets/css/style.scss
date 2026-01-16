@@ -993,11 +993,10 @@ footer
    パーツ
 ========================= */
 
+// 画像のボタン
 .btn-img {
   display: block;
   max-width: 280px;
-
-
 }
 
 a[class*="btn"] {
@@ -1006,4 +1005,23 @@ a[class*="btn"] {
     transform: translateY(-2px);
     transition: 0.25s ease;
   }
+}
+
+
+// PDF
+a[href$=".pdf"] {
+  position: relative;
+  padding-right: 3.2em;
+}
+
+a[href$=".pdf"]::after {
+  content: "PDF";
+  display: inline-block;
+  margin-left: 0.6em;
+  padding: 0.1em 0.4em;
+  font-size: 0.75em;
+  line-height: 1;
+  color: #fff;
+  background: #2e7d32;
+  border-radius: 3px;
 }
