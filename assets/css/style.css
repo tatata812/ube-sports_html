@@ -1134,6 +1134,21 @@ SNS
     margin: 0 0 40px;
   }
 }
+.subpage a[href$=".pdf"] {
+  position: relative;
+  padding-right: 3.2em;
+}
+.subpage a[href$=".pdf"]::after {
+  content: "PDF";
+  display: inline-block;
+  margin-left: 0.6em;
+  padding: 0.1em 0.4em;
+  font-size: 0.75em;
+  line-height: 1;
+  color: #fff;
+  background: #2e7d32;
+  border-radius: 3px;
+}
 
 /* 行ホバー（PC向け） */
 @media (hover: hover) {
@@ -2236,21 +2251,4 @@ a[class*=btn]:hover {
   opacity: 0.9;
   transform: translateY(-2px);
   transition: 0.25s ease;
-}
-
-a[href$=".pdf"] {
-  position: relative;
-  padding-right: 3.2em;
-}
-
-a[href$=".pdf"]::after {
-  content: "PDF";
-  display: inline-block;
-  margin-left: 0.6em;
-  padding: 0.1em 0.4em;
-  font-size: 0.75em;
-  line-height: 1;
-  color: #fff;
-  background: #2e7d32;
-  border-radius: 3px;
 }/*# sourceMappingURL=style.css.map */
