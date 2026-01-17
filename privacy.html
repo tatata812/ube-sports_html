@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>プライバシーポリシー</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;800&family=Noto+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20230220">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <header class="header">
+
+    <!-- 黒背景 -->
+    <div class="black-bg"></div>
+
+    <!-- 検索スライドメニュー -->
+    <div class="header-search">
+      <form class="search-form" action="#" method="get">
+
+        <button type="button" class="search-form__close">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </button>
+
+        <input type="text" name="s" placeholder="キーワードを入力">
+        <button type="submit">検索</button>
+      </form>
+    </div>
+
+    <!-- SPメニュー -->
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu gnav-panel">
+          <div class="gnav-panel__grid">
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">スポーツ協会について</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="about.html">スポーツ協会について</a></li>
+                <li class="gnav-panel__item"><a href="member-organizations.html">加盟団体一覧</a></li>
+                <li class="gnav-panel__item"><a href="supporting-members.html">賛助会員募集</a></li>
+                <li class="gnav-panel__item"><a href="officers.html">役員名簿</a></li>
+                <li class="gnav-panel__item"><a href="youth-sports.html">スポーツ少年団</a></li>
+                <li class="gnav-panel__item"><a href="instructors.html">地域スポーツ指導者</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">お知らせ</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="information.html">すべて</a></li>
+                <li class="gnav-panel__item"><a href="information.html">お知らせ</a></li>
+                <li class="gnav-panel__item"><a href="information.html">イベント</a></li>
+                <li class="gnav-panel__item"><a href="information.html">大会</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">施設のご案内</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="facilities.html">施設一覧</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">屋内施設</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">屋外施設</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">アーチェリー・弓道</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">アーバンスポーツ</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">会議室</a></li>
+                <li class="gnav-panel__item"><a href="/assets/pdf/riyounonagare8.pdf"
+                    target="_blank">施設の利用予約〜利用までの流れ</a></li>
+                <li class="gnav-panel__item"><a href="online-reservation.html">インターネット予約の利用について</a></li>
+                <li class="gnav-panel__item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                    rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+                <li class="gnav-panel__item"><a href="rental-items.html">貸し出し物品</a></li>
+                <li class="gnav-panel__item"><a href="applications.html">各種申請書</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">教室</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="classes.html">教室</a></li>
+                <li class="gnav-panel__item"><a href="general-class.html">一般教室</a></li>
+                <li class="gnav-panel__item"><a href="elementary-class.html">小学生教室</a></li>
+                <li class="gnav-panel__item"><a href="mizuno-tennis-school.html">ミズノテニススクール</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">イベント・大会</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="event.html">イベント一覧</a></li>
+                
+                <li class="gnav-panel__item"><a href="event-single.html">大会情報</a></li>
+                <li class="gnav-panel__item"><a href="event-single.html">スポーツうべたん</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">アクセス</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="access.html">宇部市スポーツ協会</a></li>
+              </ul>
+            </div>
+
+
+            <div class="gnav-panel__col gnav-panel__col">
+              <p class="gnav-panel__ttl">LINKS</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                    rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+                <li class="gnav-panel__item"><a href="https://www.city.ube.yamaguchi.jp/" target="_blank"
+                    rel="noopener">宇部市</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">基本事項</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="contact.html">お問い合わせ</a></li>
+                <li class="gnav-panel__item"><a href="privacy.html">個人情報保護方針</a></li>
+                <li class="gnav-panel__item"><a href="sitemap.html">サイトマップ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header 本体 -->
+    <div class="header__inner">
+      <h1 class="header__ttl-wrap header__item">
+        <a href="index.html" class="header__ttl">
+          <img src="assets/img/top/logo.png" alt="">
+        </a>
+      </h1>
+      <nav class="header__menu-wrap header__item">
+        <div class="header__menu-inner">
+          <a href="about.html" class="header__menu">スポーツ協会について</a>
+          <ul class="header__submenu">
+            <li><a href="member-organizations.html" class="header__submenu-link">加盟団体一覧</a></li>
+            <li><a href="supporting-members.html" class="header__submenu-link">賛助会員募集</a></li>
+            <li><a href="officers.html" class="header__submenu-link">役員名簿</a></li>
+            <li><a href="youth-sports.html" class="header__submenu-link">スポーツ少年団</a></li>
+            <li><a href="instructors.html" class="header__submenu-link">地域スポーツ指導者</a></li>
+            <li><a href="access.html" class="header__submenu-link">アクセス</a></li>
+          </ul>
+          <a href="#" class="header__menu">施設のご案内</a>
+          <ul class="header__submenu">
+            <li><a href="#" class="header__submenu-link">屋内施設</a></li>
+            <li><a href="#" class="header__submenu-link">屋外施設</a></li>
+            <li><a href="#" class="header__submenu-link">アーチェリー・弓道</a></li>
+            <li><a href="#" class="header__submenu-link">アーバンスポーツ</a></li>
+            <li><a href="#" class="header__submenu-link">会議室</a></li>
+          </ul>
+          <a href="#" class="header__menu">教室？</a>
+          <a href="#" class="header__menu">イベント</a>
+        </div>
+      </nav>
+      <div class="header__search" id="header-search-js">
+        <img src="assets/img/top/header-menu-search.png" alt="">
+      </div>
+
+      <div class="header__hum" id="header-hum-js">
+        <img src="assets/img/top/header-menu-hum.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <div class="subpage main page-">
+    <div class="breadcrumbs-wrap">
+      <div class="breadcrumbs-wrap__content">
+        トップ ＞ ○○○○ ＞ ○○○○
+      </div>
+    </div>
+    <h1 class="subpage__ttl">プライバシーポリシー<span>privacy</span></h1>
+
+<section class="subpage__section">
+
+  <p class="subpage__text">
+    宇部市スポーツセンター（以下「当サイト」）は、利用者の個人情報の重要性を認識し、個人情報の保護に関する法律その他の関係法令を遵守するとともに、
+    以下の方針に基づき、個人情報の適切な取扱いと保護に努めます。
+  </p>
+
+  <h2 class="subttl-sub">1. 個人情報の定義</h2>
+  <p class="subpage__text">
+    個人情報とは、氏名、住所、電話番号、メールアドレス等、特定の個人を識別できる情報をいいます。また、他の情報と照合することで個人を識別できる情報も含みます。
+  </p>
+
+  <h2 class="subttl-sub">2. 個人情報の取得方法</h2>
+  <p class="subpage__text">
+    当サイトは、利用者が各種お問い合わせ、申込フォームの送信、資料請求等を行う際に、必要な範囲で個人情報を取得することがあります。
+  </p>
+
+  <h2 class="subttl-sub">3. 個人情報の利用目的</h2>
+  <p class="subpage__text">当サイトが取得した個人情報は、以下の目的の範囲内で利用します。</p>
+  <ul class="subpage__list-num">
+    <li>お問い合わせへの対応および連絡</li>
+    <li>各種申込・予約の受付および手続きに関する連絡</li>
+    <li>サービス提供に必要なご案内・確認</li>
+    <li>当サイトの運営上必要な連絡</li>
+    <li>サービス改善のための分析（個人を特定しない形での集計・統計）</li>
+  </ul>
+
+  <h2 class="subttl-sub">4. 個人情報の第三者提供</h2>
+  <p class="subpage__text">
+    当サイトは、法令に基づく場合を除き、本人の同意なく個人情報を第三者に提供しません。
+  </p>
+
+  <h2 class="subttl-sub">5. 個人情報の委託</h2>
+  <p class="subpage__text">
+    当サイトは、利用目的の達成に必要な範囲で、個人情報の取扱いを外部業者に委託する場合があります。
+    その場合、委託先に対し適切な監督を行い、個人情報の安全管理が図られるよう努めます。
+  </p>
+
+  <h2 class="subttl-sub">6. 安全管理措置</h2>
+  <p class="subpage__text">
+    当サイトは、個人情報への不正アクセス、紛失、改ざん、漏えい等を防止するため、必要かつ適切な安全管理措置を講じます。
+  </p>
+
+  <h2 class="subttl-sub">7. 個人情報の開示・訂正・削除等</h2>
+  <p class="subpage__text">
+    当サイトは、本人から自己の個人情報について開示、訂正、追加、削除、利用停止等の請求があった場合、本人確認のうえ、法令に従い適切に対応します。
+  </p>
+
+  <h2 class="subttl-sub">8. Cookie等の利用について</h2>
+  <p class="subpage__text">
+    当サイトでは、利便性向上やアクセス解析のためにCookie等の技術を利用する場合があります。
+    Cookieにより個人を特定する情報を取得することはありません。ブラウザ設定によりCookieを無効にすることも可能です。
+  </p>
+
+  <h2 class="subttl-sub">9. アクセス解析ツールについて</h2>
+  <p class="subpage__text">
+    当サイトでは、サイトの利用状況を把握し改善するために、アクセス解析ツールを利用する場合があります。
+    解析ツールはCookieを使用してデータを収集することがありますが、個人を特定する情報は含まれません。
+  </p>
+
+  <h2 class="subttl-sub">10. 免責事項</h2>
+  <p class="subpage__text">
+    当サイトからリンク・バナー等により他サイトへ移動された場合、移動先サイトで提供される情報、サービス等について当サイトは一切の責任を負いません。
+  </p>
+
+  <h2 class="subttl-sub">11. プライバシーポリシーの変更</h2>
+  <p class="subpage__text">
+    当サイトは、法令等の変更や運営方針の見直しにより、本方針の内容を予告なく変更することがあります。
+    変更後の内容は当サイトに掲載した時点で有効となります。
+  </p>
+
+  <h2 class="subttl-sub">12. お問い合わせ窓口</h2>
+  <p class="subpage__text">
+    個人情報の取扱いに関するお問い合わせは、下記までご連絡ください。
+  </p>
+  <p>
+  〒755-0023<br>
+  山口県宇部市恩田町四丁目1番4号　宇部市野球場<br>
+  宇部市スポーツセンター<br>
+  TEL：0836-31-1507
+</p>
+</section>
+
+  </div>
+
+
+    <!--main end-->
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="#" class="footer__logo"><img src="assets/img/top/logo.png" alt=""></a>
+
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <div class="footer__top-left-item">〒755-0023 山口県宇部市恩田町四丁目1番4号</div>
+            <div class="footer__top-left-item"><a href="">TEL：0836-31-1507</a>&emsp;FAX：0836-21-7138</div>
+            <div class="footer__top-left-item">mail：<a
+                href="m&#97;i&#108;t&#111;:&#105;nf&#111;&#64;u&#98;&#101;-&#116;ai&#107;y&#111;u&#46;&#111;&#114;.&#106;p">&#105;nf&#111;&#64;u&#98;&#101;-&#116;ai&#107;y&#111;u&#46;&#111;&#114;.&#106;p</a>
+            </div>
+          </div>
+          <div class="footer__top-right">
+            <p class="footer__top-right-item">スポーツでつながる 地域、人、未来。</p>
+          </div>
+        </div>
+
+        <div class="footer__menu">
+
+          <div class="footer__menu-col">
+            <p class="footer__menu-ttl">スポーツ協会について</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="about.html">スポーツ協会について</a></li>
+              <li class="footer__menu-list-item"><a href="member-organizations.html">加盟団体一覧</a></li>
+              <li class="footer__menu-list-item"><a href="supporting-members.html">賛助会員募集</a></li>
+              <li class="footer__menu-list-item"><a href="officers.html">役員名簿</a></li>
+              <li class="footer__menu-list-item"><a href="youth-sports.html">スポーツ少年団</a></li>
+              <li class="footer__menu-list-item"><a href="instructors.html">地域スポーツ指導者</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col">
+            <p class="footer__menu-ttl">お知らせ</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="information.html">すべて</a></li>
+              <li class="footer__menu-list-item"><a href="information.html">お知らせ</a></li>
+              <li class="footer__menu-list-item"><a href="information.html">イベント</a></li>
+              <li class="footer__menu-list-item"><a href="information.html">大会</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col">
+            <p class="footer__menu-ttl">施設のご案内</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="facilities.html">施設一覧</a></li>
+              <li class="footer__menu-list-item"><a href="facilities-single.html">屋内施設</a></li>
+              <li class="footer__menu-list-item"><a href="facilities-single.html">屋外施設</a></li>
+              <li class="footer__menu-list-item"><a href="facilities-single.html">アーチェリー・弓道</a></li>
+              <li class="footer__menu-list-item"><a href="facilities-single.html">アーバンスポーツ</a></li>
+              <li class="footer__menu-list-item"><a href="facilities-single.html">会議室</a></li>
+              <li class="footer__menu-list-item"><a href="/assets/pdf/riyounonagare8.pdf"
+                  target="_blank">施設の利用予約〜利用までの流れ</a></li>
+              <li class="footer__menu-list-item"><a href="online-reservation.html">インターネット予約の利用について</a></li>
+              <li class="footer__menu-list-item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                  rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+              <li class="footer__menu-list-item"><a href="rental-items.html">貸し出し物品</a></li>
+              <li class="footer__menu-list-item"><a href="applications.html">各種申請書</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col footer__menu-col--left">
+            <p class="footer__menu-ttl">教室</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="classes.html">教室</a></li>
+              <li class="footer__menu-list-item"><a href="general-class.html">一般教室</a></li>
+              <li class="footer__menu-list-item"><a href="elementary-class.html">小学生教室</a></li>
+              <li class="footer__menu-list-item"><a href="mizuno-tennis-school.html">ミズノテニススクール</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col">
+            <p class="footer__menu-ttl">イベント・大会</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="event.html">イベント一覧</a></li>
+             
+              <li class="footer__menu-list-item"><a href="#">大会情報</a></li>
+              <li class="footer__menu-list-item"><a href="#">スポーツうべたん</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col">
+            <p class="footer__menu-ttl">アクセス</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="#">宇部市スポーツ協会</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col">
+            <p class="footer__menu-ttl">SNS</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--insta"><a href="#">Instagram</a></li>
+              <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--youtube"><a href="#">Youtube</a></li>
+              <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--fb"><a href="#">Facebook</a></li>
+              <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--line"><a href="#">LINE</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col-wrap">
+            <div class="footer__menu-col  footer__menu-col--bottom">
+              <p class="footer__menu-ttl">LINKS</p>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-list-item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                    rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+                <li class="footer__menu-list-item"><a href="https://www.city.ube.yamaguchi.jp/" target="_blank"
+                    rel="noopener">宇部市</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__menu-col">
+              <p class="footer__menu-ttl">基本事項</p>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-list-item"><a href="contact.html">お問い合わせ</a></li>
+                <li class="footer__menu-list-item"><a href="privacy.html">個人情報保護方針</a></li>
+                <li class="footer__menu-list-item"><a href="sitemap.html">サイトマップ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer__bottom">
+          ©宇部市スポーツ協会 All rights reserved.
+        </p>
+      </div>
+      <a href="#" class="footer__go-top"><img src="assets/img/top/go-top.png" alt=""></a>
+    </footer>
+    <!-- トップページだけ表示 -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v19.0">
+    </script>
+    <!-- トップページだけ表示 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js">
+    </script>
+</body>
+
+</html>

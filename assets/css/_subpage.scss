@@ -6,6 +6,11 @@
 
 .subpage {
 
+  a {
+    text-decoration: underline;
+    color: $main;
+  }
+
 
   &__ttl {
     background-color: $bg;
@@ -62,6 +67,11 @@
 
   &__text {
     margin: 0 0 12px;
+
+    &--green {
+      color: $main;
+      font-weight: bold;
+    }
   }
 
   &__text-big {
@@ -146,9 +156,22 @@
 
   }
 
-  &__ {}
+  &__list-num {
+    margin: 0 0 18px;
 
-  &__ {}
+    li {
+      list-style: decimal;
+      margin: 0 4px 0 16px;
+    }
+  }
+
+  &__list-dic {
+
+    li {
+      list-style: disc;
+      margin: 0 4px 0 16px;
+    }
+  }
 
   &__ {}
 
@@ -176,6 +199,14 @@
     }
   }
 
+  &__margin-s {
+    margin: 0 0 24px;
+
+    @include tab {
+      margin: 0 0 18px;
+    }
+  }
+
 
   // 下層ページのPDFにはマークつける
   a[href$=".pdf"] {
@@ -195,6 +226,25 @@
     border-radius: 3px;
   }
 }
+
+/* 画像を含むPDFリンクは除外 */
+a[href$=".pdf"]:has(img) {
+  padding-right: 0;
+}
+
+a[href$=".pdf"]:has(img)::after {
+  content: none;
+}
+
+a[href$=".pdf"].is-icon {
+  padding-right: 0;
+}
+
+a[href$=".pdf"].is-icon::after {
+  content: none;
+}
+
+
 
 /* 行ホバー（PC向け） */
 @media (hover: hover) {
@@ -314,7 +364,6 @@
 
   dt {
     margin-top: 40px;
-    padding-left: 12px;
     font-size: 17px;
     font-weight: 700;
     line-height: 1.4;
@@ -495,4 +544,209 @@
     }
   }
 
+}
+
+/* =================================
+申請書
+ ================================= */
+.page-applications {
+  &__icon {
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+
+
+    &:after {
+      display: none !important;
+    }
+  }
+
+  &__year {
+    font-size: 11px;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* =================================
+全国大会等出場助成金制度
+ ================================= */
+
+.tournament-subsidy {
+  &__icon {
+    width: 30px;
+    display: inline-block;
+    margin: 12px;
+  }
+}
+
+/* =================================
+全国大会等出場助成金制度
+ ================================= */
+
+.page-class {
+
+  &__line {
+    width: 100px;
+  }
+
+  &__pdf {
+    width: 50px;
+    display: block;
+    margin: 6px auto 0;
+  }
+
+  &__date {
+    text-align: center;
+    display: block;
+    color: $main;
+    font-size: 11px;
+  }
+}
+
+/* =================================
+アクセス
+ ================================= */
+.page-access {
+  &__map-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; // 16:9
+    margin: 0 0 40px;
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  }
+}
+
+/* =================================
+お問い合わせ
+ ================================= */
+.page-contact {
+  &__form-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__ttl {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__lead {
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__required {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #e53935;
+    vertical-align: middle;
+  }
+
+  input,
+  textarea,
+  select {
+    display: block;
+    width: 100%;
+    max-width: none;
+    padding: 12px 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: #2e7d32;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 10px 6px;
+    padding-right: 40px;
+  }
+
+  &__privacy {
+    margin: 32px 0;
+
+    label {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 1.6;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+      padding: 0;
+      border: none;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__btn-wrap {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  &__btn {
+    display: inline-block;
+    min-width: 240px;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: #2e7d32;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
 }
