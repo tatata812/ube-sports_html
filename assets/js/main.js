@@ -96,7 +96,7 @@ bindOrientation('.event-slider__item-img img, .event-content__item-img img');
 /* =================================
 // ニュース一覧：カテゴリタブ切り替え
  ================================= */
-var $newsTabs = $('.news-archive__tab');
+var $newsTabs = $('.news-archive-js');
 var $newsItems = $('.news-archive__item');
 
 function filterNews(type) {

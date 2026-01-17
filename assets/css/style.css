@@ -498,13 +498,13 @@
     grid-area: badge;
   }
 }
-.news-archive__badge.is-taikai {
+.news-archive__badge.is-news {
   background: #2aa0df;
 }
-.news-archive__badge.is-event {
+.news-archive__badge.is-news-event {
   background: #ff5aa3;
 }
-.news-archive__badge.is-oshirase {
+.news-archive__badge.is-news-tournament {
   background: #89b43b;
 }
 .news-archive__title {
@@ -1612,6 +1612,21 @@ a[href$=".pdf"].is-icon::after {
 }
 .page-contact__btn:hover {
   opacity: 0.85;
+}
+
+/* =================================
+お知らせ
+ ================================= */
+.page-information a {
+  text-decoration: none;
+  color: #141414;
+}
+.page-information .news-archive__tab {
+  text-align: center;
+}
+.page-information__pager {
+  margin: 80px 0;
+  text-align: center;
 }
 
 /* =========================

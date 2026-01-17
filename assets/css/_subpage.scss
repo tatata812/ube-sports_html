@@ -750,3 +750,25 @@ a[href$=".pdf"].is-icon::after {
     }
   }
 }
+
+/* =================================
+お知らせ
+ ================================= */
+.page-information {
+
+  a {
+    text-decoration: none;
+    color: #141414;
+  }
+
+  .news-archive__tab {
+    text-align: center;
+  }
+
+  &__pager {
+    margin: 80px 0;
+    text-align: center;
+  }
+
+
+}
