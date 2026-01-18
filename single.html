@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
-  <title>お知らせ一覧</title>
+  <title>記事詳細</title>
   <meta name="description" content="<?php echo $des; ?>">
   <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
   <meta name="robots" content="none">
@@ -200,180 +200,128 @@
     </div>
   </header>
 
-  <div class="subpage main page-information">
+  <div class="subpage main single">
     <div class="breadcrumbs-wrap">
       <div class="breadcrumbs-wrap__content">
         トップ ＞ ○○○○ ＞ ○○○○
       </div>
     </div>
-    <h1 class="subpage__ttl">お知らせ<span>information</span></h1>
-
+    <h1 class="single__ttl">タイトルが入りますタイトルが入りますタイトルが入ります<span>2025.01.01</span></h1>
     <section class="subpage__section">
+      <div class="single__content editor-style ">
+        <h1>h1 見出し（ページタイトル）</h1>
 
-      <div class="news-archive">
+        <p>
+          これは本文テキストです。<strong>太字</strong>、<em>斜体</em>、
+          <a href="#">リンク</a>の表示を確認します。
+        </p>
 
-        <!-- カテゴリータブ -->
-        <div class="news-archive__tabs">
-          <p class="news-archive__tabs-ttl">カテゴリー</p>
+        <p>
+          改行テスト<br>
+          2行目<br>
+          3行目
+        </p>
 
-          <div class="news-archive__tablist">
-            <a href="" class="news-archive__tab is-active" type="button" data-filter="all">
-              すべて
-            </a>
-            <a href="" class="news-archive__tab" type="button" data-filter="news">
-              おしらせ
-            </a>
-            <a href="" class="news-archive__tab" type="button" data-filter="news-event">
-              イベント
-            </a>
-            <a href="" class="news-archive__tab" type="button" data-filter="news-tournament">
-              たいかい
-            </a>
-          </div>
-        </div>
+        <h2>h2 見出し</h2>
+        <p>h2直下の本文です。余白と行間を確認します。</p>
 
-        <!-- 一覧 -->
-        <div class="news-archive__list-wrap">
-          <ul class="news-archive__list">
+        <h3>h3 見出し</h3>
+        <p>h3直下の本文です。</p>
 
-            <li class="news-archive__item" data-cat="news-tournament">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.12.13</time>
-                <span class="news-archive__badge is-news-tournament">大　会</span>
-                <span class="news-archive__title">
-                  第58回縄田杯ウベロードレース大会の結果をアップいたしました
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h4>h4 見出し</h4>
+        <p>h4直下の本文です。</p>
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  あすチャレ！Academy ～コミュニケーション編～参加者募集中（10/20まで）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h2>リスト</h2>
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  スポーツうべたん 2025秋　開催のお知らせ
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h3>ul（箇条書き）</h3>
+        <ul>
+          <li>リスト項目 1</li>
+          <li>リスト項目 2（<a href="#">リンク</a>あり）</li>
+          <li>
+            リスト項目 3
+            <ul>
+              <li>ネスト項目 1</li>
+              <li>ネスト項目 2</li>
+            </ul>
+          </li>
+        </ul>
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  山口パッツファイブホーム開幕戦 観戦招待企画
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h3>ol（番号付き）</h3>
+        <ol>
+          <li>番号 1</li>
+          <li>
+            番号 2
+            <ol>
+              <li>ネスト番号 1</li>
+              <li>ネスト番号 2</li>
+            </ol>
+          </li>
+          <li>番号 3</li>
+        </ol>
 
-            <li class="news-archive__item" data-cat="news">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.04.23</time>
-                <span class="news-archive__badge is-news">お知らせ</span>
-                <span class="news-archive__title">
-                  宇部市スポーツコミッションだより（令和6年度活動報告冊子）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h2>引用（blockquote）</h2>
+        <blockquote>
+          <p>
+            これは引用文です。クラシックエディターでよく使われる
+            blockquote のスタイルを確認します。
+          </p>
+          <cite>引用元表記</cite>
+        </blockquote>
 
-                        <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  スポーツうべたん 2025秋　開催のお知らせ
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h2>テーブル（SP横スクロール確認）</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>説明</th>
+              <th>備考</th>
+              <th>金額</th>
+              <th>対象</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>内容A</td>
+              <td>長めのテキストテキストテキスト</td>
+              <td>備考あり</td>
+              <td>10,000円</td>
+              <td>一般</td>
+            </tr>
+            <tr>
+              <td>内容B</td>
+              <td>説明文</td>
+              <td><a href="#">リンク</a></td>
+              <td>20,000円</td>
+              <td>学生</td>
+            </tr>
+            <tr>
+              <td>内容C</td>
+              <td>説明文</td>
+              <td>—</td>
+              <td>30,000円</td>
+              <td>団体</td>
+            </tr>
+          </tbody>
+        </table>
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  山口パッツファイブホーム開幕戦 観戦招待企画
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
 
-            <li class="news-archive__item" data-cat="news">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.04.23</time>
-                <span class="news-archive__badge is-news">お知らせ</span>
-                <span class="news-archive__title">
-                  宇部市スポーツコミッションだより（令和6年度活動報告冊子）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h2>区切り線</h2>
+        <hr>
 
-                <li class="news-archive__item" data-cat="news-tournament">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.12.13</time>
-                <span class="news-archive__badge is-news-tournament">大　会</span>
-                <span class="news-archive__title">
-                  第58回縄田杯ウベロードレース大会の結果をアップいたしました
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <h2>定義リスト</h2>
+        <dl>
+          <dt>dt（用語）</dt>
+          <dd>dd（説明文）です。文章が長くなった場合の折り返しも確認します。</dd>
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  あすチャレ！Academy ～コミュニケーション編～参加者募集中（10/20まで）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+          <dt>dt（用語）</dt>
+          <dd>dd（説明文）です。</dd>
+        </dl>
 
-            
-          </ul>
-        </div>
 
-        <div class="page-information__pager">
-        ページャー
-        </div>
       </div>
+
+            <a href="information.html" class="single__btn btn-img"><img src="assets/img/top/top-info-btn.png" alt="お知らせ一覧"></a>
+
     </section>
   </div>
 

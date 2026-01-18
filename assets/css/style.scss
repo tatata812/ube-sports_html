@@ -454,8 +454,8 @@ header
   &__inner {
     padding: 80px 20px 20px;
 
-    @include sp{
-    padding: 80px 20px 40px;
+    @include sp {
+      padding: 80px 20px 40px;
     }
   }
 
@@ -488,8 +488,8 @@ header
 .gnav-panel {
   padding: 18px;
 
-  @include sp{
-  padding: 0;
+  @include sp {
+    padding: 0;
   }
 
   &__grid {
@@ -724,14 +724,14 @@ footer
     position: relative;
     margin: 0 12px 0 0px;
 
-    @include sp{
-    max-width: 82px;
+    @include sp {
+      max-width: 82px;
     }
 
     &:before {
       position: absolute;
-    top: -14px;
-    right: -40px;
+      top: -14px;
+      right: -40px;
       transform: scale(0.3);
     }
 
@@ -745,7 +745,7 @@ footer
     &--youtube {
       &::before {
         content: url(../img/top/footer-youtube.png);
-            top: -5px;
+        top: -5px;
 
       }
     }
@@ -822,6 +822,7 @@ footer
 ========================= */
 .breadcrumbs-wrap {
   background-color: $bg;
+
   &__content {
     max-width: 1240px;
     margin: 0 auto;
@@ -897,7 +898,9 @@ footer
 /* =========================
    editor style
 ========================= */
-.page-style {
+
+.editor-style {
+
   &__block {
     margin: 0 0 40px;
   }
@@ -919,75 +922,244 @@ footer
     width: auto;
   }
 
-  p {
-    margin: 0 0 12px;
-    line-height: 24px;
-  }
-
+  /* --------------------
+    見出し
+  -------------------- */
   h1 {
-    position: relative;
     font-size: 28px;
-    font-weight: bold;
-    margin: 0 0 36px;
+    margin: 0 0 32px;
+    line-height: 1.4;
 
-    @include tab {
-      font-size: 20px;
-    }
-
-    &:after {
-      content: '';
-      width: 110px;
-      height: 3px;
-      display: inline-block;
-      background-color: $sub;
-      position: absolute;
-      bottom: -10px;
-      left: 0;
+    @include tab{
+    font-size: 20px;
     }
   }
 
   h2 {
     font-size: 22px;
-    margin: 24px 0 12px;
-    color: $sub;
-    font-weight: bold;
+    margin: 56px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid $main;
+    line-height: 1.4;
 
-    @include sp {
-      font-size: 20px;
+    @include tab{
+    font-size: 18px;
     }
   }
 
   h3 {
-    font-size: 20px;
-    margin: 24px 0 8px;
+    font-size: 18px;
+    margin: 40px 0 12px;
+    line-height: 1.4;
 
-    @include sp {
-      font-size: 18px;
+    @include tab{
+    font-size: 16px;
     }
+  }
+
+  h4 {
+    font-size: 16px;
+    margin: 32px 0 8px;
+    line-height: 1.4;
+  }
+
+  /* --------------------
+    テキスト
+  -------------------- */
+  p {
+    margin: 0 0 16px;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
   }
 
   a {
+    color: $main;
     text-decoration: underline;
-  }
 
-  ol {
-    margin: 0 0 12px 24px;
-    line-height: 24px;
-
-    li {
-      list-style: decimal;
+    &:hover {
+      text-decoration: none;
     }
   }
 
-  ul {
-    margin: 0 0 12px 24px;
-    line-height: 24px;
+  /* --------------------
+    リスト
+  -------------------- */
+  ul,
+  ol {
+    margin: 16px 0 24px 1.5em;
+    padding: 0;
+  }
 
-    li {
-      list-style: disc;
+  li {
+    margin-bottom: 8px;
+  }
+
+  ul ul,
+  ol ol {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  /* --------------------
+    引用
+  -------------------- */
+  blockquote {
+    margin: 24px 0;
+    padding: 16px 24px;
+    background: #f5f7f6;
+    border-left: 4px solid $main;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  cite {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* --------------------
+    テーブル（クラシック想定）
+    - HTMLを触れない前提なので table 自体をスクロール容器化
+  -------------------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+
+    /* ★SP横スクロール対応（HTML触らない版） */
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  th,
+  td {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+
+    /* ★列が多い時に潰れないように */
+    white-space: nowrap;
+  }
+
+  th {
+    background: #f0f5f2;
+    font-weight: 600;
+  }
+
+  /* --------------------
+    画像（クラシック想定）
+  -------------------- */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* クラシックのキャプションは .wp-caption を使うことが多い */
+  .wp-caption {
+    margin: 32px 0;
+    max-width: 100%;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .wp-caption-text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+
+  /* figcaption で入るケースもあるので一応 */
+  figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+
+  /* --------------------
+    区切り線
+  -------------------- */
+  hr {
+    margin: 48px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+  }
+
+  /* --------------------
+    コード
+  -------------------- */
+  pre {
+    margin: 24px 0;
+    padding: 16px;
+    background: #1e1e1e;
+    color: #fff;
+    font-size: 14px;
+    overflow-x: auto;
+    border-radius: 6px;
+  }
+
+  code {
+    font-family: Consolas, Monaco, monospace;
+  }
+
+  /* --------------------
+    定義リスト
+  -------------------- */
+  dl {
+    margin: 24px 0;
+  }
+
+  dt {
+    font-weight: 600;
+    margin-top: 16px;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-top: 4px;
+    padding-left: 16px;
+    border-left: 3px solid #e0e0e0;
+  }
+
+  /* --------------------
+    ボタン風リンク（任意）
+  -------------------- */
+  .is-style-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: $main;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+
+    &:hover {
+      opacity: 0.85;
     }
   }
 }
+
+
+
 
 /* =========================
    パーツ
@@ -1006,5 +1178,3 @@ a[class*="btn"] {
     transition: 0.25s ease;
   }
 }
-
-

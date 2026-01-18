@@ -1217,11 +1217,9 @@ a[href$=".pdf"].is-icon::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  background: #ecf9ef;
-  border: #e3e3e3 1px solid;
+  padding: 6px;
   color: #3AB649;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
@@ -1627,6 +1625,52 @@ a[href$=".pdf"].is-icon::after {
 .page-information__pager {
   margin: 80px 0;
   text-align: center;
+}
+
+/* =================================
+お知らせ　詳細
+ ================================= */
+.single__ttl {
+  border-top: #ecf9ef 24px solid;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 20px;
+}
+.single__ttl span {
+  display: block;
+  font-size: 14px;
+  color: #ccc;
+  position: relative;
+  padding-top: 16px;
+}
+.single__ttl span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: #3AB649;
+}
+.single__content {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (max-width: 820px) {
+  .single__content {
+    margin: 0 auto 60px;
+  }
+}
+.single__btn {
+  margin: 0 auto 120px;
+}
+@media (max-width: 820px) {
+  .single__btn {
+    margin: 0 auto 60px;
+  }
 }
 
 /* =========================
@@ -2391,83 +2435,228 @@ footer
 /* =========================
    editor style
 ========================= */
-.page-style__block {
+.editor-style {
+  /* --------------------
+    見出し
+  -------------------- */
+  /* --------------------
+    テキスト
+  -------------------- */
+  /* --------------------
+    リスト
+  -------------------- */
+  /* --------------------
+    引用
+  -------------------- */
+  /* --------------------
+    テーブル（クラシック想定）
+    - HTMLを触れない前提なので table 自体をスクロール容器化
+  -------------------- */
+  /* --------------------
+    画像（クラシック想定）
+  -------------------- */
+  /* クラシックのキャプションは .wp-caption を使うことが多い */
+  /* figcaption で入るケースもあるので一応 */
+  /* --------------------
+    区切り線
+  -------------------- */
+  /* --------------------
+    コード
+  -------------------- */
+  /* --------------------
+    定義リスト
+  -------------------- */
+  /* --------------------
+    ボタン風リンク（任意）
+  -------------------- */
+}
+.editor-style__block {
   margin: 0 0 40px;
 }
-.page-style .aligncenter {
+.editor-style .aligncenter {
   display: block;
   margin: 0 auto;
 }
-.page-style .alignright {
+.editor-style .alignright {
   float: right;
 }
-.page-style .alignleft {
+.editor-style .alignleft {
   float: left;
 }
-.page-style img {
+.editor-style img {
   width: auto;
 }
-.page-style p {
-  margin: 0 0 12px;
-  line-height: 24px;
-}
-.page-style h1 {
-  position: relative;
+.editor-style h1 {
   font-size: 28px;
-  font-weight: bold;
-  margin: 0 0 36px;
+  margin: 0 0 32px;
+  line-height: 1.4;
 }
 @media (max-width: 820px) {
-  .page-style h1 {
+  .editor-style h1 {
     font-size: 20px;
   }
 }
-.page-style h1:after {
-  content: "";
-  width: 110px;
-  height: 3px;
-  display: inline-block;
-  background-color: #b57322;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-}
-.page-style h2 {
+.editor-style h2 {
   font-size: 22px;
-  margin: 24px 0 12px;
-  color: #b57322;
-  font-weight: bold;
+  margin: 56px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3AB649;
+  line-height: 1.4;
 }
-@media (max-width: 600px) {
-  .page-style h2 {
-    font-size: 20px;
-  }
-}
-.page-style h3 {
-  font-size: 20px;
-  margin: 24px 0 8px;
-}
-@media (max-width: 600px) {
-  .page-style h3 {
+@media (max-width: 820px) {
+  .editor-style h2 {
     font-size: 18px;
   }
 }
-.page-style a {
+.editor-style h3 {
+  font-size: 18px;
+  margin: 40px 0 12px;
+  line-height: 1.4;
+}
+@media (max-width: 820px) {
+  .editor-style h3 {
+    font-size: 16px;
+  }
+}
+.editor-style h4 {
+  font-size: 16px;
+  margin: 32px 0 8px;
+  line-height: 1.4;
+}
+.editor-style p {
+  margin: 0 0 16px;
+}
+.editor-style strong {
+  font-weight: 700;
+}
+.editor-style em {
+  font-style: italic;
+}
+.editor-style a {
+  color: #3AB649;
   text-decoration: underline;
 }
-.page-style ol {
-  margin: 0 0 12px 24px;
-  line-height: 24px;
+.editor-style a:hover {
+  text-decoration: none;
 }
-.page-style ol li {
-  list-style: decimal;
+.editor-style ul,
+.editor-style ol {
+  margin: 16px 0 24px 1.5em;
+  padding: 0;
 }
-.page-style ul {
-  margin: 0 0 12px 24px;
-  line-height: 24px;
+.editor-style li {
+  margin-bottom: 8px;
 }
-.page-style ul li {
-  list-style: disc;
+.editor-style ul ul,
+.editor-style ol ol {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.editor-style blockquote {
+  margin: 24px 0;
+  padding: 16px 24px;
+  background: #f5f7f6;
+  border-left: 4px solid #3AB649;
+}
+.editor-style blockquote p {
+  margin: 0;
+}
+.editor-style cite {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+.editor-style table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 15px;
+  /* ★SP横スクロール対応（HTML触らない版） */
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+.editor-style th,
+.editor-style td {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+  /* ★列が多い時に潰れないように */
+  white-space: nowrap;
+}
+.editor-style th {
+  background: #f0f5f2;
+  font-weight: 600;
+}
+.editor-style img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.editor-style .wp-caption {
+  margin: 32px 0;
+  max-width: 100%;
+}
+.editor-style .wp-caption img {
+  margin: 0 auto;
+}
+.editor-style .wp-caption-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.editor-style figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.editor-style hr {
+  margin: 48px 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+.editor-style pre {
+  margin: 24px 0;
+  padding: 16px;
+  background: #1e1e1e;
+  color: #fff;
+  font-size: 14px;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+.editor-style code {
+  font-family: Consolas, Monaco, monospace;
+}
+.editor-style dl {
+  margin: 24px 0;
+}
+.editor-style dt {
+  font-weight: 600;
+  margin-top: 16px;
+}
+.editor-style dd {
+  margin-left: 0;
+  margin-top: 4px;
+  padding-left: 16px;
+  border-left: 3px solid #e0e0e0;
+}
+.editor-style .is-style-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #3AB649;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.editor-style .is-style-button:hover {
+  opacity: 0.85;
 }
 
 /* =========================
