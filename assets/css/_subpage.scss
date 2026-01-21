@@ -1193,7 +1193,9 @@ a[href$=".pdf"].is-icon::after {
     }
   }
 
-  &__ {}
+  &__btn {
+    margin: 0 auto;
+  }
 
   &__ {}
 

@@ -1984,6 +1984,9 @@ a[href$=".pdf"].is-icon::after {
      object-position: center;
   /* 中央基準 */
 }
+.instructor-list__btn {
+  margin: 0 auto;
+}
 /* =========================
    base（全ページ共通）
 ========================= */
