@@ -56,7 +56,7 @@
   }
 
   &__section {
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto 120px;
     padding: 0 16px;
 
@@ -86,13 +86,15 @@
 
   // テーブル
   &__table-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    
+    @include pc {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   &__table {
     width: 100%;
-    border-collapse: collapse;
     min-width: 740px;
     border-collapse: collapse;
 
@@ -1170,7 +1172,7 @@ a[href$=".pdf"].is-icon::after {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-  
+
   }
 
   &__img {
@@ -1179,8 +1181,8 @@ a[href$=".pdf"].is-icon::after {
     overflow: hidden;
     margin: 0 0 12px;
 
-    @include sp{
-    width: 100%;
+    @include sp {
+      width: 100%;
     }
 
     img {

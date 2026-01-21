@@ -1051,7 +1051,7 @@ SNS
   }
 }
 .subpage__section {
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto 120px;
   padding: 0 16px;
 }
@@ -1074,13 +1074,14 @@ SNS
 .subpage__text-right {
   text-align: right;
 }
-.subpage__table-wrap {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+@media (max-width: 1120px) {
+  .subpage__table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 .subpage__table {
   width: 100%;
-  border-collapse: collapse;
   min-width: 740px;
   border-collapse: collapse;
 }

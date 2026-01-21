@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>生涯学習講座</title>
+  <meta name="description" content="<?php echo $des; ?>">
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <meta property="og:type" content="website">
+  <meta property="og:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:description" content="<?php echo $des; ?>">
+  <meta property="og:site_name"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>assets/img/fb.jpg">
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="<?php wp_title( '-', true, 'right' ); ?><?php bloginfo( 'name' ); ?> | <?php echo $des; ?>">
+  <meta name="twitter:description" content="<?php echo $des; ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;800&family=Noto+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20260121">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <header class="header">
+
+    <!-- 黒背景 -->
+    <div class="black-bg"></div>
+
+    <!-- 検索スライドメニュー -->
+    <div class="header-search">
+      <form class="search-form" action="#" method="get">
+
+        <button type="button" class="search-form__close">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </button>
+
+        <input type="text" name="s" placeholder="キーワードを入力">
+        <button type="submit">検索</button>
+      </form>
+    </div>
+
+    <!-- SPメニュー -->
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu gnav-panel">
+          <div class="gnav-panel__grid">
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">スポーツ協会について</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="about.html">スポーツ協会について</a></li>
+                <li class="gnav-panel__item"><a href="member-organizations.html">加盟団体一覧</a></li>
+                <li class="gnav-panel__item"><a href="supporting-members.html">賛助会員募集</a></li>
+                <li class="gnav-panel__item"><a href="officers.html">役員名簿</a></li>
+                <li class="gnav-panel__item"><a href="youth-sports.html">スポーツ少年団</a></li>
+                <li class="gnav-panel__item"><a href="instructors.html">地域スポーツ指導者</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">お知らせ</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="information.html">すべて</a></li>
+                <li class="gnav-panel__item"><a href="information.html">お知らせ</a></li>
+                <li class="gnav-panel__item"><a href="information.html">イベント</a></li>
+                <li class="gnav-panel__item"><a href="information.html">大会</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">施設のご案内</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="facilities.html">施設一覧</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">屋内施設</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">屋外施設</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">アーチェリー・弓道</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">アーバンスポーツ</a></li>
+                <li class="gnav-panel__item"><a href="facilities-single.html">会議室</a></li>
+                <li class="gnav-panel__item"><a href="/assets/pdf/riyounonagare8.pdf"
+                    target="_blank">施設の利用予約〜利用までの流れ</a></li>
+                <li class="gnav-panel__item"><a href="online-reservation.html">インターネット予約の利用について</a></li>
+                <li class="gnav-panel__item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                    rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+                <li class="gnav-panel__item"><a href="rental-items.html">貸し出し物品</a></li>
+                <li class="gnav-panel__item"><a href="applications.html">各種申請書</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">教室</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="classes.html">教室</a></li>
+                <li class="gnav-panel__item"><a href="general-class.html">一般教室</a></li>
+                <li class="gnav-panel__item"><a href="elementary-class.html">小学生教室</a></li>
+                <li class="gnav-panel__item"><a href="mizuno-tennis-school.html">ミズノテニススクール</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">イベント・大会</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="event.html">イベント一覧</a></li>
+
+                <li class="gnav-panel__item"><a href="event-single.html">大会情報</a></li>
+                <li class="gnav-panel__item"><a href="event-single.html">スポーツうべたん</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">アクセス</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="access.html">宇部市スポーツ協会</a></li>
+              </ul>
+            </div>
+
+
+            <div class="gnav-panel__col gnav-panel__col">
+              <p class="gnav-panel__ttl">LINKS</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                    rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+                <li class="gnav-panel__item"><a href="https://www.city.ube.yamaguchi.jp/" target="_blank"
+                    rel="noopener">宇部市</a></li>
+              </ul>
+            </div>
+
+            <div class="gnav-panel__col">
+              <p class="gnav-panel__ttl">基本事項</p>
+              <ul class="gnav-panel__list">
+                <li class="gnav-panel__item"><a href="contact.html">お問い合わせ</a></li>
+                <li class="gnav-panel__item"><a href="privacy.html">個人情報保護方針</a></li>
+                <li class="gnav-panel__item"><a href="sitemap.html">サイトマップ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header 本体 -->
+    <div class="header__inner">
+      <h1 class="header__ttl-wrap header__item">
+        <a href="index.html" class="header__ttl">
+          <img src="assets/img/top/logo.png" alt="">
+        </a>
+      </h1>
+      <nav class="header__menu-wrap header__item">
+        <div class="header__menu-inner">
+          <a href="about.html" class="header__menu">スポーツ協会について</a>
+          <ul class="header__submenu">
+            <li><a href="member-organizations.html" class="header__submenu-link">加盟団体一覧</a></li>
+            <li><a href="supporting-members.html" class="header__submenu-link">賛助会員募集</a></li>
+            <li><a href="officers.html" class="header__submenu-link">役員名簿</a></li>
+            <li><a href="youth-sports.html" class="header__submenu-link">スポーツ少年団</a></li>
+            <li><a href="instructors.html" class="header__submenu-link">地域スポーツ指導者</a></li>
+            <li><a href="access.html" class="header__submenu-link">アクセス</a></li>
+          </ul>
+          <a href="#" class="header__menu">施設のご案内</a>
+          <ul class="header__submenu">
+            <li><a href="#" class="header__submenu-link">屋内施設</a></li>
+            <li><a href="#" class="header__submenu-link">屋外施設</a></li>
+            <li><a href="#" class="header__submenu-link">アーチェリー・弓道</a></li>
+            <li><a href="#" class="header__submenu-link">アーバンスポーツ</a></li>
+            <li><a href="#" class="header__submenu-link">会議室</a></li>
+          </ul>
+          <a href="#" class="header__menu">教室？</a>
+          <a href="#" class="header__menu">イベント</a>
+        </div>
+      </nav>
+      <div class="header__search" id="header-search-js">
+        <img src="assets/img/top/header-menu-search.png" alt="">
+      </div>
+
+      <div class="header__hum" id="header-hum-js">
+        <img src="assets/img/top/header-menu-hum.png" alt="">
+      </div>
+    </div>
+  </header>
+
+  <div class="subpage main page-">
+    <div class="breadcrumbs-wrap">
+      <div class="breadcrumbs-wrap__content">
+        トップ ＞ ○○○○ ＞ ○○○○
+      </div>
+    </div>
+    <h1 class="subpage__ttl">生涯学習講座</h1>
+
+    <section class="subpage__section">
+      <h2 class="subttl">令和8年度 サンライフ宇部・パルセンター宇部の生涯学習講座</h2>
+
+      <p class="subpage__text-big"><strong>受講生募集中！！</strong></p>
+
+
+      <dl class="subpage__description-wrap">
+        <dt>対象</dt>
+        <dd>
+          どなたでも（高校生以下は除く）
+        </dd>
+      </dl>
+
+      <dl class="subpage__description-wrap">
+        <dt>開講期間</dt>
+        <dd>
+          令和8年4月〜令和9年3月（1年間の講座）
+        </dd>
+      </dl>
+
+      <dl class="subpage__description-wrap">
+        <dt>申込方法</dt>
+        <dd>
+          <p>
+            申込受付当日、受講申込書に初回受講料<strong>3ヶ月分</strong>を添えて提出してください。<br>
+            （受講申込書は、講座ごとに実施会場にて受付時に配布します。）
+          </p>
+        </dd>
+      </dl>
+
+      <dl class="subpage__description-wrap">
+        <dt>申込期日</dt>
+        <dd>
+          <strong>令和8年3月2日（月）9時00分〜</strong>
+          <p>
+            （その後は、定員に達するまで事務所で随時受付します。）
+          </p>
+        </dd>
+      </dl>
+
+      <dl class="subpage__description-wrap">
+        <dt>その他</dt>
+        <dd>
+          <p>
+            ※各講座とも先着順、定員になり次第締切。定員に満たない場合は、中止とすることもあります。<br>
+            ※受講料は<strong>3ヶ月</strong>ごとに前納です。（消費税含みます）<br>
+            ※教材費が別途必要な講座もあります。<br>
+            ※体育館を使用する講座は体育館シューズが必要です。
+          </p>
+        </dd>
+      </dl>
+
+      <dl class="subpage__description-wrap">
+        <dt>問合せ先</dt>
+        <dd>
+          <p>
+            サンライフ宇部　宇部市神原町一丁目6番20号　TEL：0836-22-0541<br>
+            パルセンター宇部　宇部市西平原四丁目9番1号　TEL：0836-31-2212
+          </p>
+        </dd>
+      </dl>
+
+      <dl class="subpage__description-wrap subpage__margin-s">
+        <dt>教室の詳細</dt>
+        <dd>
+          <p>
+            教室の詳細は、
+            <a href="assets/pdf/r8shougaigakushuukouza.pdf" style="padding: 0;" target="_blank">こちら</a>をご覧ください。
+          </p>
+        </dd>
+      </dl>
+
+      <h2 class="subttl-sub">サンライフ宇部</h2>
+
+      <div class="subpage__table-wrap subpage__margin-s">
+        <table class="subpage__table">
+          <thead>
+            <tr>
+              <th>曜日</th>
+              <th>No</th>
+              <th>教室名</th>
+              <th>開講日（基本）</th>
+              <th>開講時間</th>
+              <th>定員</th>
+              <th>受講料<br>1期（3ヶ月分）</th>
+              <th>講師名</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 火曜 -->
+            <tr>
+              <th rowspan="6">火曜</th>
+              <td>1</td>
+              <td>太極拳〜タイチーダンス</td>
+              <td>（毎週）</td>
+              <td>9:30〜11:00</td>
+              <td>15</td>
+              <td>6,100円</td>
+              <td>邱　雅慧</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>新卓球（ラージ）B</td>
+              <td>（毎週）</td>
+              <td>10:00〜12:00</td>
+              <td>30</td>
+              <td>5,600円</td>
+              <td>山平　修</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>ゆったり・ストレッチヨガ</td>
+              <td>第1・第2・第3</td>
+              <td>13:30〜14:30</td>
+              <td>22</td>
+              <td>7,000円</td>
+              <td>河崎　泰子</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>太極拳A（経験者）</td>
+              <td>（毎週）</td>
+              <td>15:00〜16:30</td>
+              <td>30</td>
+              <td>6,500円</td>
+              <td rowspan="2">河野　静香</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>太極拳B（初心者を含む）</td>
+              <td>（毎週）</td>
+              <td>16:30〜18:00</td>
+              <td>30</td>
+              <td>6,500円</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>卓球B</td>
+              <td>（毎週）</td>
+              <td>19:00〜21:00</td>
+              <td>30</td>
+              <td>5,600円</td>
+              <td>小田　善美</td>
+            </tr>
+
+            <!-- 水曜 -->
+            <tr>
+              <th rowspan="6">水曜</th>
+              <td>7</td>
+              <td>パソコンA（初〜中級）</td>
+              <td>（月2回）</td>
+              <td>9:20〜11:20</td>
+              <td>14</td>
+              <td>12,600円</td>
+              <td rowspan="2">清水　雅夫</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>パソコンB（中〜上級）</td>
+              <td>（月2回）</td>
+              <td>11:30〜13:30</td>
+              <td>14</td>
+              <td>13,500円</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>カラオケA1</td>
+              <td>（第2・第4）</td>
+              <td>12:30〜14:30</td>
+              <td>20</td>
+              <td>4,700円</td>
+              <td rowspan="2">港　一長</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>カラオケB1</td>
+              <td>（第1・第3）</td>
+              <td>13:00〜15:00</td>
+              <td>20</td>
+              <td>4,700円</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>新卓球（ラージ）A</td>
+              <td>（毎週）</td>
+              <td>14:00〜16:00</td>
+              <td>30</td>
+              <td>5,600円</td>
+              <td>山平　修</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>かんたん関節トレーニング<br>〜膝・腰・肩の痛みを和らげる〜</td>
+              <td>（毎週）</td>
+              <td>19:00〜20:20</td>
+              <td>15</td>
+              <td>6,100円</td>
+              <td>邱　雅慧</td>
+            </tr>
+
+            <!-- 木曜 -->
+            <tr>
+              <th rowspan="4">木曜</th>
+              <td>13</td>
+              <td>クラシックギター（初めてコース）</td>
+              <td>（第2・第4）</td>
+              <td>9:00〜9:50</td>
+              <td>5</td>
+              <td>4,500円</td>
+              <td rowspan="2">中野　義久</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>クラシックギター（アンサンブルコース）</td>
+              <td>（第2・第4）</td>
+              <td>10:00〜12:00</td>
+              <td>20</td>
+              <td>9,000円</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>書道（実用書）</td>
+              <td>（月3回）</td>
+              <td>13:00〜15:00</td>
+              <td>20</td>
+              <td>6,100円</td>
+              <td>阿川　彰徳</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>華道（池坊）</td>
+              <td>（毎週）</td>
+              <td>18:00〜21:00</td>
+              <td>15</td>
+              <td>7,900円</td>
+              <td>渡辺美代子</td>
+            </tr>
+
+            <!-- 金曜 -->
+            <tr>
+              <th rowspan="3">金曜</th>
+              <td>17</td>
+              <td>パソコン達人</td>
+              <td>（月2回）</td>
+              <td>9:20〜11:20</td>
+              <td>14</td>
+              <td>14,400円</td>
+              <td>清水　雅夫</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>フラダンスC</td>
+              <td>（第2・第4）</td>
+              <td>13:30〜14:40</td>
+              <td>15</td>
+              <td>6,000円</td>
+              <td>杉山由美枝</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>卓球A</td>
+              <td>（毎週）</td>
+              <td>14:30〜16:30</td>
+              <td>30</td>
+              <td>5,600円</td>
+              <td>寺中　道泰</td>
+            </tr>
+
+            <!-- 土曜 -->
+            <tr>
+              <th rowspan="3">土曜</th>
+              <td>20</td>
+              <td>美ューティBodyWave®</td>
+              <td>（第2・第4）</td>
+              <td>9:40〜10:30</td>
+              <td>15</td>
+              <td>3,000円</td>
+              <td rowspan="2">邱　雅慧</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>健康ストレッチ</td>
+              <td>（第2・第4）</td>
+              <td>10:40〜11:30</td>
+              <td>15</td>
+              <td>3,000円</td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td>水彩画・はがき絵</td>
+              <td>（第1・第3）</td>
+              <td>9:30〜11:30</td>
+              <td>15</td>
+              <td>6,200円</td>
+              <td>篠原　紀子</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="subttl-sub">パルセンター宇部</h2>
+
+      <div class="subpage__table-wrap">
+        <table class="subpage__table">
+          <thead>
+            <tr>
+              <th>曜日</th>
+              <th>No</th>
+              <th>教室名</th>
+              <th>開講日（基本）</th>
+              <th>開講時間</th>
+              <th>定員</th>
+              <th>受講料<br>1期（3ヶ月分）</th>
+              <th>講師名</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 木曜 -->
+            <tr>
+              <th rowspan="3">木曜</th>
+              <td>23</td>
+              <td>パソコン達人</td>
+              <td>（月2回）</td>
+              <td>9:00〜11:00</td>
+              <td>14</td>
+              <td>14,400円</td>
+              <td rowspan="3">清水　雅夫</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>パソコンA（初〜中級）</td>
+              <td>（月2回）</td>
+              <td>11:10〜13:10</td>
+              <td>14</td>
+              <td>12,600円</td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td>パソコンB（中〜上級）</td>
+              <td>（月2回）</td>
+              <td>13:20〜15:20</td>
+              <td>14</td>
+              <td>13,500円</td>
+            </tr>
+
+            <!-- 金曜 -->
+            <tr>
+              <th rowspan="2">金曜</th>
+              <td>26</td>
+              <td>バドミントンA</td>
+              <td>（毎週）</td>
+              <td>10:00〜12:00</td>
+              <td>35</td>
+              <td>5,600円</td>
+              <td>磯部　良子</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>バドミントンB</td>
+              <td>（毎週）</td>
+              <td>19:00〜21:00</td>
+              <td>35</td>
+              <td>5,600円</td>
+              <td>吉川　直樹</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </section>
+  </div>
+
+
+  <!--main end-->
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#" class="footer__logo"><img src="assets/img/top/logo.png" alt=""></a>
+
+      <div class="footer__top">
+        <div class="footer__top-left">
+          <div class="footer__top-left-item">〒755-0023 山口県宇部市恩田町四丁目1番4号</div>
+          <div class="footer__top-left-item"><a href="">TEL：0836-31-1507</a>&emsp;FAX：0836-21-7138</div>
+          <div class="footer__top-left-item">mail：<a
+              href="m&#97;i&#108;t&#111;:&#105;nf&#111;&#64;u&#98;&#101;-&#116;ai&#107;y&#111;u&#46;&#111;&#114;.&#106;p">&#105;nf&#111;&#64;u&#98;&#101;-&#116;ai&#107;y&#111;u&#46;&#111;&#114;.&#106;p</a>
+          </div>
+        </div>
+        <div class="footer__top-right">
+          <p class="footer__top-right-item">スポーツでつながる 地域、人、未来。</p>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+
+        <div class="footer__menu-col">
+          <p class="footer__menu-ttl">スポーツ協会について</p>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-item"><a href="about.html">スポーツ協会について</a></li>
+            <li class="footer__menu-list-item"><a href="member-organizations.html">加盟団体一覧</a></li>
+            <li class="footer__menu-list-item"><a href="supporting-members.html">賛助会員募集</a></li>
+            <li class="footer__menu-list-item"><a href="officers.html">役員名簿</a></li>
+            <li class="footer__menu-list-item"><a href="youth-sports.html">スポーツ少年団</a></li>
+            <li class="footer__menu-list-item"><a href="instructors.html">地域スポーツ指導者</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-col">
+          <p class="footer__menu-ttl">お知らせ</p>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-item"><a href="information.html">すべて</a></li>
+            <li class="footer__menu-list-item"><a href="information.html">お知らせ</a></li>
+            <li class="footer__menu-list-item"><a href="information.html">イベント</a></li>
+            <li class="footer__menu-list-item"><a href="information.html">大会</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-col">
+          <p class="footer__menu-ttl">施設のご案内</p>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-item"><a href="facilities.html">施設一覧</a></li>
+            <li class="footer__menu-list-item"><a href="facilities-single.html">屋内施設</a></li>
+            <li class="footer__menu-list-item"><a href="facilities-single.html">屋外施設</a></li>
+            <li class="footer__menu-list-item"><a href="facilities-single.html">アーチェリー・弓道</a></li>
+            <li class="footer__menu-list-item"><a href="facilities-single.html">アーバンスポーツ</a></li>
+            <li class="footer__menu-list-item"><a href="facilities-single.html">会議室</a></li>
+            <li class="footer__menu-list-item"><a href="/assets/pdf/riyounonagare8.pdf"
+                target="_blank">施設の利用予約〜利用までの流れ</a></li>
+            <li class="footer__menu-list-item"><a href="online-reservation.html">インターネット予約の利用について</a></li>
+            <li class="footer__menu-list-item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+            <li class="footer__menu-list-item"><a href="rental-items.html">貸し出し物品</a></li>
+            <li class="footer__menu-list-item"><a href="applications.html">各種申請書</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-col footer__menu-col--left">
+          <p class="footer__menu-ttl">教室</p>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-item"><a href="classes.html">教室</a></li>
+            <li class="footer__menu-list-item"><a href="general-class.html">一般教室</a></li>
+            <li class="footer__menu-list-item"><a href="elementary-class.html">小学生教室</a></li>
+            <li class="footer__menu-list-item"><a href="mizuno-tennis-school.html">ミズノテニススクール</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-col">
+          <p class="footer__menu-ttl">イベント・大会</p>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-item"><a href="event.html">イベント一覧</a></li>
+
+            <li class="footer__menu-list-item"><a href="#">大会情報</a></li>
+            <li class="footer__menu-list-item"><a href="#">スポーツうべたん</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-col">
+          <p class="footer__menu-ttl">アクセス</p>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-item"><a href="access.html">宇部市スポーツ協会</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-col">
+          <p class="footer__menu-ttl">SNS</p>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--insta"><a href="#">Instagram</a></li>
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--youtube"><a href="#">Youtube</a></li>
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--fb"><a href="#">Facebook</a></li>
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--line"><a href="#">LINE</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu-col-wrap">
+          <div class="footer__menu-col  footer__menu-col--bottom">
+            <p class="footer__menu-ttl">LINKS</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
+                  rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
+              <li class="footer__menu-list-item"><a href="https://www.city.ube.yamaguchi.jp/" target="_blank"
+                  rel="noopener">宇部市</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-col">
+            <p class="footer__menu-ttl">基本事項</p>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-list-item"><a href="contact.html">お問い合わせ</a></li>
+              <li class="footer__menu-list-item"><a href="privacy.html">個人情報保護方針</a></li>
+              <li class="footer__menu-list-item"><a href="sitemap.html">サイトマップ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer__bottom">
+        ©宇部市スポーツ協会 All rights reserved.
+      </p>
+    </div>
+    <a href="#" class="footer__go-top"><img src="assets/img/top/go-top.png" alt=""></a>
+  </footer>
+  <!-- トップページだけ表示 -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v19.0">
+  </script>
+  <!-- トップページだけ表示 -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
+</html>
