@@ -516,7 +516,8 @@
   &__date {
     color: #666;
     font-variant-numeric: tabular-nums;
-    width: 80px;
+    width: 90px;
+    white-space: nowrap;
 
     @include tab {
       grid-area: date;
@@ -531,6 +532,8 @@
     width: 80px;
     border-radius: 999px;
     color: #fff;
+        white-space: nowrap;
+
 
     @include tab {
       grid-area: badge;

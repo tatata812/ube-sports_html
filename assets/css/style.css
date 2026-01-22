@@ -477,7 +477,8 @@
 .news-archive__date {
   color: #666;
   font-variant-numeric: tabular-nums;
-  width: 80px;
+  width: 90px;
+  white-space: nowrap;
 }
 @media (max-width: 820px) {
   .news-archive__date {
@@ -492,6 +493,7 @@
   width: 80px;
   border-radius: 999px;
   color: #fff;
+  white-space: nowrap;
 }
 @media (max-width: 820px) {
   .news-archive__badge {
@@ -1797,6 +1799,16 @@ a[href$=".pdf"].is-icon::after {
 .page-information__pager {
   margin: 80px 0;
   text-align: center;
+}
+@media (min-width: 1020px) {
+  .page-information .subpage__section {
+    width: 1020px;
+    max-width: 1020px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
 }
 
 /* =================================
