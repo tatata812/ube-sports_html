@@ -1082,6 +1082,40 @@ SNS
     -webkit-overflow-scrolling: touch;
   }
 }
+@media screen and (max-width: 1019px) {
+  .subpage__table-wrap--no-scroll {
+    overflow-x: visible;
+    -webkit-overflow-scrolling: auto;
+    /* 中の table を画面幅に収める */
+    /* th を30%に */
+    /* td は残り */
+    /* ★ テキストを確実に折り返す */
+  }
+  .subpage__table-wrap--no-scroll table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+  .subpage__table-wrap--no-scroll th {
+    width: 25%;
+  }
+  .subpage__table-wrap--no-scroll td {
+    width: 75%;
+  }
+  .subpage__table-wrap--no-scroll th,
+  .subpage__table-wrap--no-scroll td {
+    white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}
+@media screen and (max-width: 1019px) and (max-width: 600px) {
+  .subpage__table-wrap--no-scroll th,
+  .subpage__table-wrap--no-scroll td {
+    font-size: 14px;
+    padding: 8px !important;
+  }
+}
 .subpage__table {
   width: 100%;
   min-width: 740px;
@@ -2010,6 +2044,43 @@ a[href$=".pdf"].is-icon::after {
 .instructor-list__btn {
   margin: 0 auto;
 }
+/* =================================
+イベント
+ ================================= */
+.event__pager {
+  text-align: center;
+  margin: 40px 0;
+}
+.event__map-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.event__map-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.event__img {
+  max-width: 780px;
+  margin: 0 auto 40px;
+}
+.event__content {
+  margin: 0 0 60px;
+}
+@media (max-width: 820px) {
+  .event__content {
+    margin: 0 0 32px;
+  }
+}
+.event__btn {
+  margin: 40px auto;
+}
+
 /* =========================
    base（全ページ共通）
 ========================= */
