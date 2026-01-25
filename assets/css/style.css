@@ -1268,7 +1268,7 @@ a[href$=".pdf"].is-icon::after {
   color: #3AB649;
   font-size: 16px;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: none !important;
   white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -2047,6 +2047,9 @@ a[href$=".pdf"].is-icon::after {
 /* =================================
 イベント
  ================================= */
+.event .event-content__item {
+  text-decoration: none;
+}
 .event__pager {
   text-align: center;
   margin: 40px 0;
@@ -2079,6 +2082,34 @@ a[href$=".pdf"].is-icon::after {
 }
 .event__btn {
   margin: 40px auto;
+}
+
+/* =================================
+大会情報
+ ================================= */
+.tournament .subpage__table th:first-child {
+  width: 28%;
+}
+.tournament .subpage__table td:first-child {
+  text-align: center;
+}
+.tournament .subpage__table th:nth-child(2) {
+  width: 72%;
+  letter-spacing: normal;
+  text-align: center;
+  /* or left */
+}
+.tournament__item {
+  margin: 0 0 60px;
+}
+@media (max-width: 820px) {
+  .tournament__item {
+    margin: 0 0 24px;
+  }
+}
+.tournament__pager {
+  margin: 40px 0;
+  text-align: center;
 }
 
 /* =========================

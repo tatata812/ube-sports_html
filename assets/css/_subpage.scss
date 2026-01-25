@@ -103,26 +103,26 @@
           table-layout: fixed;
         }
 
-              /* th を30%に */
-      th {
-        width: 25%;
-      }
+        /* th を30%に */
+        th {
+          width: 25%;
+        }
 
-      /* td は残り */
-      td {
-        width: 75%;
-      }
+        /* td は残り */
+        td {
+          width: 75%;
+        }
 
         /* ★ テキストを確実に折り返す */
         th,
         td {
-          white-space: normal!important; // nowrap を殺す
+          white-space: normal !important; // nowrap を殺す
           word-break: break-word;
           overflow-wrap: anywhere;
 
-          @include sp{
-          font-size:14px;
-          padding: 8px!important;
+          @include sp {
+            font-size: 14px;
+            padding: 8px !important;
           }
         }
       }
@@ -311,7 +311,6 @@ a[href$=".pdf"].is-icon::after {
   @include tab {
     gap: 8px;
     margin: 0 0 32px;
-
   }
 
   &__btn {
@@ -322,7 +321,7 @@ a[href$=".pdf"].is-icon::after {
     color: $main;
     font-size: 16px;
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: none !important;
     white-space: nowrap;
     transition: background 0.2s ease, color 0.2s ease;
 
@@ -1266,6 +1265,10 @@ a[href$=".pdf"].is-icon::after {
  ================================= */
 .event {
 
+  .event-content__item {
+    text-decoration: none;
+  }
+
   &__pager {
     text-align: center;
     margin: 40px 0;
@@ -1305,4 +1308,40 @@ a[href$=".pdf"].is-icon::after {
     margin: 40px auto;
   }
 
+}
+
+/* =================================
+大会情報
+ ================================= */
+.tournament {
+
+  .subpage__table {
+    th:first-child {
+      width: 28%;
+    }
+
+    td:first-child {
+     text-align: center;
+    }
+
+    th:nth-child(2) {
+      width: 72%;
+      letter-spacing: normal;
+      text-align: center;
+      /* or left */
+    }
+  }
+
+  &__item {
+    margin: 0 0 60px;
+
+    @include tab{
+    margin: 0 0 24px;
+    }
+  }
+
+  &__pager {
+    margin: 40px 0;
+    text-align: center;
+  }
 }
