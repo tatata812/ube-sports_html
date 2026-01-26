@@ -2267,6 +2267,17 @@ header
   left: 50%;
   transform: translateX(-50%) scale(0.35);
 }
+.header__menu--facilities::before {
+  content: url(../img/top/header-menu-icon02.png);
+}
+.header__menu--classes::before {
+  content: url(../img/top/header-menu-icon03.png);
+  transform: translateX(-50%) scale(0.38);
+  top: -17px;
+}
+.header__menu--event::before {
+  content: url(../img/top/header-menu-icon04.png);
+}
 .header__submenu {
   display: none;
   position: absolute;

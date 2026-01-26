@@ -21,14 +21,14 @@ body {
     "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     "Meiryo", "Yu Gothic", "YuGothic",
     sans-serif;
-          font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 
 }
 
 p {
   font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
   color: #141414;
-  
+
 }
 
 a {
@@ -175,6 +175,31 @@ header
       left: 50%;
       transform: translateX(-50%) scale(0.35);
     }
+
+    &--facilities {
+      &::before {
+        content: url(../img/top/header-menu-icon02.png);
+      }
+    }
+
+    &--classes {
+            &::before {
+        content: url(../img/top/header-menu-icon03.png);
+              transform: translateX(-50%) scale(0.38);
+                    top: -17px;
+
+
+      }
+    }
+
+    &--event {
+            &::before {
+        content: url(../img/top/header-menu-icon04.png);
+      }
+    }
+
+
+
   }
 
   //  追加：下層メニュー（アコーディオン）
@@ -933,8 +958,8 @@ footer
     margin: 0 0 32px;
     line-height: 1.4;
 
-    @include tab{
-    font-size: 20px;
+    @include tab {
+      font-size: 20px;
     }
   }
 
@@ -945,8 +970,8 @@ footer
     border-bottom: 2px solid $main;
     line-height: 1.4;
 
-    @include tab{
-    font-size: 18px;
+    @include tab {
+      font-size: 18px;
     }
   }
 
@@ -955,8 +980,8 @@ footer
     margin: 40px 0 12px;
     line-height: 1.4;
 
-    @include tab{
-    font-size: 16px;
+    @include tab {
+      font-size: 16px;
     }
   }
 
