@@ -305,7 +305,9 @@ filterNews('all');
   });
 
 
-  //フェードイン
+  /* =================================
+  アニメーション　フェードイン
+ ================================= */
   $(window).scroll(function () {
     const windowHeight = $(window).height(); //ウィンドウの高さ
     const scroll = $(window).scrollTop(); //スクロール量

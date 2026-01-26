@@ -2844,22 +2844,105 @@ footer
   }
 }
 
-/* =========================
-   animation
-========================= */
+/* =====================================================
+  Scroll Fade-in Animation
+  ・JSで .action が付与されると表示される
+  ・fade-in-js は必須クラス
+  ・動きは variation クラスで切り替える
+===================================================== */
+/* ------------------------------
+  Base（共通）
+------------------------------ */
 .fade-in-js {
   opacity: 0;
-  transform: translateY(30px);
   transition: opacity 0.5s ease, transform 0.7s ease;
 }
 .fade-in-js.action {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
+/* ------------------------------
+  Variations（動きの種類）
+  ※ fade-in-js と併用する
+------------------------------ */
+/* 下から上へフェードイン（基本） */
+.fade-up {
+  transform: translateY(30px);
+}
+
+/* 上から下へフェードイン */
+.fade-down {
+  transform: translateY(-30px);
+}
+
+/* 左からスライドイン */
+.fade-left {
+  transform: translateX(-40px);
+}
+
+/* 右からスライドイン */
+.fade-right {
+  transform: translateX(40px);
+}
+
+/* ズームイン（控えめ） */
+.fade-zoom {
+  transform: scale(0.95);
+}
+
+/* ズームイン（強め・強調用） */
+.fade-zoom-big {
+  transform: scale(0.9);
+}
+
+/* 回転しながらフェードイン（遊び要素） */
+.fade-rotate {
+  transform: translateY(20px) rotate(-3deg);
+}
+
+/* ------------------------------
+  Delay（表示タイミング調整）
+  ・複数要素を順番に表示したいときに使用
+------------------------------ */
+.fade-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.fade-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.fade-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.fade-delay-4 {
+  transition-delay: 0.4s;
+}
+
+.fade-delay-5 {
+  transition-delay: 0.5s;
+}
+
+/* ------------------------------
+  Speed（表示速度調整・任意）
+------------------------------ */
+/* 速く表示したいとき */
+.fade-fast {
+  transition-duration: 0.35s, 0.5s;
+}
+
+/* ゆっくり上品に表示したいとき */
+.fade-slow {
+  transition-duration: 0.8s, 1.1s;
+}
+
+/* =========================
+   ロード
+========================= */
 .fade-in-onload {
   opacity: 0;
-  transform: translateY(20px);
   animation: fadeInOnLoad 0.8s ease forwards;
   animation-delay: 0.3s;
 }
@@ -2867,7 +2950,6 @@ footer
 @keyframes fadeInOnLoad {
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 .fade-in-onload02 {
