@@ -91,6 +91,7 @@ dt {
   &:has(.subpage) {
     background-image: url(../img/subpage/sub-bg.png);
     background-size: cover;
+    background-position: center;
   }
 }
 
