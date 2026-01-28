@@ -83,6 +83,29 @@ dt {
   }
 }
 
+/* =========================
+   layout
+========================= */
+.wrap {
+
+  &:has(.subpage) {
+    background-image: url(../img/subpage/sub-bg.png);
+    background-size: cover;
+  }
+}
+
+.main {
+  margin: 80px 0 0;
+
+  @include pc {
+    margin: 64px 0 0;
+  }
+
+  @include tab {
+    margin: 56px 0 0;
+  }
+}
+
 
 /* =================================
 header
@@ -108,7 +131,7 @@ header
     padding: 8px 16px 0;
     max-width: 1400px;
     margin: 0 auto;
-    
+
 
 
 
@@ -864,24 +887,7 @@ footer
 }
 
 
-/* =========================
-   layout
-========================= */
-.section-bg {
-  background-color: #f2f2f2;
-}
 
-.main {
-  margin: 80px 0 0;
-
-  @include pc {
-    margin: 64px 0 0;
-  }
-
-  @include tab {
-    margin: 56px 0 0;
-  }
-}
 
 /* =====================================================
   Scroll Fade-in Animation

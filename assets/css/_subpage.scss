@@ -130,6 +130,7 @@
   }
 
   &__table {
+    background-color: #fff;
     width: 100%;
     min-width: 740px;
     border-collapse: collapse;
@@ -372,6 +373,7 @@ a[href$=".pdf"].is-icon::after {
   position: relative;
   display: inline-block;
   padding-left: 40px;
+  z-index: 1;
 
   @include sp {
     font-size: 16px;
@@ -1159,6 +1161,7 @@ a[href$=".pdf"].is-icon::after {
   }
 
   &__article {
+    background-color: #fff;
     text-decoration: none !important;
     width: calc((100% - 80px) / 3);
     padding: 24px;
@@ -1321,7 +1324,7 @@ a[href$=".pdf"].is-icon::after {
     }
 
     td:first-child {
-     text-align: center;
+      text-align: center;
     }
 
     th:nth-child(2) {
@@ -1335,13 +1338,298 @@ a[href$=".pdf"].is-icon::after {
   &__item {
     margin: 0 0 60px;
 
-    @include tab{
-    margin: 0 0 24px;
+    @include tab {
+      margin: 0 0 24px;
     }
   }
 
   &__pager {
     margin: 40px 0;
     text-align: center;
+  }
+}
+
+/* =================================
+施設詳細
+ ================================= */
+
+.facilities-single {
+
+  .subpage__ttl {
+
+    span {
+      display: block;
+      font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+      font-size: 24px;
+      color: $main;
+
+      @include tab {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__content {
+    background-color: $bg;
+    padding: 60px 120px;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    border-radius: 24px;
+    position: relative;
+
+    @media screen and (max-width: 1200px) {
+      border-radius: 0;
+    }
+
+    @include pc {
+      padding: 60px 60px;
+    }
+
+    @include tab {
+      padding: 40px 14px;
+    }
+  }
+
+  &__content-inner {
+    background-color: #fff;
+    padding: 24px 60px 60px;
+    border-radius: 24px;
+
+    @include pc {
+      padding: 12px 40px 40px;
+    }
+
+    @include tab {
+      padding: 0 12px 40px;
+      border-radius: 12px;
+      margin: 0 0 40px;
+    }
+
+    &--margin {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__table-wrap {
+    width: 100%;
+    overflow-x: auto;
+
+    &--no-scroll {
+      overflow-x: visible;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    tr {
+      border-bottom: 1px solid #b5b5b5;
+
+      &:first-child {
+        border-top: 1px solid #b5b5b5;
+      }
+
+      /* --- SP：行をブロック化 --- */
+      @include sp {
+        display: block;
+      }
+    }
+
+    th,
+    td {
+      padding: 20px 24px;
+      font-size: 16px;
+      line-height: 1.8;
+      vertical-align: top;
+
+      /* --- tablet --- */
+      @include tab {
+        padding: 16px 18px;
+        font-size: 15px;
+        width: 100%;
+
+      }
+
+      /* --- sp --- */
+      @include sp {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+      }
+    }
+
+    th {
+      width: 30%;
+      background: #f3f3f3;
+      text-align: left;
+
+
+
+      @include sp {
+        border-bottom: none;
+        width: 100%;
+
+      }
+    }
+
+    td {
+      width: 70%;
+      background: #fff;
+
+
+      @include sp {
+        border-top: 1px solid #ddd;
+        width: 100%;
+
+      }
+    }
+  }
+
+  &__map-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; // 16:9
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  }
+
+  &__content-semicircle-top {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 340px;
+
+    @include tab {
+      display: none;
+    }
+  }
+
+   &__btn {
+    margin: 0 auto 120px;
+
+    @include tab {
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+.photo-gallery {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+
+  @include tab {
+    gap: 18px;
+    flex-direction: column;
+  }
+
+  &__main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__main-img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 24px;
+
+    @include tab {
+      border-radius: 8px;
+    }
+  }
+
+  &__thumbs {
+    width: 260px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    @include tab {
+      width: 100%;
+      grid-template-columns: repeat(4, 1fr); // ★ 3列が一番安定
+      gap: 8px;
+    }
+
+
+  }
+
+  &__thumb {
+    aspect-ratio: 4 / 3; // ★ 比率は枠に
+    overflow: hidden;
+    border-radius: 14px;
+    cursor: pointer;
+
+    @include tab {
+      border-radius: 4px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%; // ★ これ重要
+      object-fit: cover;
+      object-position: center bottom;
+      display: block;
+      opacity: 0.65;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    &.is-active {
+      box-shadow: 0 0 0 3px $main;
+
+      img {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+    }
+
+    &:hover img {
+      opacity: 1;
+      transform: scale(1.02);
+    }
   }
 }

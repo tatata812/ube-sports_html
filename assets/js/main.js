@@ -238,24 +238,42 @@ filterNews('all');
 
 
 /* =================================
-メインビジュアル　スライダー
+施設詳細のギャラリー
  ================================= */
-  $(document).ready(function () {
-    const $slides = $('.main-visual-js img');
-    let current = 0;
-    const slideCount = $slides.length;
-    const intervalTime = 4000; // 3秒ごとに切り替え
+$(function () {
+  $('.photo-gallery__thumb').on('click', function () {
+    const imgSrc = $(this).find('img').attr('src');
 
-    // 初期設定：最初の画像以外を非表示
-    $slides.hide().eq(current).show();
+    // メイン画像切り替え
+    $('.photo-gallery__main-img').attr('src', imgSrc);
 
-    // スライド切り替え
-    setInterval(function () {
-      const next = (current + 1) % slideCount;
-      $slides.eq(current).fadeOut(1000);
-      $slides.eq(next).fadeIn(1000);
-      current = next;
-    }, intervalTime);
+    // active切り替え
+    $('.photo-gallery__thumb').removeClass('is-active');
+    $(this).addClass('is-active');
+  });
+});
+
+/* =================================
+施設詳細　前に戻るボタン
+ ================================= */
+
+ $(document).on('click', 'a.js-back-btn', function (e) {
+    e.preventDefault();
+
+    const fallback = $(this).attr('href') || '/index.html';
+
+    // 戻れるなら戻る
+    if (window.history.length > 1) {
+      window.history.back();
+
+      // 戻れなかった時の保険（同一タブで直アクセスなど）
+      setTimeout(function () {
+        window.location.href = fallback;
+      }, 200);
+    } else {
+      // 履歴が無いなら index.html
+      window.location.href = fallback;
+    }
   });
 
   /* =================================
