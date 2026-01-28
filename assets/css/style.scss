@@ -96,6 +96,8 @@ header
   background-color: #fff;
   border-bottom: #eee 1px solid;
 
+
+
   &.is-hide {
     transform: translateY(-100%);
   }
@@ -106,6 +108,8 @@ header
     padding: 8px 16px 0;
     max-width: 1400px;
     margin: 0 auto;
+    
+
 
 
     @include pc {
