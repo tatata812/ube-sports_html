@@ -2532,7 +2532,7 @@ a[href$=".pdf"].is-icon::after {
 .facilities__body {
   margin-top: 12px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 0 16px;
 }
