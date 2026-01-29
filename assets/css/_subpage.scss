@@ -54,6 +54,51 @@
     }
   }
 
+  &__main-visual-hero {
+    padding: 12px 24px;
+    max-width: 1400px;
+    margin: 0 auto 12px;
+    position: relative;
+
+
+    @include tab {
+      padding: 8px;
+      margin: 0 auto 32px;
+
+    }
+  }
+
+  &__ttl-hero {
+    padding: 20px 16px 30px;
+    text-align: center;
+    font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    color: $main;
+    line-height: 1.2;
+    margin: 0 0 40px;
+    position: relative;
+
+    @include tab {
+      font-size: 20px;
+      margin: 0 0 32px;
+      padding: 0 16px;
+
+    }
+
+    span {
+      display: block;
+      font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 28px;
+      color: #d9d9d9;
+      font-family: "Noto Sans", sans-serif;
+
+      @include tab {
+        font-size: 14px;
+      }
+    }
+  }
+
   &__section {
     max-width: 920px;
     margin: 0 auto 120px;
@@ -1522,34 +1567,6 @@ a[href$=".pdf"].is-icon::after {
       margin: 0 auto 60px;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 .photo-gallery {
@@ -1668,7 +1685,7 @@ a[href$=".pdf"].is-icon::after {
     @include tab {
       font-size: 20px;
       margin: 0 0 32px;
-          padding: 0 16px;
+      padding: 0 16px;
 
     }
 
@@ -1703,7 +1720,7 @@ a[href$=".pdf"].is-icon::after {
 
     @include tab {
       padding: 40px 14px 12px;
-          margin: 0 auto 60px;
+      margin: 0 auto 60px;
 
     }
 
@@ -1775,7 +1792,7 @@ a[href$=".pdf"].is-icon::after {
     margin: 0 auto 80px;
     padding: 0 16px;
 
-        @include sp{
+    @include sp {
       gap: 32px;
     }
 
@@ -1784,12 +1801,12 @@ a[href$=".pdf"].is-icon::after {
   &__article {
     width: calc((100% - 64px) / 3);
 
-   @include tab{
-   
+    @include tab {
+
       width: calc((100% - 32px) / 2);
     }
 
-    @include sp{
+    @include sp {
       width: 100%;
     }
 
@@ -1855,6 +1872,46 @@ a[href$=".pdf"].is-icon::after {
     text-align: center;
     margin: 0 0 80px;
   }
+}
+
+/* =================================
+教室
+ ================================= */
+
+.page-classes {
+
+  &__item-wrap {
+    max-width: 880px;
+    gap: 60px 40px;
+    margin: 0 auto 120px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 16px;
+
+    @include sp {
+      gap: 12px;
+
+    }
+  }
+
+  &__item {
+    width: calc((100% - 40px) / 2);
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  &__img {}
+
+  &__btn {
+    max-width: 200px;
+    margin: -20px 0 0 auto;
+  }
+
+  &__ {}
+
+  &__ {}
 
   &__ {}
 
