@@ -2431,12 +2431,6 @@ dt {
 /* =========================
    layout
 ========================= */
-.wrap:has(.subpage) {
-  background-image: url(../img/subpage/sub-bg.png);
-  background-size: cover;
-  background-position: center;
-}
-
 .main {
   margin: 80px 0 0;
 }
