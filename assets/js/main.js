@@ -276,6 +276,27 @@ $(function () {
     }
   });
 
+    /* =================================
+  施設一覧　画像の切り替え
+ ================================= */
+$('.facilities__item').each(function () {
+  const $item = $(this);
+  const $img = $item.find('.facility-item-js');
+
+  // data-indexを文字として確実に取る
+  const index = $img.attr('data-index'); // ← .data() じゃなく attr にする
+
+  // 画像のあるディレクトリを、今のsrcから取得
+  // assets/img/subpage/facilities01.png → assets/img/subpage/
+  const currentSrc = $img.attr('src');
+  const dir = currentSrc.replace(/facilities\d{2}.*$/, '');
+
+  const normalSrc = `${dir}facilities${index}.png`;
+  const activeSrc = `${dir}facilities${index}__active.png`;
+
+  $img.attr('src', $item.hasClass('active') ? activeSrc : normalSrc);
+});
+
   /* =================================
   ページ内リンク　ヘッダーの高さ考慮
  ================================= */

@@ -879,6 +879,10 @@ footer
 .breadcrumbs-wrap {
   background-color: $bg;
 
+  &--white {
+    background-color: #fff;
+  }
+
   &__content {
     max-width: 1240px;
     margin: 0 auto;

@@ -11,7 +11,6 @@
     color: $main;
   }
 
-
   &__ttl {
     background-color: $bg;
     padding: 20px 16px 30px;
@@ -1025,8 +1024,6 @@ a[href$=".pdf"].is-icon::after {
       margin: 0;
     }
   }
-
-
 }
 
 /* =================================
@@ -1402,11 +1399,14 @@ a[href$=".pdf"].is-icon::after {
     @include tab {
       padding: 0 12px 40px;
       border-radius: 12px;
-      margin: 0 0 40px;
     }
 
     &--margin {
       margin: 0 0 60px;
+
+      @include tab {
+        margin: 0 0 40px;
+      }
     }
   }
 
@@ -1515,7 +1515,7 @@ a[href$=".pdf"].is-icon::after {
     }
   }
 
-   &__btn {
+  &__btn {
     margin: 0 auto 120px;
 
     @include tab {
@@ -1632,4 +1632,251 @@ a[href$=".pdf"].is-icon::after {
       transform: scale(1.02);
     }
   }
+}
+
+/* =================================
+施設一覧
+ ================================= */
+
+.facilities {
+
+  &__main-visual {
+    padding: 12px 24px;
+    max-width: 1400px;
+    margin: 0 auto 12px;
+    position: relative;
+
+
+    @include tab {
+      padding: 8px;
+      margin: 0 auto 32px;
+
+    }
+  }
+
+  &__ttl {
+    padding: 20px 16px 30px;
+    text-align: center;
+    font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    color: $main;
+    line-height: 1.2;
+    margin: 0 0 40px;
+    position: relative;
+
+    @include tab {
+      font-size: 20px;
+      margin: 0 0 32px;
+          padding: 0 16px;
+
+    }
+
+    span {
+      display: block;
+      font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 28px;
+      color: #d9d9d9;
+      font-family: "Noto Sans", sans-serif;
+
+      @include tab {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__content {
+    background-color: $bg;
+    padding: 60px 120px;
+    max-width: 1200px;
+    margin: 0 auto 120px;
+    border-radius: 24px;
+    position: relative;
+
+    @media screen and (max-width: 1200px) {
+      border-radius: 0;
+    }
+
+    @include pc {
+      padding: 60px 60px;
+    }
+
+    @include tab {
+      padding: 40px 14px 12px;
+          margin: 0 auto 60px;
+
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -17px;
+      transform: translateX(-50%);
+
+      width: 0;
+      height: 0;
+
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 18px solid $bg; // 下の背景色
+    }
+  }
+
+  &__search-wrap {
+    margin: 0 0 80px;
+
+    @include tab {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+    gap: 16px;
+
+    @include tab {
+      flex-wrap: wrap;
+      gap: 12px;
+
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include tab {
+      width: calc((100% - 24px) / 3);
+      margin: 0 0 40px;
+    }
+
+    // active時（緑枠＋濃い画像＋下に●）
+    &.active {
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -24px; // ●を枠の外に出す（調整OK）
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #18a84a;
+      }
+    }
+  }
+
+  &__article-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 32px;
+    max-width: 1020px;
+    margin: 0 auto 80px;
+    padding: 0 16px;
+
+        @include sp{
+      gap: 32px;
+    }
+
+  }
+
+  &__article {
+    width: calc((100% - 64px) / 3);
+
+   @include tab{
+   
+      width: calc((100% - 32px) / 2);
+    }
+
+    @include sp{
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover {
+      .facilities__img img {
+        transform: scale(1.05);
+      }
+
+      .facilities__arrow img {
+        transform: translateX(4px); // ← さりげなく動かす
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden; // ← はみ出しカット
+    border-radius: 24px;
+    aspect-ratio: 4 / 3; // ← 表示比率を固定
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // ← トリミングの肝
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__body {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 1.5;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+
+    img {
+      width: 28px; // ← アイコンサイズ
+      height: 28px;
+      transition: transform 0.25s ease;
+    }
+  }
+
+  &__pager {
+    text-align: center;
+    margin: 0 0 80px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
 }
