@@ -169,46 +169,52 @@
     padding: 12px;
   }
 
-  /* 正方形枠 */
-  &__item-img {
-    width: 150px;
-    padding-top: 150px;
-    /* 正方形化 */
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 0 auto;
-    background: #eee;
-    /* ← 縦長時にこの色が出る */
+/* 正方形枠 */
+&__item-img {
+  width: 150px;
+  padding-top: 150px; // 正方形
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #eee;
 
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain; // 基本は contain
+    max-width: 100%;
+    max-height: 100%;
+    transition: 0.3s ease;
+  }
+
+  /* =========================
+    横長画像
+    → 横100%＋上下に余白
+  ========================= */
+  &.is-horizontal {
     img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      object-fit: contain;
-      /* 基本は contain */
-      max-width: 100%;
-      max-height: 100%;
-      transition: 0.3s ease;
-    }
-
-    /* 横長画像 → 正方形いっぱい（見切れOK） */
-    &.is-horizontal img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* 横長は cover */
+      height: auto;      // ← 重要
+      max-height: 100%;
+      object-fit: contain;
     }
+  }
 
-    /* 縦長画像 → 横幅を小さくし余白を作る */
-    &.is-vertical img {
+  /* =========================
+    縦長画像
+    → 高さ100%＋左右余白
+  ========================= */
+  &.is-vertical {
+    img {
       width: auto;
       height: 100%;
       object-fit: contain;
-      /* contain で左右余白出る */
     }
   }
+}
 
   /* 左右矢印 */
   &__arrow {
@@ -897,58 +903,57 @@
     }
   }
 
-  /* 正方形枠 */
-  &__item-img {
-    width: 100%;
-    padding-top: 100%;
-    /* 正方形化 */
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 0 auto 24px;
-    background: #eee;
+/* 正方形枠 */
+&__item-img {
+  width: 100%;
+  padding-top: 100%; /* 正方形化 */
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto 24px;
+  background: #eee;
 
-    @include tab {
-      margin: 0 auto 8px;
-    }
-
-    &::before {
-      content: url(../img/top/arrow-icon.png);
-      position: absolute;
-      bottom: -20px;
-      right: -12px;
-      transform: scale(0.45);
-      z-index: 1;
-    }
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      object-fit: contain;
-      /* 基本は contain */
-      max-width: 100%;
-      max-height: 100%;
-      transition: 0.3s ease;
-    }
-
-    /* 横長画像 → 正方形いっぱい（見切れOK） */
-    &.is-horizontal img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* 横長は cover */
-    }
-
-    /* 縦長画像 → 横幅を小さくし余白を作る */
-    &.is-vertical img {
-      width: auto;
-      height: 100%;
-      object-fit: contain;
-      /* contain で左右余白出る */
-    }
+  @include tab {
+    margin: 0 auto 8px;
   }
+
+  &::before {
+    content: url(../img/top/arrow-icon.png);
+    position: absolute;
+    bottom: -20px;
+    right: -12px;
+    transform: scale(0.45);
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain; /* 基本は contain */
+    max-width: 100%;
+    max-height: 100%;
+    transition: 0.3s ease;
+    display: block;
+  }
+
+  /* 横長画像 → 横いっぱい＋上下に余白 */
+  &.is-horizontal img {
+    width: 100%;
+    height: auto;      // ★ここが肝：高さを固定しない
+    max-height: 100%;  // 念のため枠からはみ出し防止
+    object-fit: contain; // ★切らない（上下余白は背景が見える）
+  }
+
+  /* 縦長画像 → 高さ100%＋左右に余白 */
+  &.is-vertical img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
 
   /* タイトル */
   &__text {
