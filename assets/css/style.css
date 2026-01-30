@@ -3068,11 +3068,11 @@ header
   display: block;
 }
 .header-sp__inner {
-  padding: 80px 20px 20px;
+  padding: 20px 20px 20px;
 }
 @media (max-width: 600px) {
   .header-sp__inner {
-    padding: 80px 0 60px;
+    padding: 20px 0 60px;
   }
 }
 .header-sp__btn-img {
