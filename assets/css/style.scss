@@ -305,8 +305,8 @@ header
     }
 
     @include tab {
-              top: 8px;
-        right: 88px;
+      top: 8px;
+      right: 88px;
     }
 
   }
@@ -515,13 +515,21 @@ header
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
+  width: 840px;
   height: 90vh;
   background: #fff;
   transition: 0.3s;
   z-index: 300;
   overflow-y: scroll;
   border-radius: 0 0 0 40px;
+
+  @include pc {
+    width: 80%;
+  }
+
+  @include sp {
+    width: 90%;
+  }
 
 
   &.active {
@@ -538,7 +546,7 @@ header
     padding: 80px 20px 20px;
 
     @include sp {
-      padding: 80px 20px 40px;
+      padding: 80px 0 60px;
     }
   }
 
@@ -575,6 +583,10 @@ header
       color: #333;
       text-decoration: none;
     }
+  }
+
+  &__search-wrap {
+    padding: 0 16px;
   }
 }
 
@@ -639,6 +651,134 @@ header
     }
   }
 }
+
+.drawer-menu {
+
+  &__inner {
+    padding: 32px 24px 48px;
+
+    @include tab {
+      padding: 24px 12px 48px 24px;
+    }
+  }
+
+  &__line {
+    border: none;
+    height: 1px;
+    background: #7acb7a;
+    margin: 24px 0 32px;
+  }
+
+  /* 横並びカラム */
+  &__columns {
+    display: flex;
+    gap: 72px;
+
+    &--bottom {
+      gap: 72px;
+      align-items: flex-start;
+    }
+
+    @include tab {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__column {
+    min-width: 0;
+    width: 50%;
+
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &__section--full {
+    margin-bottom: 8px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__icon {
+    width: 30px;
+
+    &--lesson {
+      width: 40px;
+    }
+
+    @include sp {
+      width: 24px;
+    }
+
+    // ※もしSPでアイコンを大きくしたいならここ
+    // @include tab {
+    //   width: 48px;
+    //   height: 48px; // 画像タグの場合は不要なことも多い
+    // }
+  }
+
+  &__ttl {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    white-space: nowrap;
+  }
+
+  &__jp {
+    font-size: 18px;
+    font-weight: 700;
+    color: #666;
+    line-height: 1.2;
+
+    @include tab {
+      font-size: 20px;
+    }
+  }
+
+  &__en {
+    font-size: 14px;
+    font-weight: 700;
+    color: #53b85a;
+    line-height: 1.2;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 0 0 48px;
+
+    @include sp {
+      margin: 0 0 0 0;
+    }
+
+    a {
+      font-size: 14px;
+      color: #666;
+      line-height: 1;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &--sub {
+      margin-top: 24px;
+    }
+  }
+
+  &__spacer {
+    height: 32px;
+  }
+}
+
+
+
 
 
 
