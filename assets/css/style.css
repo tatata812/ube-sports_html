@@ -3043,7 +3043,7 @@ header
   top: 0;
   right: -100%;
   width: 840px;
-  height: 90vh;
+  height: auto;
   background: #fff;
   transition: 0.3s;
   z-index: 300;
@@ -3058,6 +3058,8 @@ header
 @media (max-width: 600px) {
   .header-sp {
     width: 90%;
+    height: 100vh;
+    border-radius: 0 0 0 0;
   }
 }
 .header-sp.active {
@@ -3068,11 +3070,11 @@ header
   display: block;
 }
 .header-sp__inner {
-  padding: 20px 20px 20px;
+  padding: 20px 20px 60px;
 }
 @media (max-width: 600px) {
   .header-sp__inner {
-    padding: 20px 0 60px;
+    padding: 20px 0 40px;
   }
 }
 .header-sp__btn-img {
