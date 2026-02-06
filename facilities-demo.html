@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
-  <title>地域スポーツ指導者登録方法</title>
+  <title>施設一覧 demo</title>
   <meta name="description" content="<?php echo $des; ?>">
   <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
   <meta name="robots" content="none">
@@ -206,32 +206,185 @@
     </div>
   </header>
 
-  <div class="subpage main">
-    <div class="breadcrumbs-wrap">
+  <div class="subpage main facilities">
+    <div class="breadcrumbs-wrap breadcrumbs-wrap--white">
       <div class="breadcrumbs-wrap__content">
         トップ ＞ ○○○○ ＞ ○○○○
       </div>
     </div>
-    <h1 class="subpage__ttl">地域スポーツ指導者登録方法</h1>
+    <div class="subpage__main-visual-hero">
+      <img src="assets/img/subpage/facilities-main.jpg" alt="">
+      <div class="section-deco-bottom">
+        <img src="assets/img/top/sc-white-t.png">
+      </div>
+    </div>
+    <h1 class="subpage__ttl-hero">施設一覧<span>Facility</span></h1>
+    <div class="facilities__content">
+      <div class="facilities__search-wrap">
+        <form class="facility-search" action="" method="get">
+          <label class="sr-only" for="facilitySearch">施設検索</label>
 
-    <section class="subpage__section">
-      <h2 class="subttl-sub">地域スポーツ指導者への登録方法</h2>
-      <p class="subpage__text subpage__margin-s">「宇部市スポーツコミッション指導者人財バンク登録申込書（下記、「要綱・様式」よりダウンロード）」（様式第１号）を事務局まで提出してください。
-      </p>
+          <input id="facilitySearch" class="facility-search__input" type="search" name="q" placeholder="施設検索"
+            autocomplete="off" />
 
-      <h2 class="subttl-sub">登録基準</h2>
-      <p class="subpage__text">次の条件を満たす個人・団体となります。</p>
-      <ol class="subpage__list-dic subpage__margin-s">
-        <li>スポーツコミッション参加団体及びその構成員またはスポーツコミッション参加団体からの推薦を受けた個人・団体のうち、人財バンク登録の意思を有する方</li>
-        <li>スポーツや健康づくりの指導に関し、優れた知識や技能を有し、市民の多様なスポーツ･健康づくり活動を支援することについて熱意のある方</li>
-      </ol>
+          <button class="facility-search__btn" type="submit" aria-label="検索">
+            <img src="assets/img/top/top-howto-search.png" alt="">
+          </button>
+        </form>
+      </div>
+      <div class="facilities__item-wrap">
+        <a href="" class="facilities__item active">
+          <img src="assets/img/subpage/facilities01.png" alt="すべて" class="facility-item-js" data-index="01">
+        </a>
+        <a href="" class="facilities__item">
+          <img src="assets/img/subpage/facilities02.png" class="facility-item-js" data-index="02" alt="屋内施設">
+        </a>
+        <a href="" class="facilities__item">
+          <img src="assets/img/subpage/facilities03.png" class="facility-item-js" data-index="03" alt="屋外施設">
+        </a>
+        <a href="" class="facilities__item">
+          <img src="assets/img/subpage/facilities04.png" class="facility-item-js" data-index="04" alt="アーチェリー・弓道">
+        </a>
+        <a href="" class="facilities__item">
+          <img src="assets/img/subpage/facilities05.png" class="facility-item-js" data-index="05" alt="アーバンスポーツ">
+        </a>
+        <a href="" class="facilities__item">
+          <img src="assets/img/subpage/facilities06.png" class="facility-item-js" data-index="06" alt="会議室">
+        </a>
+      </div>
+    </div>
+    <div class="facilities__article-wrap">
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single01.jpg" alt="ユーピーアールスタジアム">
+          </figure>
 
-      <h2 class="subttl-sub">要綱・様式</h2>
-      <p class="subpage__text"><a href="assets/pdf/instructors/file_health_talent_15.pdf"
-          target="_blank">スポーツコミッション指導者人財バンク登録申込書（様式第１号）</a></p>
-      <p class="subpage__text"><a href="assets/pdf/instructors/file_health_talent_17.pdf" target="_blank">
-          スポーツコミッション指導者人財バンク登録（変更・更新）申出書（様式第３号）</a></p>
-    </section>
+          <div class="facilities__body">
+            <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single03.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">ユーピーアールスタジアム<span></span></p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single02.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single05.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single01.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single06.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">恩田スポーツパーク多目的グラウンド</p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single01.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">ユーピーアールスタジアム</p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single05.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">恩田スポーツパーク多目的グラウンド</p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+      <article class="facilities__article">
+        <a href="facilities-single.html">
+          <figure class="facilities__img">
+            <img src="assets/img/subpage/facilities-single01.jpg" alt="ユーピーアールスタジアム">
+          </figure>
+
+          <div class="facilities__body">
+            <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
+            <span class="facilities__arrow">
+              <img src="assets/img/top/arrow-icon.png" alt="">
+            </span>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="facilities__pager">
+      ページャー
+    </div>
   </div>
   <!--main end-->
 
@@ -311,7 +464,7 @@
             <li class="footer__menu-list-item"><a href="event.html">イベント一覧</a></li>
 
             <li class="footer__menu-list-item"><a href="tournament.html">大会情報</a></li>
-            <li class="footer__menu-list-item"><a href="#">スポーツうべたん</a></li>
+            <li class="footer__menu-list-item"><a href="facilities-single.html">スポーツうべたん</a></li>
           </ul>
         </div>
 
@@ -325,10 +478,14 @@
         <div class="footer__menu-col">
           <p class="footer__menu-ttl">SNS</p>
           <ul class="footer__menu-list">
-            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--insta"><a href="#">Instagram</a></li>
-            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--youtube"><a href="#">Youtube</a></li>
-            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--fb"><a href="#">Facebook</a></li>
-            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--line"><a href="#">LINE</a></li>
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--insta"><a
+                href="facilities-single.html">Instagram</a></li>
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--youtube"><a
+                href="facilities-single.html">Youtube</a></li>
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--fb"><a
+                href="facilities-single.html">Facebook</a></li>
+            <li class="footer__menu-list-item footer__menu-sns footer__menu-sns--line"><a
+                href="facilities-single.html">LINE</a></li>
           </ul>
         </div>
 
