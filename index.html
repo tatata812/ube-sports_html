@@ -42,7 +42,6 @@
 
 <body class="wrap">
   <header class="header">
-
     <!-- 黒背景 -->
     <div class="black-bg"></div>
 
@@ -53,7 +52,6 @@
         <button type="button" class="search-form__close">
           <img src="assets/img/top/search-btn-batsu.png" alt="閉じる">
         </button>
-
         <input type="text" name="s" placeholder="キーワードを入力">
         <button type="submit">検索</button>
       </form>
@@ -65,97 +63,118 @@
         <div class="header-sp__btn-img">
           <img src="assets/img/top/hun-btn-batsu.png" alt="閉じる">
         </div>
-        <div class="header-sp__menu gnav-panel">
-          <div class="gnav-panel__grid">
+        <nav class="drawer-menu">
+          <div class="drawer-menu__inner">
 
-            <div class="gnav-panel__col">
-              <p class="gnav-panel__ttl">スポーツ協会について</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="about.html">スポーツ協会について</a></li>
-                <li class="gnav-panel__item"><a href="member-organizations.html">加盟団体一覧</a></li>
-                <li class="gnav-panel__item"><a href="supporting-members.html">賛助会員募集</a></li>
-                <li class="gnav-panel__item"><a href="officers.html">役員名簿</a></li>
-                <li class="gnav-panel__item"><a href="youth-sports.html">スポーツ少年団</a></li>
-                <li class="gnav-panel__item"><a href="instructors.html">地域スポーツ指導者</a></li>
-              </ul>
+            <!-- お知らせ -->
+            <section class="drawer-menu__section drawer-menu__section--full">
+              <a href="#" class="drawer-menu__head">
+                <span class="drawer-menu__icon"><img src="assets/img/top/sp-menu-icon01.png" alt=""></span>
+                <div class="drawer-menu__ttl">
+                  <span class="drawer-menu__jp">お知らせ</span>
+                  <span class="drawer-menu__en">Information</span>
+                </div>
+              </a>
+            </section>
+
+            <hr class="drawer-menu__line">
+
+            <!-- メイン（2カラム：flex） -->
+            <div class="drawer-menu__columns">
+
+              <!-- 左カラム -->
+              <div class="drawer-menu__column">
+                <a href="#" class="drawer-menu__head">
+                  <span class="drawer-menu__icon"><img src="assets/img/top/header-menu-icon02.png" alt=""></span>
+                  <div class="drawer-menu__ttl">
+                    <span class="drawer-menu__jp">施設のご案内</span>
+                    <span class="drawer-menu__en">Facility</span>
+                  </div>
+                </a>
+                <ul class="drawer-menu__list">
+                  <li><a href="#">屋内施設</a></li>
+                  <li><a href="#">屋外施設</a></li>
+                  <li><a href="#">アーチェリー・弓道</a></li>
+                  <li><a href="#">アーバンスポーツ</a></li>
+                  <li><a href="#">会議室</a></li>
+                </ul>
+                <ul class="drawer-menu__list drawer-menu__list--sub">
+                  <li><a href="#">施設の利用予約〜利用までの流れ</a></li>
+                  <li><a href="#">インターネット予約の利用について</a></li>
+                  <li><a href="#">ひろしま・やまぐち公共施設予約サービス</a></li>
+                  <li><a href="#">貸し出し物品</a></li>
+                  <li><a href="#">各種申請書</a></li>
+                </ul>
+              </div>
+
+              <!-- 右カラム -->
+              <div class="drawer-menu__column">
+                <a href="#" class="drawer-menu__head">
+                  <span class="drawer-menu__icon drawer-menu__icon--event"><img src="assets/img/top/sp-menu-icon02.png"
+                      alt=""></span>
+                  <div class="drawer-menu__ttl">
+                    <span class="drawer-menu__jp">イベント・大会</span>
+                    <span class="drawer-menu__en">Event</span>
+                  </div>
+                </a>
+                <ul class="drawer-menu__list">
+                  <li><a href="#">大会情報</a></li>
+                  <li><a href="#">スポーツうべたん</a></li>
+                </ul>
+                <div class="drawer-menu__spacer"></div>
+                <a href="#" class="drawer-menu__head">
+                  <span class="drawer-menu__icon drawer-menu__icon--lesson"><img
+                      src="assets/img/top/header-menu-icon03.png" alt=""></span>
+                  <div class="drawer-menu__ttl">
+                    <span class="drawer-menu__jp">教室</span>
+                    <span class="drawer-menu__en">Lesson</span>
+                  </div>
+                </a>
+                <ul class="drawer-menu__list">
+                  <li><a href="#">一般教室</a></li>
+                  <li><a href="#">小学生教室</a></li>
+                  <li><a href="#">生涯学習教室</a></li>
+                  <li><a href="#">ミズノテニススクール</a></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="gnav-panel__col">
-              <p class="gnav-panel__ttl">お知らせ</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="information.html">すべて</a></li>
-                <li class="gnav-panel__item"><a href="information.html">お知らせ</a></li>
-                <li class="gnav-panel__item"><a href="information.html">イベント</a></li>
-                <li class="gnav-panel__item"><a href="information.html">大会</a></li>
-              </ul>
-            </div>
+            <hr class="drawer-menu__line">
 
-            <div class="gnav-panel__col">
-              <p class="gnav-panel__ttl">施設のご案内</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="facilities.html">施設一覧</a></li>
-                <li class="gnav-panel__item"><a href="facilities-single.html">屋内施設</a></li>
-                <li class="gnav-panel__item"><a href="facilities-single.html">屋外施設</a></li>
-                <li class="gnav-panel__item"><a href="facilities-single.html">アーチェリー・弓道</a></li>
-                <li class="gnav-panel__item"><a href="facilities-single.html">アーバンスポーツ</a></li>
-                <li class="gnav-panel__item"><a href="facilities-single.html">会議室</a></li>
-                <li class="gnav-panel__item"><a href="/assets/pdf/riyounonagare8.pdf"
-                    target="_blank">施設の利用予約〜利用までの流れ</a></li>
-                <li class="gnav-panel__item"><a href="online-reservation.html">インターネット予約の利用について</a></li>
-                <li class="gnav-panel__item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
-                    rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
-                <li class="gnav-panel__item"><a href="rental-items.html">貸し出し物品</a></li>
-                <li class="gnav-panel__item"><a href="applications.html">各種申請書</a></li>
-              </ul>
-            </div>
+            <!-- 下段 -->
+            <div class="drawer-menu__columns drawer-menu__columns--bottom">
+              <div class="drawer-menu__column">
 
-            <div class="gnav-panel__col">
-              <p class="gnav-panel__ttl">教室</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="classes.html">教室</a></li>
-                <li class="gnav-panel__item"><a href="general-class.html">一般教室</a></li>
-                <li class="gnav-panel__item"><a href="elementary-class.html">小学生教室</a></li>
-                <li class="gnav-panel__item"><a href="mizuno-tennis-school.html">ミズノテニススクール</a></li>
-              </ul>
-            </div>
-
-            <div class="gnav-panel__col">
-              <p class="gnav-panel__ttl">イベント・大会</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="event.html">イベント一覧</a></li>
-
-                <li class="gnav-panel__item"><a href="tournament.html">大会情報</a></li>
-                <li class="gnav-panel__item"><a href="event-single.html">スポーツうべたん</a></li>
-              </ul>
-            </div>
-
-            <div class="gnav-panel__col">
-              <p class="gnav-panel__ttl">アクセス</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="access.html">宇部市スポーツ協会</a></li>
-              </ul>
-            </div>
-
-
-            <div class="gnav-panel__col gnav-panel__col">
-              <p class="gnav-panel__ttl">LINKS</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
-                    rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
-                <li class="gnav-panel__item"><a href="https://www.city.ube.yamaguchi.jp/" target="_blank"
-                    rel="noopener">宇部市</a></li>
-              </ul>
-            </div>
-
-            <div class="gnav-panel__col">
-              <p class="gnav-panel__ttl">基本事項</p>
-              <ul class="gnav-panel__list">
-                <li class="gnav-panel__item"><a href="contact.html">お問い合わせ</a></li>
-                <li class="gnav-panel__item"><a href="privacy.html">個人情報保護方針</a></li>
-                <li class="gnav-panel__item"><a href="sitemap.html">サイトマップ</a></li>
-              </ul>
+                <a href="#" class="drawer-menu__head">
+                  <span class="drawer-menu__icon"><img src="assets/img/top/header-menu-icon.png" alt=""></span>
+                  <div class="drawer-menu__ttl">
+                    <span class="drawer-menu__jp">スポーツ協会について</span>
+                    <span class="drawer-menu__en">About Us</span>
+                  </div>
+                </a>
+              </div>
+              <div class="drawer-menu__column">
+                <a href="#" class="drawer-menu__head">
+                  <span class="drawer-menu__icon"><img src="assets/img/top/sp-menu-icon03.png" alt=""></span>
+                  <div class="drawer-menu__ttl">
+                    <span class="drawer-menu__jp">アクセス</span>
+                    <span class="drawer-menu__en">Access</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
+        </nav>
+
+        <div class="header-sp__search-wrap">
+          <form class="facility-search" action="" method="get">
+            <label class="sr-only" for="facilitySearch">検索</label>
+            <input class="facility-search__input" type="search" name="q" placeholder="検索"
+              autocomplete="off">
+            <button class="facility-search__btn" type="submit" aria-label="検索">
+              <img src="assets/img/top/top-howto-search.png" alt="">
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -197,32 +216,31 @@
         </div>
       </nav>
       <div class="header__search" id="header-search-js">
-        <img src="assets/img/top/header-menu-search.png" alt="">
+        <img src="assets/img/top/header-menu-search.png">
       </div>
 
       <div class="header__hum" id="header-hum-js">
-        <img src="assets/img/top/header-menu-hum.png" alt="">
+        <img src="assets/img/top/header-menu-hum.png">
       </div>
     </div>
   </header>
+  <!-- header.phpここまで ※このHTMLのコードを使って下さい-->
 
   <div class="main page-top">
 
     <section class="main-visual">
       <div class="main-visual__img">
-        <img src="assets/img/top/main-visual.png" alt="">
+        <img src="assets/img/top/main-visual.png">
         <div class="main-visual__lead-wrap fade-in-onload">
           <img src="assets/img/top/main-visual-text.png" alt="スポーツでつながる地域、人、未来">
         </div>
       </div>
-
       <div class="main-visual__img--sp">
-        <img src="assets/img/top/main-visual-sp.png" alt="">
+        <img src="assets/img/top/main-visual-sp.png">
         <div class="main-visual__lead-wrap fade-in-onload">
           <img src="assets/img/top/main-visual-text-sp.png" alt="スポーツでつながる地域、人、未来">
         </div>
       </div>
-
 
       <!-- 注目のイベント -->
       <div class="event-slider fade-in-onload02">
@@ -230,6 +248,7 @@
           <h2 class="event-slider__title">注目のイベント</h2>
 
           <div class="event-slider__slider js-event-slider">
+            <!-- 投稿タイプイベント 「注目のイベント」タグで表示-->
             <a href="event-single.html" class="event-slider__item">
               <div class="event-slider__item-img">
                 <img src="assets/img/top/sample01.jpg" alt="">
@@ -250,12 +269,12 @@
 
           <!-- 左矢印 -->
           <button class="event-slider__arrow event-slider__arrow--prev">
-            <img src="assets/img//top/arrow-left.svg" alt="">
+            <img src="assets/img//top/arrow-left.svg">
           </button>
 
           <!-- 右矢印 -->
           <button class="event-slider__arrow event-slider__arrow--next">
-            <img src="assets/img/top/arrow-right.svg" alt="">
+            <img src="assets/img/top/arrow-right.svg">
           </button>
         </div>
 
@@ -269,65 +288,60 @@
     </section>
 
 
-
     <!-- お知らせ -->
     <section class="top-info">
       <h2 class="top-section-ttl top-info__ttl">お知らせ<span>News</span></h2>
 
-
       <!-- 重要なお知らせ -->
+      <!-- 通常の投稿「重要」タグで表示 -->
       <div class="important-info" aria-labelledby="importantInfoTtl">
         <div class="important-info__inner">
           <h2 class="important-info__label" id="importantInfoTtl">重要なお知らせ</h2>
 
           <ul class="important-info__list">
+
             <li class="important-info__item">
               <a href="#" class="important-info__link">
                 <span class="important-info__text">
                   令和６年４月１日より公益財団法人人宇部市体育協会から【公益財団法人宇部市スポーツ協会】へ名称を変更いたしました。
                 </span>
-
                 <span class="important-info__icon">
                   <img src="assets/img/top/arrow-icon.png">
                 </span>
               </a>
             </li>
-
             <li class="important-info__item">
               <a href="#" class="important-info__link">
                 <span class="important-info__text">
                   西部体育館アリーナ工事に伴う休館について（期間：令和７年１１月２５日（火）〜令和８年１月９日（金））
                 </span>
-
                 <span class="important-info__icon">
                   <img src="assets/img/top/arrow-icon.png">
                 </span>
               </a>
             </li>
-
             <li class="important-info__item">
               <a href="#" class="important-info__link">
                 <span class="important-info__text">
                   都市型スポーツ広場専用利用日について
                 </span>
-
                 <span class="important-info__icon">
                   <img src="assets/img/top/arrow-icon.png">
                 </span>
               </a>
             </li>
+
           </ul>
         </div>
       </div>
 
-
       <!-- お知らせ本体 -->
       <div class="news-archive fade-in-js fade-zoom-big">
 
+        <!-- data-filter・ data-catにカテゴリーのスラッグ -->
         <!-- カテゴリータブ -->
         <div class="news-archive__tabs">
           <p class="news-archive__tabs-ttl">カテゴリー</p>
-
           <div class="news-archive__tablist">
             <button class="news-archive__tab news-archive-js is-active" type="button" data-filter="all">
               すべて
@@ -347,7 +361,6 @@
         <!-- 一覧 -->
         <div class="news-archive__list-wrap">
           <ul class="news-archive__list">
-
             <li class="news-archive__item" data-cat="news-tournament">
               <a href="single.html" class="news-archive__link">
                 <time class="news-archive__date">2025.12.13</time>
@@ -412,7 +425,6 @@
                 </span>
               </a>
             </li>
-
           </ul>
         </div>
       </div>
@@ -420,6 +432,7 @@
       <a href="information.html" class="top-info__btn btn-img"><img src="assets/img/top/top-info-btn.png"
           alt="お知らせ一覧"></a>
     </section>
+
 
     <section class="top-howto-bnr">
       <a href="https://yoyacool.e-harp.jp/facility/" class="top-howto-bnr__item fade-in-js fade-up fade-delay-1"
@@ -462,19 +475,15 @@
               src="assets/img/top/facilities-btn05.png" alt="会議室"></a>
         </div>
         <div class="top-howto__search">
-
         </div>
         <form class="facility-search" action="" method="get">
           <label class="sr-only" for="facilitySearch">施設検索</label>
-
-          <input id="facilitySearch" class="facility-search__input" type="search" name="q" placeholder="施設検索"
-            autocomplete="off" />
-
+          <input class="facility-search__input" type="search" name="q" placeholder="施設検索"
+            autocomplete="off">
           <button class="facility-search__btn" type="submit" aria-label="検索">
-            <img src="assets/img/top/top-howto-search.png" alt="">
+            <img src="assets/img/top/top-howto-search.png" alt="検索">
           </button>
         </form>
-
       </div>
       <div class="section-deco-bottom">
         <img src="assets/img/top/sc-green-s.png">
@@ -533,7 +542,6 @@
       <div class="section-deco-bottom">
         <img src="assets/img/top/sc-white-s.png">
       </div>
-
     </section>
 
 
@@ -546,7 +554,6 @@
           <img src="assets/img/top/insta-demo.png" alt="">
           <p>※仮画像（システム組み込み後の表示となります。）</p>
         </div>
-
       </div>
       <div class="top-sns__wrap">
         <div class="top-sns__item fade-in-js fade-left">
@@ -558,7 +565,6 @@
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
-
         <div class="top-sns__item fade-in-js fade-right">
           <h3 class="top-sns__item-ttl">Facebook</h3>
           <div class="top-sns__facebook js-fb-wrap">
@@ -567,15 +573,9 @@
               data-small-header="true" data-show-facepile="false">
             </div>
           </div>
-
-
-
         </div>
-
       </div>
     </section>
-
-
 
   </div>
   <!--main end-->
@@ -596,9 +596,7 @@
           <p class="footer__top-right-item">スポーツでつながる 地域、人、未来。</p>
         </div>
       </div>
-
       <div class="footer__menu">
-
         <div class="footer__menu-col">
           <p class="footer__menu-ttl">スポーツ協会について</p>
           <ul class="footer__menu-list">
@@ -703,13 +701,13 @@
         ©宇部市スポーツ協会 All rights reserved.
       </p>
     </div>
-    <a href="#" class="footer__go-top"><img src="assets/img/top/go-top.png" alt=""></a>
+    <a href="#" class="footer__go-top"><img src="assets/img/top/go-top.png" alt="ページトップへ"></a>
   </footer>
   <!-- トップページだけ表示 -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v19.0">
   </script>
-  <!-- トップページだけ表示 -->
+  <!-- トップページだけ表示ここまで -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="assets/js/main.js">
   </script>

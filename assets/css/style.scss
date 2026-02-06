@@ -84,16 +84,8 @@ dt {
 }
 
 /* =========================
-   layout
+   フッター上調整
 ========================= */
-.wrap {
-
-  // &:has(.subpage) {
-  //   background-image: url(../img/subpage/sub-bg.png);
-  //   background-size: cover;
-  //   background-position: center;
-  // }
-}
 
 .main {
   margin: 90px 0 0;
@@ -106,7 +98,6 @@ dt {
     margin: 56px 0 0;
   }
 }
-
 
 /* =================================
 header
@@ -129,7 +120,6 @@ header
     height: 56px;
   }
 
-
   &.is-hide {
     transform: translateY(-100%);
   }
@@ -142,20 +132,14 @@ header
     margin: 0 auto;
     align-items: center;
 
-
-
-
     @include pc {
       align-items: center;
       padding: 14px 90px 8px 16px;
-
     }
 
     @include tab {
       padding: 8px 80px 8px 16px;
-
     }
-
 
     @include sp {
       justify-content: space-between;
@@ -169,15 +153,12 @@ header
     @include pc {
       max-width: 170px;
       padding: 0;
-
     }
   }
 
 
   &__menu-wrap {
     margin-left: auto;
-
-    // サブメニューの閉じ処理をここで拾うので、基準要素にしておく
     position: relative;
 
     @include pc {
@@ -189,10 +170,7 @@ header
     display: flex;
     gap: 24px;
     align-items: flex-start;
-
-    // ★追加：submenu(absolute)の基準
     position: relative;
-    // ★追加：親のoverflowで切れないように
     overflow: visible;
 
     @include pc {
@@ -225,8 +203,6 @@ header
         content: url(../img/top/header-menu-icon03.png);
         transform: translateX(-50%) scale(0.38);
         top: -17px;
-
-
       }
     }
 
@@ -235,13 +211,9 @@ header
         content: url(../img/top/header-menu-icon04.png);
       }
     }
-
-
-
   }
 
-  //  追加：下層メニュー（アコーディオン）
-
+  //  下層メニュー（アコーディオン）
 
   &__submenu {
     display: none; // jQueryの slideDown/Up 用
@@ -257,8 +229,6 @@ header
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     z-index: 9999;
     border: $main 2px solid;
-
-    // アニメ中の見切れ対策
     overflow: hidden;
   }
 
@@ -273,15 +243,12 @@ header
     }
   }
 
-  // 任意：JSが開いたsubmenuに付ける
   &__submenu.is-open {
     display: block;
   }
 
-  // 任意：開いてる親メニューの見た目を変えたい場合（好みで）
   &__menu.is-open {
-    // 例：文字色変えるとか
-    // color: #e53935;
+    opacity: 0.7;
   }
 
   &__search {
@@ -301,14 +268,12 @@ header
       max-width: 40px;
       top: 13px;
       right: 113px;
-
     }
 
     @include tab {
       top: 8px;
       right: 88px;
     }
-
   }
 
   &__hum {
@@ -325,7 +290,6 @@ header
     @include pc {
       max-width: 70px;
       right: 13px;
-
     }
 
     @include tab {
@@ -341,14 +305,12 @@ header
     height: 74px;
     display: grid;
     place-items: center;
-    /* 横・縦をまとめて中央に */
     text-align: center;
 
     @include pc {
       display: none;
     }
   }
-
 
   &__btn-wrap {
     display: none;
@@ -363,8 +325,6 @@ header
       width: 24px;
     }
   }
-
-
 }
 
 // 黒背景
@@ -392,16 +352,13 @@ header
   right: 0;
   width: 100%;
   height: 100vh;
-
   transform: translateX(100%);
   opacity: 0;
   transition: all 0.3s ease;
   z-index: 250;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   pointer-events: none;
 
   &.active {
@@ -414,21 +371,17 @@ header
   .search-form {
     position: relative;
     z-index: 300;
-
     width: 85%;
     max-width: 340px;
     background: #fff;
     padding: 28px 22px 32px;
     border-radius: 22px;
-
     box-shadow:
       0 12px 30px rgba(0, 0, 0, 0.15),
       0 0 0 2px rgba($main, 0.18);
-
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     opacity: 0;
     transform: translateY(18px);
     transition: 0.3s ease;
@@ -451,9 +404,7 @@ header
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
-
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -464,14 +415,13 @@ header
     }
   }
 
-  //  入力欄（ブルー系）
+  //  入力欄
   .search-form input[type="text"] {
     width: 100%;
     padding: 14px 16px;
     border: 2px solid $main;
     border-radius: 14px;
     font-size: 15px;
-
     background: #f0fbfd;
     transition: 0.25s ease;
 
@@ -483,7 +433,7 @@ header
     }
   }
 
-  //  検索ボタン（単色グラデなし）
+  //  検索ボタン
   .search-form button[type="submit"] {
     padding: 12px 16px;
     border: none;
@@ -531,10 +481,7 @@ header
     width: 100%;
     height: 100vh;
     border-radius: 0 0 0 0;
-
-
   }
-
 
   &.active {
     right: 0;
@@ -543,7 +490,6 @@ header
     .header-sp__btn-img {
       display: block; // ← active時だけ表示
     }
-
   }
 
   &__inner {
@@ -622,7 +568,6 @@ header
     border-radius: 14px;
     padding: 14px;
   }
-
 
   &__ttl {
     margin: 0 0 10px;
@@ -719,12 +664,6 @@ header
     @include sp {
       width: 24px;
     }
-
-    // ※もしSPでアイコンを大きくしたいならここ
-    // @include tab {
-    //   width: 48px;
-    //   height: 48px; // 画像タグの場合は不要なことも多い
-    // }
   }
 
   &__ttl {
@@ -782,11 +721,6 @@ header
 }
 
 
-
-
-
-
-
 /* =================================
 footer
  ================================= */
@@ -801,9 +735,7 @@ footer
   @media screen and (max-width: 1350px) {
     border-radius: 0;
     margin: 0 auto 0;
-
   }
-
 
   &__inner {
     padding: 24px 16px;
@@ -901,9 +833,7 @@ footer
     @include sp {
       flex-direction: column;
       gap: 24px 70px;
-
     }
-
   }
 
   &__menu-col {
@@ -1033,14 +963,6 @@ footer
       opacity: 1;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 
   &__go-to-btn {
     width: 40px;
@@ -1176,10 +1098,8 @@ footer
 }
 
 
-
-
 /* =========================
-   ロード
+   ロード時のアニメーション
 ========================= */
 .fade-in-onload {
   opacity: 0;
@@ -1211,7 +1131,6 @@ footer
 /* =========================
    editor style
 ========================= */
-
 .editor-style {
 
   &__block {
@@ -1468,26 +1387,5 @@ footer
     &:hover {
       opacity: 0.85;
     }
-  }
-}
-
-
-
-
-/* =========================
-   パーツ
-========================= */
-
-// 画像のボタン
-.btn-img {
-  display: block;
-  max-width: 280px;
-}
-
-a[class*="btn"] {
-  &:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-    transition: 0.25s ease;
   }
 }

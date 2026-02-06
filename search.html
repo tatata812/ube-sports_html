@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
-  <title>お知らせ一覧</title>
+  <title>検索結果</title>
   <meta name="description" content="<?php echo $des; ?>">
   <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
   <meta name="robots" content="none">
@@ -206,173 +206,45 @@
     </div>
   </header>
 
-  <div class="subpage main page-information">
+  <div class="subpage main page-">
     <div class="breadcrumbs-wrap">
       <div class="breadcrumbs-wrap__content">
         トップ ＞ ○○○○ ＞ ○○○○
       </div>
     </div>
-    <h1 class="subpage__ttl">お知らせ<span>information</span></h1>
+    <h1 class="subpage__ttl">検索結果<span></span></h1>
 
     <section class="subpage__section">
-      <div class="news-archive">
-        <!-- カテゴリータブ -->
-        <div class="news-archive__tabs">
-          <p class="news-archive__tabs-ttl">カテゴリー</p>
-          <div class="news-archive__tablist">
-            <a href="" class="news-archive__tab is-active" type="button" data-filter="all">
-              すべて
-            </a>
-            <a href="" class="news-archive__tab" type="button" data-filter="news">
-              お知らせ
-            </a>
-            <a href="" class="news-archive__tab" type="button" data-filter="news-event">
-              イベント
-            </a>
-            <a href="" class="news-archive__tab" type="button" data-filter="news-tournament">
-              大　会
-            </a>
-          </div>
-        </div>
+      <p class="search__lead">
+        検索されたキーワードに該当するページの一覧です。
+      </p>
 
-        <!-- 一覧 -->
-        <div class="news-archive__list-wrap">
-          <ul class="news-archive__list">
-            <li class="news-archive__item" data-cat="news-tournament">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.12.13</time>
-                <span class="news-archive__badge is-news-tournament">大　会</span>
-                <span class="news-archive__title">
-                  第58回縄田杯ウベロードレース大会の結果をアップいたしました
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+      <!-- 検索結果がある場合 -->
+      <div class="search__list">
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  あすチャレ！Academy ～コミュニケーション編～参加者募集中（10/20まで）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <a href="#" class="search__item">
+          <span class="search__item-ttl">記事タイトルが入ります</span>
+        </a>
+        <a href="#" class="search__item">
+          <span class="search__item-ttl">記事タイトルが入ります</span>
+        </a>
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  スポーツうべたん 2025秋　開催のお知らせ
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
+        <a href="#" class="search__item">
+          <span class="search__item-ttl">記事タイトルが入ります</span>
+        </a>
 
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  山口パッツファイブホーム開幕戦 観戦招待企画
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
-
-            <li class="news-archive__item" data-cat="news">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.04.23</time>
-                <span class="news-archive__badge is-news">お知らせ</span>
-                <span class="news-archive__title">
-                  宇部市スポーツコミッションだより（令和6年度活動報告冊子）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
-
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  スポーツうべたん 2025秋　開催のお知らせ
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
-
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  山口パッツファイブホーム開幕戦 観戦招待企画
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
-
-            <li class="news-archive__item" data-cat="news">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.04.23</time>
-                <span class="news-archive__badge is-news">お知らせ</span>
-                <span class="news-archive__title">
-                  宇部市スポーツコミッションだより（令和6年度活動報告冊子）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
-
-            <li class="news-archive__item" data-cat="news-tournament">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.12.13</time>
-                <span class="news-archive__badge is-news-tournament">大　会</span>
-                <span class="news-archive__title">
-                  第58回縄田杯ウベロードレース大会の結果をアップいたしました
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
-
-            <li class="news-archive__item" data-cat="news-event">
-              <a href="single.html" class="news-archive__link">
-                <time class="news-archive__date">2025.10.13</time>
-                <span class="news-archive__badge is-news-event">イベント</span>
-                <span class="news-archive__title">
-                  あすチャレ！Academy ～コミュニケーション編～参加者募集中（10/20まで）
-                </span>
-                <span class="news-archive__arrow">
-                  <img src="assets/img/top/arrow-icon.png">
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-information__pager">
-          ページャー
-        </div>
       </div>
+
+      <!-- 検索結果がない場合 -->
+
+      <!-- <p class="search__text">
+        該当するページが見つかりませんでした。
+      </p>
+      <p class="search__text">
+        別のキーワードで再度お試しいただくか、<br>
+        トップページより目的のページをお探しください。
+      </p> -->
+
     </section>
   </div>
   <!--main end-->

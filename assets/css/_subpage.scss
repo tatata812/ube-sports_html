@@ -60,11 +60,9 @@
     margin: 0 auto 12px;
     position: relative;
 
-
     @include tab {
       padding: 8px;
       margin: 0 auto 32px;
-
     }
   }
 
@@ -83,7 +81,6 @@
       font-size: 20px;
       margin: 0 0 32px;
       padding: 0 16px;
-
     }
 
     span {
@@ -127,7 +124,6 @@
     text-align: right;
   }
 
-
   // テーブル
   &__table-wrap {
     @media screen and (max-width: 1020px) {
@@ -140,27 +136,23 @@
         overflow-x: visible;
         -webkit-overflow-scrolling: auto;
 
-        /* 中の table を画面幅に収める */
         table {
           width: 100%;
-          min-width: 0; // ← table側の min-width:740px を無効化
+          min-width: 0;
           table-layout: fixed;
         }
 
-        /* th を30%に */
         th {
           width: 25%;
         }
 
-        /* td は残り */
         td {
           width: 75%;
         }
 
-        /* ★ テキストを確実に折り返す */
         th,
         td {
-          white-space: normal !important; // nowrap を殺す
+          white-space: normal !important;
           word-break: break-word;
           overflow-wrap: anywhere;
 
@@ -244,8 +236,6 @@
     dd {
       margin: 0;
     }
-
-
   }
 
   &__list-num {
@@ -265,24 +255,6 @@
     }
   }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
   &__margin {
     margin: 0 0 80px;
 
@@ -298,7 +270,6 @@
       margin: 0 0 18px;
     }
   }
-
 
   // 下層ページのPDFにはマークつける
   a[href$=".pdf"] {
@@ -335,7 +306,6 @@ a[href$=".pdf"].is-icon {
 a[href$=".pdf"].is-icon::after {
   content: none;
 }
-
 
 
 /* 行ホバー（PC向け） */
@@ -423,8 +393,6 @@ a[href$=".pdf"].is-icon::after {
     font-size: 16px;
     padding-left: 32px;
     margin: 40px 0 24px;
-
-
   }
 
   &::before {
@@ -448,7 +416,6 @@ a[href$=".pdf"].is-icon::after {
 }
 
 // 見出しリスト
-
 .definition-block {
   dl {
     margin: 0;
@@ -465,7 +432,6 @@ a[href$=".pdf"].is-icon::after {
     &:first-of-type {
       margin-top: 0;
     }
-
   }
 
   dd {
@@ -498,7 +464,6 @@ a[href$=".pdf"].is-icon::after {
 /* =================================
 スポーツ協会について
  ================================= */
-
 .page-about {
 
   &__flex {
@@ -552,7 +517,6 @@ a[href$=".pdf"].is-icon::after {
     @include sp {
       flex-direction: column;
       max-width: 200px;
-
     }
   }
 
@@ -573,24 +537,20 @@ a[href$=".pdf"].is-icon::after {
     min-height: 56px;
     padding: 14px 24px;
     border-radius: 999px;
-
     background: #fff;
-    border: 2px solid #43a047; // 緑の枠
-    color: #43a047; // 文字も緑
-
+    border: 2px solid #43a047;
+    color: #43a047;
     font-weight: 700;
     line-height: 1.3;
     text-align: center;
     text-decoration: none;
-
     transition: 0.25s ease;
-
     flex: 1 1 320px;
     max-width: 320px;
 
     &:hover,
     &:focus-visible {
-      background: #ecf9ef; // うっすら緑
+      background: #ecf9ef;
       box-shadow: 0 8px 20px rgba(67, 160, 71, 0.25);
       transform: translateY(-1px);
       outline: none;
@@ -758,7 +718,7 @@ a[href$=".pdf"].is-icon::after {
 
   .docs-table {
     width: 100%;
-    min-width: 760px; // スマホで横スクロールさせるため
+    min-width: 760px;
     border-collapse: collapse;
     table-layout: fixed;
 
@@ -831,18 +791,17 @@ a[href$=".pdf"].is-icon::after {
       gap: 8px 14px;
     }
   }
-
 }
 
 /* =================================
 申請書
  ================================= */
 .page-applications {
+
   &__icon {
     width: 30px;
     display: block;
     margin: 0 auto;
-
 
     &:after {
       display: none !important;
@@ -1074,7 +1033,6 @@ a[href$=".pdf"].is-icon::after {
 /* =================================
 お知らせ　詳細
  ================================= */
-
 .single {
 
   &__ttl {
@@ -1100,8 +1058,6 @@ a[href$=".pdf"].is-icon::after {
         height: 3px;
         background: $main;
       }
-
-
     }
   }
 
@@ -1185,7 +1141,6 @@ a[href$=".pdf"].is-icon::after {
 /* =================================
 地域スポーツ指導者リスト
  ================================= */
-
 .instructor-list {
 
   &__content {
@@ -1261,7 +1216,6 @@ a[href$=".pdf"].is-icon::after {
     margin: 80px 0;
     text-align: center;
   }
-
 }
 
 /* =================================
@@ -1273,7 +1227,6 @@ a[href$=".pdf"].is-icon::after {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-
   }
 
   &__img {
@@ -1299,10 +1252,6 @@ a[href$=".pdf"].is-icon::after {
   &__btn {
     margin: 0 auto;
   }
-
-  &__ {}
-
-  &__ {}
 }
 
 /* =================================
@@ -1348,11 +1297,9 @@ a[href$=".pdf"].is-icon::after {
     }
   }
 
-
   &__btn {
     margin: 40px auto;
   }
-
 }
 
 /* =================================
@@ -1476,7 +1423,6 @@ a[href$=".pdf"].is-icon::after {
         border-top: 1px solid #b5b5b5;
       }
 
-      /* --- SP：行をブロック化 --- */
       @include sp {
         display: block;
       }
@@ -1493,8 +1439,7 @@ a[href$=".pdf"].is-icon::after {
       @include tab {
         padding: 16px 18px;
         font-size: 15px;
-        width: 100%;
-
+        width: 100
       }
 
       /* --- sp --- */
@@ -1510,19 +1455,15 @@ a[href$=".pdf"].is-icon::after {
       background: #f3f3f3;
       text-align: left;
 
-
-
       @include sp {
         border-bottom: none;
         width: 100%;
-
       }
     }
 
     td {
       width: 70%;
       background: #fff;
-
 
       @include sp {
         border-top: 1px solid #ddd;
@@ -1608,15 +1549,13 @@ a[href$=".pdf"].is-icon::after {
 
     @include tab {
       width: 100%;
-      grid-template-columns: repeat(4, 1fr); // ★ 3列が一番安定
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
     }
-
-
   }
 
   &__thumb {
-    aspect-ratio: 4 / 3; // ★ 比率は枠に
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 14px;
     cursor: pointer;
@@ -1627,7 +1566,7 @@ a[href$=".pdf"].is-icon::after {
 
     img {
       width: 100%;
-      height: 100%; // ★ これ重要
+      height: 100%;
       object-fit: cover;
       object-position: center bottom;
       display: block;
@@ -1686,7 +1625,6 @@ a[href$=".pdf"].is-icon::after {
       font-size: 20px;
       margin: 0 0 32px;
       padding: 0 16px;
-
     }
 
     span {
@@ -1767,14 +1705,13 @@ a[href$=".pdf"].is-icon::after {
       margin: 0 0 40px;
     }
 
-    // active時（緑枠＋濃い画像＋下に●）
     &.active {
 
       &::after {
         content: "";
         position: absolute;
         left: 50%;
-        bottom: -24px; // ●を枠の外に出す（調整OK）
+        bottom: -24px;
         transform: translateX(-50%);
         width: 12px;
         height: 12px;
@@ -1795,7 +1732,6 @@ a[href$=".pdf"].is-icon::after {
     @include sp {
       gap: 32px;
     }
-
   }
 
   &__article {
@@ -1822,21 +1758,21 @@ a[href$=".pdf"].is-icon::after {
       }
 
       .facilities__arrow img {
-        transform: translateX(4px); // ← さりげなく動かす
+        transform: translateX(4px);
       }
     }
   }
 
   &__img {
     position: relative;
-    overflow: hidden; // ← はみ出しカット
+    overflow: hidden;
     border-radius: 24px;
-    aspect-ratio: 4 / 3; // ← 表示比率を固定
+    aspect-ratio: 4 / 3;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; // ← トリミングの肝
+      object-fit: cover;
       transition: transform 0.3s ease;
     }
   }
@@ -1877,7 +1813,6 @@ a[href$=".pdf"].is-icon::after {
 /* =================================
 教室
  ================================= */
-
 .page-classes {
 
   &__item-wrap {
@@ -1890,7 +1825,6 @@ a[href$=".pdf"].is-icon::after {
 
     @include sp {
       gap: 12px;
-
     }
   }
 
@@ -1908,32 +1842,85 @@ a[href$=".pdf"].is-icon::after {
     max-width: 200px;
     margin: -20px 0 0 auto;
   }
+}
 
-  &__ {}
+/* =================================
+検索結果
+ ================================= */
+.search {
 
-  &__ {}
+  &__lead {
+    font-size: 20px;
+    margin: 0 0 32px;
 
-  &__ {}
+    @include tab{
+    font-size: 18px;
+    }
+  }
 
-  &__ {}
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 48px;
 
-  &__ {}
+    a {
+      text-decoration: none;
+      color: #555;
 
-  &__ {}
+    }
+  }
 
-  &__ {}
+  &__item {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    padding: 8px;
+    line-height: 1;
+    transition: background-color 0.2s ease;
 
-  &__ {}
+    &:hover {
+      background-color: #f7f7f7;
+    }
 
-  &__ {}
+    &:last-child {
+      border-bottom: none;
 
-  &__ {}
+    }
+  }
 
-  &__ {}
+  &__link {
+    display: block;
+    padding: 24px 0;
+    color: #000;
+    transition: background-color 0.2s ease;
 
-  &__ {}
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
 
-  &__ {}
 
+  &__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
 
+  &__actions {
+    margin-top: 40px;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #333;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  }
 }

@@ -26,7 +26,6 @@
       font-size: 20px;
     }
   }
-
 }
 
 .section-deco-bottom {
@@ -44,21 +43,33 @@
   }
 }
 
+
+// 画像のボタン
+.btn-img {
+  display: block;
+  max-width: 280px;
+}
+
+a[class*="btn"] {
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    transition: 0.25s ease;
+  }
+}
+
 /* =================================
 メインビジュアル
  ================================= */
-
 .main-visual {
   padding: 12px 24px;
   max-width: 1400px;
   margin: 0 auto 12px;
   position: relative;
 
-
   @include tab {
     padding: 8px;
     margin: 0 auto 60px;
-
   }
 
   &__img {
@@ -78,7 +89,6 @@
   }
 
 
-
   &__lead-wrap {
     position: absolute;
     top: 40%;
@@ -96,7 +106,6 @@
       left: 32%;
     }
 
-
     @include tab {
       width: 85%;
       left: 50%;
@@ -107,8 +116,6 @@
       top: 30%;
     }
   }
-
-
 
   &__lead {
     font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
@@ -122,7 +129,6 @@
       font-size: 20px;
     }
   }
-
 }
 
 
@@ -134,7 +140,6 @@
   position: absolute;
   right: 60px;
   bottom: 20px;
-
 
   @include pc {
     bottom: -20px;
@@ -169,52 +174,52 @@
     padding: 12px;
   }
 
-/* 正方形枠 */
-&__item-img {
-  width: 150px;
-  padding-top: 150px; // 正方形
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 0 auto;
-  background: #eee;
+  /* 正方形枠 */
+  &__item-img {
+    width: 150px;
+    padding-top: 150px; // 正方形
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #eee;
 
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain; // 基本は contain
-    max-width: 100%;
-    max-height: 100%;
-    transition: 0.3s ease;
-  }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain; // 基本は contain
+      max-width: 100%;
+      max-height: 100%;
+      transition: 0.3s ease;
+    }
 
-  /* =========================
+    /* =========================
     横長画像
     → 横100%＋上下に余白
   ========================= */
-  &.is-horizontal {
-    img {
-      width: 100%;
-      height: auto;      // ← 重要
-      max-height: 100%;
-      object-fit: contain;
+    &.is-horizontal {
+      img {
+        width: 100%;
+        height: auto; // ← 重要
+        max-height: 100%;
+        object-fit: contain;
+      }
     }
-  }
 
-  /* =========================
+    /* =========================
     縦長画像
     → 高さ100%＋左右余白
   ========================= */
-  &.is-vertical {
-    img {
-      width: auto;
-      height: 100%;
-      object-fit: contain;
+    &.is-vertical {
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
-}
 
   /* 左右矢印 */
   &__arrow {
@@ -278,7 +283,6 @@
 /* =================================
 お知らせ
  ================================= */
-
 .top-info {
   padding: 0 16px;
 
@@ -297,16 +301,9 @@
       margin: 0 auto 60px;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 }
 
 // 重要なお知らせ
-
 .important-info {
   background: $bg;
   border-radius: 24px;
@@ -317,7 +314,6 @@
   @include tab {
     border-radius: 18px;
     margin: 0 auto 60px;
-
   }
 
   &__inner {
@@ -408,7 +404,6 @@
 
   @include tab {
     margin: 0 auto 60px;
-
   }
 
   &__tabs {
@@ -508,8 +503,6 @@
       flex-wrap: wrap;
       gap: 12px;
       padding: 12px;
-
-
     }
 
     &:hover {
@@ -538,7 +531,7 @@
     width: 80px;
     border-radius: 999px;
     color: #fff;
-        white-space: nowrap;
+    white-space: nowrap;
 
 
     @include tab {
@@ -602,7 +595,6 @@
     flex-wrap: wrap;
     gap: 28px;
     margin: 0 auto 60px;
-
   }
 
   @include sp {
@@ -640,7 +632,6 @@
   @include tab {
     padding: 0 16px 80px;
   }
-
 
   &__inner {
     max-width: 1080px;
@@ -681,7 +672,6 @@
       flex-direction: column;
       gap: 18px;
       margin: 0 auto 18px;
-
     }
   }
 
@@ -715,7 +705,6 @@
 
     @include tab {
       margin: 0 0 40px;
-
     }
 
     @include sp {
@@ -729,15 +718,6 @@
       width: calc((100% - 16px) / 2);
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 }
 
 // 検索窓
@@ -756,7 +736,6 @@
   @include sp {
     height: 50px;
     padding: 0 18px 0 24px;
-
   }
 }
 
@@ -791,14 +770,6 @@
   display: block;
 }
 
-/* フォーカス対応 */
-// .facility-search__input:focus-visible,
-// .facility-search__btn:focus-visible{
-//   outline: 3px solid rgba(96, 179, 88, 0.35);
-//   outline-offset: 4px;
-//   border-radius: 9999px;
-// }
-
 /* iOSの×ボタン非表示 */
 .facility-search__input::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -821,7 +792,6 @@
 /* =================================
 イベント
  ================================= */
-
 .top-event {
   background-color: $bg;
   max-width: 1350px;
@@ -850,11 +820,8 @@
     @include tab {
       padding: 16px;
       margin: 0 auto 40px;
-
     }
   }
-
-
 
   &__ttl {
     margin: 0 0 64px;
@@ -867,14 +834,6 @@
   &__btn {
     margin: 0 auto;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 }
 
 // イベント一覧
@@ -903,59 +862,56 @@
     }
   }
 
-/* 正方形枠 */
-&__item-img {
-  width: 100%;
-  padding-top: 100%; /* 正方形化 */
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 0 auto 24px;
-  background: #eee;
-
-  @include tab {
-    margin: 0 auto 8px;
-  }
-
-  &::before {
-    content: url(../img/top/arrow-icon.png);
-    position: absolute;
-    bottom: -20px;
-    right: -12px;
-    transform: scale(0.45);
-    z-index: 1;
-  }
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain; /* 基本は contain */
-    max-width: 100%;
-    max-height: 100%;
-    transition: 0.3s ease;
-    display: block;
-  }
-
-  /* 横長画像 → 横いっぱい＋上下に余白 */
-  &.is-horizontal img {
+  &__item-img {
     width: 100%;
-    height: auto;      // ★ここが肝：高さを固定しない
-    max-height: 100%;  // 念のため枠からはみ出し防止
-    object-fit: contain; // ★切らない（上下余白は背景が見える）
+    padding-top: 100%;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 24px;
+    background: #eee;
+
+    @include tab {
+      margin: 0 auto 8px;
+    }
+
+    &::before {
+      content: url(../img/top/arrow-icon.png);
+      position: absolute;
+      bottom: -20px;
+      right: -12px;
+      transform: scale(0.45);
+      z-index: 1;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+      transition: 0.3s ease;
+      display: block;
+    }
+
+    /* 横長画像 → 横いっぱい＋上下に余白 */
+    &.is-horizontal img {
+      width: 100%;
+      height: auto; // 高さを固定しない
+      max-height: 100%; // 枠からはみ出し防止
+      object-fit: contain; // ★切らない（上下余白は背景が見える）
+    }
+
+    /* 縦長画像 → 高さ100%＋左右に余白 */
+    &.is-vertical img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
-  /* 縦長画像 → 高さ100%＋左右に余白 */
-  &.is-vertical img {
-    width: auto;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-
-
-  /* タイトル */
   &__text {
     font-size: 12px;
     color: #333;
@@ -973,11 +929,9 @@
 /* =================================
 SNS
  ================================= */
-
 .top-sns {
   padding: 12px 16px 180px;
-    overflow: hidden;
-
+  overflow: hidden;
 
   @include tab {
     padding: 40px 16px 120px;
@@ -1008,8 +962,6 @@ SNS
     }
   }
 
-  &__insta-content {}
-
   &__wrap {
     max-width: 1020px;
     margin: 0 auto;
@@ -1032,11 +984,9 @@ SNS
       width: 400px;
       height: 400px;
       background: #eef9ee;
-      /* 薄い緑 */
       border-radius: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
-      /* ← 中身より後ろ */
 
       @include sp {
         display: none;
@@ -1070,20 +1020,11 @@ SNS
   &__facebook {
     width: 100%;
     max-width: 500px;
-    /* 好きな最大幅 */
     margin: 0 auto;
-
-
-
   }
-
-  &__ {}
-
-  &__ {}
-
 }
 
-/* 表示エリアの高さを制限 */
+/* Facebook表示エリアの高さを制限 */
 .top-sns__facebook .fb-page,
 .top-sns__facebook .fb-page span,
 .top-sns__facebook iframe {
