@@ -1853,8 +1853,8 @@ a[href$=".pdf"].is-icon::after {
     font-size: 20px;
     margin: 0 0 32px;
 
-    @include tab{
-    font-size: 18px;
+    @include tab {
+      font-size: 18px;
     }
   }
 
@@ -1923,4 +1923,92 @@ a[href$=".pdf"].is-icon::after {
       color: #fff;
     }
   }
+}
+
+/* =================================
+検索結果
+ ================================= */
+.page-camp {
+
+  &__img {
+    max-width: 780px;
+    margin: 0 0 32px;
+  }
+
+  &__boxes {
+    display: grid;
+    gap: 28px;
+  }
+
+  &__box {
+    border: 2px solid #222;
+    padding: 26px 28px;
+    background: #fff;
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+    line-height: 1.45;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    b {
+      font-weight: bold;
+    }
+  }
+
+  /* 数字 共通 */
+  &__num {
+    font-weight: 700;
+    color: #333;
+  }
+
+  /* ★ 強調する数字だけ */
+  &__num--big {
+    font-weight: 800;
+    color: #ff2d2d;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+
+    @include tab {
+      font-size: 18px;
+    }
+  }
+
+  &__notes {
+    margin: 22px 0 60px;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+      line-height: 1.8;
+
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+
+      &::before {
+        content: "※";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 }
