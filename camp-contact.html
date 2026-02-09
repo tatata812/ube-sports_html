@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="email=no,telephone=no,address=no">
   <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
-  <title>スポーツ合宿</title>
+  <title>スポーツ合宿　お問い合わせ</title>
   <meta name="description" content="<?php echo $des; ?>">
   <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
   <meta name="robots" content="none">
@@ -99,7 +99,8 @@
                 <li class="gnav-panel__item"><a href="facilities-single.html">アーチェリー・弓道</a></li>
                 <li class="gnav-panel__item"><a href="facilities-single.html">アーバンスポーツ</a></li>
                 <li class="gnav-panel__item"><a href="facilities-single.html">会議室</a></li>
-                <li class="gnav-panel__item"><a href="facility-flow.html" target="_blank">施設の利用予約〜利用までの流れ</a></li>
+                <li class="gnav-panel__item"><a href="assets/pdf/riyounonagare8.pdf" target="_blank">施設の利用予約〜利用までの流れ</a>
+                </li>
                 <li class="gnav-panel__item"><a href="online-reservation.html">インターネット予約の利用について</a></li>
                 <li class="gnav-panel__item"><a href="https://yoyacool.e-harp.jp/facility/" target="_blank"
                     rel="noopener">ひろしま・やまぐち公共施設予約サービス</a></li>
@@ -205,198 +206,125 @@
     </div>
   </header>
 
-  <div class="subpage main page-camp">
+  <div class="subpage main page-contact">
     <div class="breadcrumbs-wrap">
       <div class="breadcrumbs-wrap__content">
         トップ ＞ ○○○○ ＞ ○○○○
       </div>
     </div>
-    <h1 class="subpage__ttl">スポーツ合宿</h1>
+    <h1 class="subpage__ttl">スポーツ合宿 お問い合わせ</h1>
 
     <section class="subpage__section">
-      <p class="subpage__text-big">※令和７年度のスポーツ合宿助成金は予算上限に達したため、受付を終了しました。</p>
-      <h2 class="subttl">スポーツ合宿のベスト環境の中で、ウベトレのススメ！</h2>
-      <div class="page-camp__img">
-        <img src="assets/img/subpage/camp-img.jpg" alt="ウベトレのススメ！">
+      <div class="page-contact__form-wrap">
+        <h2 class="page-contact__ttl">お問い合わせ</h2>
+
+        <p class="page-contact__lead">
+          お問い合わせ内容をご入力のうえ、「送信する」ボタンを押してください。
+        </p>
+
+        <form action="" method="post" class="page-contact__form">
+
+          <div class="page-contact__item">
+            <label for="org" class="page-contact__label">
+              団体名<span class="page-contact__required">必須</span>
+            </label>
+            <input type="text" id="org" name="org" required>
+            <p class="page-contact__note">例：宇部スポーツクラブ</p>
+          </div>
+
+          <div class="page-contact__item">
+            <label for="kana" class="page-contact__label">
+              ふりがな<span class="page-contact__required">必須</span>
+            </label>
+            <input type="text" id="kana" name="kana" required>
+            <p class="page-contact__note">例：うべすぽーつくらぶ</p>
+          </div>
+
+          <div class="page-contact__item">
+            <label for="name" class="page-contact__label">
+              担当者名<span class="page-contact__required">必須</span>
+            </label>
+            <input type="text" id="name" name="name" required>
+            <p class="page-contact__note">例：山田太郎</p>
+          </div>
+
+          <div class="page-contact__item">
+            <label for="tel" class="page-contact__label">
+              電話番号<span class="page-contact__required">必須</span>
+            </label>
+            <input type="tel" id="tel" name="tel" required>
+            <p class="page-contact__note">例：012-345-6789</p>
+            <p class="page-contact__note">担当者とご連絡がつく電話番号を入力してください</p>
+          </div>
+
+          <div class="page-contact__item">
+            <label for="email" class="page-contact__label">
+              メールアドレス<span class="page-contact__required">必須</span>
+            </label>
+            <input type="email" id="email" name="email" required>
+            <p class="page-contact__note">例：abc@xyz.jp</p>
+          </div>
+
+          <div class="page-contact__item">
+            <label for="email2" class="page-contact__label">
+              確認用メールアドレス<span class="page-contact__required">必須</span>
+            </label>
+            <input type="email" id="email2" name="email2" required>
+            <p class="page-contact__note">例：abc@xyz.jp</p>
+          </div>
+
+          <div class="page-contact__item">
+            <p class="page-contact__label">
+              申請種別<span class="page-contact__required">必須</span>
+            </p>
+            <label class="page-contact__radio">
+              <input type="radio" name="type" value="grant" required>
+              助成金交付申請
+            </label>
+            <label class="page-contact__radio">
+              <input type="radio" name="type" value="report" required>
+              助成金実績報告書兼請求
+            </label>
+          </div>
+
+          <div class="page-contact__item">
+            <p class="page-contact__label">
+              添付ファイル<span class="page-contact__required">必須</span>
+            </p>
+            <div class="page-contact__files">
+              <input type="file">
+              <input type="file">
+              <input type="file">
+              <input type="file">
+            </div>
+          </div>
+
+          <div class="page-contact__item">
+            <label for="message" class="page-contact__label">
+              連絡事項
+            </label>
+            <textarea id="message" name="message" rows="6"></textarea>
+          </div>
+
+          <div class="page-contact__privacy">
+            <label>
+              <input type="checkbox" required>
+              <span>
+                <a href="/privacy-policy" target="_blank" rel="noopener">
+                  個人情報保護方針
+                </a>
+                に同意します
+              </span>
+            </label>
+          </div>
+
+          <div class="page-contact__btn-wrap">
+            <button type="submit" class="page-contact__btn">送信する</button>
+          </div>
+
+        </form>
       </div>
-
-      <p class="subpage__text">
-        宇部市は「スポ泊宇部」と題し、市内運動設備を使用する市外のスポーツ団体様へ
-        宿泊費の助成を行っています。是非、スポーツ合宿に宇部市をお選びいただき、
-        選手たちの能力アップにお役立てください。
-      </p>
-
-      <h2 class="subttl-sub">スポ泊宇部　助成内容</h2>
-
-      <div class="page-camp__boxes">
-        <div class="page-camp__box">
-          <p class="page-camp__title"><b>宇部市で合宿する市外の団体に</b></p>
-
-          <p class="page-camp__row">
-            <span class="page-camp__label">最大</span>
-            <span class="page-camp__num page-camp__num--big">5</span>
-            <span class="page-camp__unit">万円補助</span>
-          </p>
-
-          <p class="page-camp__row">
-            <span class="page-camp__label">1泊1人あたり</span>
-            <span class="page-camp__num page-camp__num--big">2,000</span>
-            <span class="page-camp__unit">円補助</span>
-          </p>
-        </div>
-
-        <div class="page-camp__box">
-          <p class="page-camp__title">
-            <b>近隣3市のスポーツ施設を利用し合宿する市外の団体に</b>
-          </p>
-
-          <p class="page-camp__row">
-            <span class="page-camp__label">最大</span>
-            <b>2.5</b>
-            <span class="page-camp__unit">万円補助</span>
-          </p>
-
-          <p class="page-camp__row">
-            <span class="page-camp__label">
-              宇部市の宿泊施設利用で1泊1人あたり
-            </span>
-            <b>1,000</b>
-            <span class="page-camp__unit">円補助</span>
-          </p>
-        </div>
-      </div>
-
-      <ul class="page-camp__notes">
-        <li>宿泊補助は1団体延べ10泊以上（10人の団体であれば1泊でOK）</li>
-        <li>宿泊補助は1団体あたり年度内に1回のみ利用可能</li>
-        <li>近隣3市＝山口市、山陽小野田市、美祢市</li>
-      </ul>
-
-      <h2 class="subttl-sub">スポーツ合宿　申請</h2>
-
-      <ol class="subpage__list-num">
-        <li>
-          スポーツ合宿申請に必要な書類を以下よりダウンロードしてください。
-          <ol class="subpage__list-dic">
-            <li><a href="assets/pdf/camp/outline2024-.pdf" target="_blank">スポーツ合宿　助成金交付要綱</a></li>
-            <li><a href="assets/pdf/camp/style1-2024-.pdf" target="_blank">スポーツ合宿　助成金交付申請書（様式第1号）</a></li>
-            <li><a href="assets/pdf/camp/style4-2025.pdf" target="_blank">スポーツ合宿　助成金実績報告書兼請求書（様式第4号）</a></li>
-          </ol>
-          <p class="subpage__text subpage__text--note">
-            ※助成金は個人口座への振り込みはできません。団体名義の口座をご利用ください。
-          </p>
-        </li>
-        <li>合宿日1週間前までに【助成金交付申請書（様式第1号）】を提出してください。</li>
-        <li>合宿後2週間以内に【助成金実績報告書兼請求書（様式第4号）】と領収書等添付書類を提出してください。</li>
-      </ol>
-
-      <p class="subpage__text">各書類は専用フォームから送信してください。</p>
-      <p class="subpage__btn-link subpage__margin">
-        <a class="subpage__btn-link-a" href="camp-contact.html">スポーツ合宿申請フォームはこちらから</a>
-      </p>
-
-      <h2 class="subttl-sub">スポーツ合宿　お問い合わせ</h2>
-
-      <p class="subpage__text subpage__margin">
-        「宇部市スポーツ合宿」に関しますお問い合わせは、<br>
-        電話：<a class="subpage__tel" href="tel:0836397653">0836-39-7653</a> までお願いいたします。
-      </p>
-
-      <h2 class="subttl-sub">宇部市のスポーツ施設ご案内</h2>
-
-
-      <!-- 該当の施設を表示させる -->
-      <div class="facilities__article-wrap">
-        <article class="facilities__article">
-          <a href="facilities-single.html">
-            <figure class="facilities__img">
-              <img src="assets/img/subpage/facilities-single01.jpg" alt="ユーピーアールスタジアム">
-            </figure>
-
-            <div class="facilities__body">
-              <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
-              <span class="facilities__arrow">
-                <img src="assets/img/top/arrow-icon.png" alt="">
-              </span>
-            </div>
-          </a>
-        </article>
-        <article class="facilities__article">
-          <a href="facilities-single.html">
-            <figure class="facilities__img">
-              <img src="assets/img/subpage/facilities-single03.jpg" alt="ユーピーアールスタジアム">
-            </figure>
-
-            <div class="facilities__body">
-              <p class="facilities__name">ユーピーアールスタジアム<span></span></p>
-              <span class="facilities__arrow">
-                <img src="assets/img/top/arrow-icon.png" alt="">
-              </span>
-            </div>
-          </a>
-        </article>
-        <article class="facilities__article">
-          <a href="facilities-single.html">
-            <figure class="facilities__img">
-              <img src="assets/img/subpage/facilities-single02.jpg" alt="ユーピーアールスタジアム">
-            </figure>
-
-            <div class="facilities__body">
-              <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
-              <span class="facilities__arrow">
-                <img src="assets/img/top/arrow-icon.png" alt="">
-              </span>
-            </div>
-          </a>
-        </article>
-        <article class="facilities__article">
-          <a href="facilities-single.html">
-            <figure class="facilities__img">
-              <img src="assets/img/subpage/facilities-single05.jpg" alt="ユーピーアールスタジアム">
-            </figure>
-
-            <div class="facilities__body">
-              <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
-              <span class="facilities__arrow">
-                <img src="assets/img/top/arrow-icon.png" alt="">
-              </span>
-            </div>
-          </a>
-        </article>
-        <article class="facilities__article">
-          <a href="facilities-single.html">
-            <figure class="facilities__img">
-              <img src="assets/img/subpage/facilities-single01.jpg" alt="ユーピーアールスタジアム">
-            </figure>
-
-            <div class="facilities__body">
-              <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
-              <span class="facilities__arrow">
-                <img src="assets/img/top/arrow-icon.png" alt="">
-              </span>
-            </div>
-          </a>
-        </article>
-        <article class="facilities__article">
-          <a href="facilities-single.html">
-            <figure class="facilities__img">
-              <img src="assets/img/subpage/facilities-single01.jpg" alt="ユーピーアールスタジアム">
-            </figure>
-
-            <div class="facilities__body">
-              <p class="facilities__name">ユーピーアールスタジアム<span>（恩田運動公園宇部市野球場）</span></p>
-              <span class="facilities__arrow">
-                <img src="assets/img/top/arrow-icon.png" alt="">
-              </span>
-            </div>
-          </a>
-        </article>
-      </div>
-
-        <h2 class="subttl-sub">スポーツ合宿　お問い合わせ</h2>
-        <p class="subpage__text">宇部市の宿泊施設は「うべ旅ナビ（宇部観光コンベンション協会公式サイト）」をご参照ください。</p>
     </section>
-
   </div>
   <!--main end-->
 

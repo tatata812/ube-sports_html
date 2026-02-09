@@ -585,27 +585,23 @@ a[class*="btn"] {
 お知らせの下のバナー
  ================================= */
 .top-howto-bnr {
-  max-width: 1120px;
+  max-width: 720px;
   margin: 0 auto 120px;
   display: flex;
   gap: 40px;
   padding: 0 16px;
-
-  @include tab {
-    flex-wrap: wrap;
+          flex-wrap: wrap;
     gap: 28px;
-    margin: 0 auto 60px;
-  }
+
+
 
   @include sp {
     justify-content: center;
   }
 
   &__item {
-
-    @include tab {
       width: calc((100% - 28px) / 2);
-    }
+
 
     @include sp {
       width: 100%;
@@ -846,21 +842,62 @@ a[class*="btn"] {
     gap: 16px;
   }
 
-  &__item {
-    width: calc((100% - 64px) / 3);
-    margin: 0 0 40px;
+&__item {
+  position: relative; // ← 疑似要素用に必須
+  width: calc((100% - 64px) / 3);
+  margin: 0 0 40px;
 
-    @include tab {
-      width: calc((100% - 16px) / 2);
-      margin: 0 0 24px;
-    }
+  @include tab {
+    width: calc((100% - 16px) / 2);
+    margin: 0 0 24px;
+  }
 
-    &:hover {
-      .event-content__item-img img {
-        transform: translate(-50%, -50%) scale(1.1);
-      }
+  &:hover {
+    .event-content__item-img img {
+      transform: translate(-50%, -50%) scale(1.1);
     }
   }
+
+  // ===== バッジ共通 =====
+  &[class*="event-"]::after {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    background: #44617d;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 2;
+  }
+
+  // ===== カテゴリー別テキスト =====
+  &.event-all::after {
+    content: "どなたでも";
+  }
+
+  &.event-adult::after {
+    content: "大人";
+  }
+
+  &.event-kids::after {
+    content: "子ども";
+  }
+
+  &.event-parent-child::after {
+    content: "親子";
+  }
+
+  &.event-senior::after {
+    content: "シニア";
+  }
+
+  &.event-ubetan::after {
+    content: "うべタン";
+  }
+}
 
   &__item-img {
     width: 100%;
