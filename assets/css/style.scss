@@ -211,6 +211,12 @@ header
         content: url(../img/top/header-menu-icon04.png);
       }
     }
+
+    &--booking {
+      &::before {
+        content: url(../img/top/header-menu-icon05.png);
+      }
+    }
   }
 
   //  下層メニュー（アコーディオン）

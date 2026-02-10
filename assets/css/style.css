@@ -3017,6 +3017,9 @@ header
 .header__menu--event::before {
   content: url(../img/top/header-menu-icon04.png);
 }
+.header__menu--booking::before {
+  content: url(../img/top/header-menu-icon05.png);
+}
 .header__submenu {
   display: none;
   position: absolute;
