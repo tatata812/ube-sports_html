@@ -2512,7 +2512,7 @@ a[href$=".pdf"].is-icon::after {
 }
 .facilities__content {
   background-color: #ecf9ef;
-  padding: 60px 120px;
+  padding: 60px 60px;
   max-width: 1200px;
   margin: 0 auto 120px;
   border-radius: 24px;
@@ -2521,17 +2521,18 @@ a[href$=".pdf"].is-icon::after {
 @media screen and (max-width: 1200px) {
   .facilities__content {
     border-radius: 0;
-  }
-}
-@media (max-width: 1120px) {
-  .facilities__content {
-    padding: 60px 60px;
+    padding: 60px 40px;
   }
 }
 @media (max-width: 820px) {
   .facilities__content {
-    padding: 40px 14px 12px;
+    padding: 40px 40px 12px;
     margin: 0 auto 60px;
+  }
+}
+@media (max-width: 600px) {
+  .facilities__content {
+    padding: 40px 16px 12px;
   }
 }
 .facilities__content::after {
@@ -2823,8 +2824,9 @@ a[href$=".pdf"].is-icon::after {
   left: 0;
   top: 0;
 }
+
 /* =================================
-旧宇部市スポーツコミッション事業一覧
+旧宇部市スポーツコミッション
  ================================= */
 .commission-main__list {
   display: grid;
@@ -2930,6 +2932,7 @@ a[href$=".pdf"].is-icon::after {
 .commission__pager {
   text-align: center;
 }
+
 /* =========================
    base（全ページ共通）
 ========================= */

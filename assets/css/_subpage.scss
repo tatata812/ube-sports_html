@@ -1675,7 +1675,7 @@ a[href$=".pdf"].is-icon::after {
 
   &__content {
     background-color: $bg;
-    padding: 60px 120px;
+    padding: 60px 60px;
     max-width: 1200px;
     margin: 0 auto 120px;
     border-radius: 24px;
@@ -1683,16 +1683,17 @@ a[href$=".pdf"].is-icon::after {
 
     @media screen and (max-width: 1200px) {
       border-radius: 0;
-    }
+          padding: 60px 40px;
 
-    @include pc {
-      padding: 60px 60px;
     }
 
     @include tab {
-      padding: 40px 14px 12px;
+      padding: 40px 40px 12px;
       margin: 0 auto 60px;
+    }
 
+    @include sp{
+      padding: 40px 16px 12px;
     }
 
     &::after {
@@ -2036,18 +2037,10 @@ a[href$=".pdf"].is-icon::after {
       }
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 }
 
 /* =================================
-旧宇部市スポーツコミッション事業一覧
+旧宇部市スポーツコミッション
  ================================= */
 
 .commission-main {
@@ -2110,8 +2103,6 @@ a[href$=".pdf"].is-icon::after {
     padding: 32px 12px;
     border-radius: 24px;
 
-
-
     @include tab {
       width: calc((100% - 16px) / 2); // SPは2列
     }
@@ -2173,36 +2164,4 @@ a[href$=".pdf"].is-icon::after {
   &__pager {
     text-align: center;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
